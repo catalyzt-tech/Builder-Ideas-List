@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Navbar from '@/component/Navbar'
+import Navbar from '@/src/app/component/Navbar'
 
 const home = () => {
   return (
