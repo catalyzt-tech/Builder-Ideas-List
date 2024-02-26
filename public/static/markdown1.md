@@ -2,10 +2,10 @@
 title: Withdrawal Visualizer 
 description: A UI to monitor OP Mainnet withdrawals for network safety.
 lang: en-US
-type: Contracts
-category: Draft Project Idea
+type: Foundation Mission Request
+category: "S5: Intent 3 - Improve the Consumer Experience"
 effort: Large 
-labels: Medium
+labels: Attestations
 ---
 
 # Title

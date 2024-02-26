@@ -2,10 +2,10 @@
 title: Withdrawal Visualizer 
 description: A UI to monitor OP Mainnet withdrawals for network safety.
 lang: en-US
-type: Contracts
-category: Draft Project Idea
+type: Token House Mission Request
+category: "S5: Intent 1 - Progress towards technical decentralization"
 effort: Large 
-labels: Medium
+labels: Chain Infra
 ---
 
 # Title

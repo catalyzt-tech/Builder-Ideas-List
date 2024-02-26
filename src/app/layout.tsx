@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${interFont.variable} ${rubikFont.variable} `}>
-        <div className="font-inter ">
+        <div className="font-inter overflow-x-hidden">
           {children}
         </div>
       </body>
