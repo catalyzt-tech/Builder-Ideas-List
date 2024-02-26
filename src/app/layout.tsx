@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Navbar from './(navbar)/component/Navbar'
+import Navbar from './component/navbar/Navbar'
 import { Inter, Rubik } from 'next/font/google'
 
 const interFont = Inter({
