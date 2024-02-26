@@ -1,5 +1,5 @@
 import SearchIcon from "@/public/icon/SearchIcon";
-import InputRef from "./Input";
+import InputRef from "../../component/Input";
 import HeroIcon from "@/public/img/home_banner.png"
 import Image from "next/image";
 export default function HeroSection({

@@ -14,10 +14,14 @@ export async function getResources() {
     const directoryPath = path.join(process.cwd(), 'public', 'static');
     const fileNames = await fs.readdir(directoryPath);
 
-    console.log(fileNames)
+    let postDataPromises = [];
 
-    const postDataPromises = fileNames.map((fileName) => getMarkDownData(fileName));
-    
+    for (let i = 0; i < fileNames.length; i++) {
+      if(path.extname(fileNames[i]).toLowerCase() === ".md") {
+        postDataPromises.push(getMarkDownData(fileNames[i]))
+      }
+    }
+      
     const postData = await Promise.all(postDataPromises);
 
     const jsonData = JSON.stringify(postData, null, 2);
