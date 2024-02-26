@@ -20,7 +20,6 @@ async function getResources(): Promise<PostData[]> {
   return Promise.all(postDataPromises);
 }
 
-
 async function getPostData(id: string): Promise<PostData> {
   const fullPath = path.join(process.cwd(), 'public', 'static', id); 
   const fileContents = fs.readFileSync(fullPath, 'utf8'); 
