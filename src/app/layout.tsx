@@ -1,7 +1,19 @@
 import type { Metadata } from 'next'
-import { Rubik } from 'next/font/google'
 import './globals.css'
-import Navbar from './component/Navbar'
+import Navbar from './(navbar)/component/Navbar'
+import { Inter, Rubik } from 'next/font/google'
+
+const interFont = Inter({
+  subsets: ["latin"],
+  weight: ['200', '300', '400', '500', '600', '700'],
+  variable: '--font-inter',
+});
+
+const rubikFont = Rubik({
+  subsets: ["latin"],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-rubik',
+});
 
 const rubik = Rubik({ subsets: ['latin'] })
 
@@ -17,11 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rubik.className}`}>
-        <div className="px-10 py-4 bg-white">
-          <Navbar />
+      <body className={`${interFont.variable} ${rubikFont.variable} `}>
+        <div className="font-inter ">
+          {children}
         </div>
-        {children}
       </body>
     </html>
   )
