@@ -8,7 +8,7 @@ export default function BreadCrump({
 
 return (
 
-        <div className="flex flex-wrap items-center gap-2 border-b pb-4 ">
+        <div className="flex flex-wrap items-center gap-2 border-b pb-4 font-rubik">
           <div className="flex gap-1.5 items-center">
             <HomeIcon/>
             <h6 className="text-base font-extralight">Home</h6>

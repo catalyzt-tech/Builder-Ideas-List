@@ -12,8 +12,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily:{
-        kanit: "var(--font-kanit)",
-        sanThai: "var(--font-sans-thai)",
+        inter: "var(--font-inter)",
+        rubik: "var(--font-rubik)",
       },
       colors: {
         primaryRed: {

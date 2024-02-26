@@ -14,7 +14,7 @@ return (
         {/* lg:max-w-[30rem] xl:max-w-[36rem] */}
         <div className="flex flex-col ">
 
-            <h6 className="text-slate-900 text-4xl font-semibold ">Open Project Idea</h6>
+            <h6 className="text-slate-900 text-4xl font-semibold font-rubik ">Open Project Idea</h6>
             <p className="text-slate-600 text-sm font-light mt-4">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
             
             <div className="mt-8">

@@ -59,8 +59,6 @@ export default function TabPage({
     ]
 
 
-    console.log(state.currentBadge)
-
 return (
 
     <div className=" mt-[2rem] ">
@@ -71,10 +69,10 @@ return (
                     <div 
                     key={i}
                     onClick={() => handleChangeIndex(i)}
-                    className={`${item.index === state.index ? "text-slate-900" : "text-slate-500"} hover:text-primaryRed text-lg font-normal cursor-pointer flex items-center gap-2 px-4 py-1.5 relative`}
+                    className={`${item.index === state.index ? "text-slate-900" : "text-slate-500"} hover:text-primaryRed  cursor-pointer flex items-center gap-2 px-4 py-1.5 relative`}
                     >
                         {item.index === state.index && <div className="absolute inset-x-0 bottom-0 h-0.5 bg-primaryRed animate-slideup"></div>}
-                        <h6>{item.text}</h6>
+                        <h6 className="font-rubik text-lg font-normal">{item.text} hello</h6>
                     </div>
                 ))}
             </div>
@@ -91,7 +89,7 @@ return (
 
         </div>
 
-        <div className="flex flex-wrap gap-2 mt-4 mb-[2.5rem]">
+        <div className="flex flex-wrap gap-2 mt-4 ">
             {badge.map((item, i) => (
                 <div 
                 key={i}
@@ -102,7 +100,7 @@ return (
                 `}
                 onClick={() => setState(prev => ({...prev, currentBadge: item.index}))}
                 >
-                    <p className=" text-sm font-thin">{item.text}</p>
+                    <p className=" text-sm font-normal">{item.text}</p>
                 </div>
             ))}
         </div>
