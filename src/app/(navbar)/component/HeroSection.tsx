@@ -21,6 +21,7 @@ export default function HeroSection({
             <div className="mt-8">
                <InputSection  />
             </div>
+            
         </div>
         <div className="flex justify-center">
             <Image

@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, createContext, useContext, useEffect } from 'react';
+import React, { useState, createContext, useContext } from 'react';
 const HomeContext = createContext<HomeContextType | null>(null);
 
 export interface HomeContextType {
@@ -19,7 +19,6 @@ interface HomeStateType {
 }
 
 export const HomeProvider = ({ children }: { children: React.ReactNode }) => {
-    // const router = useRouter()
     const [search, setSearch] = useState<string>("")
 
     function handleSearchChange(e:React.ChangeEvent<HTMLInputElement>) {

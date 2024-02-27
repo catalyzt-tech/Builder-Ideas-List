@@ -23,7 +23,7 @@ export default function GridCard({
                 <h6 className="text-xs font-normal line-clamp-2 break-all">{data.category}</h6>
             </div>                
             <div className="inline-flex px-2 py-1 rounded-full bg-slate-100 hover:bg-slate-200/75 cursor-pointer w-fit">
-                <h6 className="text-xs font-normal text-gray-900 line-clamp-2 break-all">{data.type}</h6>
+                <h6 className="text-xs font-normal text-gray-600 line-clamp-2 break-all">{data.type}</h6>
             </div>                
         </div>
 

@@ -125,9 +125,9 @@ export default async function page({ params }: { params: { id: string } }){
 
                   <div className='mx-4 my-4'>
                   <button className="w-[144px] h-[48px] bg-red-600 hover:bg-red-500 text-white rounded-md py-2 px-4 border">
-            Apply
-          </button>
-                  </div>
+                    Apply
+                  </button>
+                </div>
             </section>
 
             <section className='bg-white p-4 rounded-md shadow-md items-center w-auto mx-10 my-6'>
