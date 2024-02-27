@@ -28,6 +28,46 @@
     "category": "S5: Intent 1 - Progress towards technical decentralization",
     "effort": "Large",
     "labels": "Chain Infra"
+  },
+  {
+    "id": "markdown4.md",
+    "title": "billy",
+    "description": "A UI to monitor OP Mainnet withdrawals for network safety.",
+    "lang": "en-US",
+    "type": "Project Idea",
+    "category": "S5: Intent 2 - Grow the Superchain",
+    "effort": "Large",
+    "labels": "OP Stack"
+  },
+  {
+    "id": "markdown5.md",
+    "title": "wit",
+    "description": "A UI to monitor OP Mainnet withdrawals for network safety.",
+    "lang": "en-US",
+    "type": "Token House Mission Request",
+    "category": "S5: Intent 1 - Progress towards technical decentralization",
+    "effort": "Large",
+    "labels": "Chain Infra"
+  },
+  {
+    "id": "markdown6.md",
+    "title": "mark",
+    "description": "A UI to monitor OP Mainnet withdrawals for network safety.",
+    "lang": "en-US",
+    "type": "Project Idea",
+    "category": "S5: Intent 2 - Grow the Superchain",
+    "effort": "Large",
+    "labels": "OP Stack"
+  },
+  {
+    "id": "markdown7.md",
+    "title": "mix",
+    "description": "A UI to monitor OP Mainnet withdrawals for network safety.",
+    "lang": "en-US",
+    "type": "Token House Mission Request",
+    "category": "S5: Intent 1 - Progress towards technical decentralization",
+    "effort": "Large",
+    "labels": "Chain Infra"
   }
 ]
 

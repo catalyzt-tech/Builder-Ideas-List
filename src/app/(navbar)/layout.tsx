@@ -1,4 +1,5 @@
 import Navbar from '../component/navbar/Navbar'
+import { HomeProvider } from './Context'
 
 export default function Layout({
   children,
@@ -11,7 +12,9 @@ export default function Layout({
           <Navbar/>
         </div>
         <div className="font-inter ">
-          {children}
+          <HomeProvider>
+            {children}
+          </HomeProvider>
         </div>
     </div>
   )

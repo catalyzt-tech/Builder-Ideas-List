@@ -2,11 +2,12 @@
 import GridIcon from "@/public/icon/GridIcon"
 import ListIcon from "@/public/icon/ListIcon"
 import { TabStateType } from "./Home"
-import InputRef from "../../component/Input"
 import SearchIcon from "@/public/icon/SearchIcon"
 import SortIcon from "@/public/icon/SortIcon"
 import SettingIcon from "@/public/icon/SettingsIcon"
 import { useState } from "react"
+import Input from "../../component/Input"
+import { HomeContextType, useHome } from "../Context"
 
 export default function TabPage({
     state,
@@ -21,7 +22,7 @@ export default function TabPage({
     }
 
 
-    const [subState, setSubState] = useState(false)
+    const {search, handleSearchChange}:HomeContextType = useHome?.()!;
 
     const tab = [
         {
@@ -71,9 +72,11 @@ return (
 
         <div className="grid grid-cols-2 gap-4">
 
-            <div className="">
-                <InputRef
+            <div className=""> 
+                <Input
                 Icon={<SearchIcon/>}
+                value={search}
+                onChange={handleSearchChange}
                 className="border placeholder-slate-500 bg-white text-slate-500 focus:ring w-full px-1 py-1.5 rounded-full "
                 placeholder="Search Project"
                 />
