@@ -7,7 +7,7 @@ export default function Layout({
 }>) {
   return (
     <div className="">
-         <div className="px-10 py-4 bg-white">
+         <div className="pl-2 pr-8 lg:px-10 py-4 bg-white">
           <Navbar/>
         </div>
         <div className="font-inter ">
