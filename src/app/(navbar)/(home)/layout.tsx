@@ -8,9 +8,6 @@ export default function Layout({
 }>) {
   return (
     <div className="">
-         <div className="px-10 py-4 bg-white">
-          <Navbar/>
-        </div>
           <HomeProvider>
             {children}
           </HomeProvider>

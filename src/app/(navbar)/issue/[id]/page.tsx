@@ -83,7 +83,7 @@ export default async function page({ params }: { params: { id: string } }) {
       </div>
 
       <div className="lg:px-[10rem] lg:py-[1.5rem] flex justify-center w-screen">
-        <div className="sticky top-10 h-fit ">
+        <div className="sticky top-24 h-fit ">
           <ScrollSpy />
         </div>
 

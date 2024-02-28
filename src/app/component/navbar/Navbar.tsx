@@ -4,7 +4,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between h-full">
+    <div className="flex items-center justify-between fixed top-0 bg-white px-10 py-4 w-full z-50 shadow-xl">
       <section>
         <Link href="/"><svg width="247" height="37" viewBox="0 0 782 169" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="522" y="17" width="260" height="137" rx="68.5" fill="#FF0000" />

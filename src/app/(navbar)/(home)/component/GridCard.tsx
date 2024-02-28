@@ -16,7 +16,7 @@ export default function GridCard({
         <div className="flex flex-col gap-4 border rounded-md p-3 h-full" >
         <div>
             <Link 
-            className="text-sm font-semibold text-gray-900 mb-0.5 line-clamp-1"
+            className="text-sm font-semibold text-gray-900 mb-0.5 line-clamp-1 hover:underline"
             href={`/issue/${data.id}`}
             >
                 {data.title}

@@ -10,7 +10,7 @@ export default function Checkbox({
 
 return (
 
-    <div className="flex"> 
+    <div className="flex z-10"> 
         
         <label className="mcui-checkbox">
             <input type="checkbox"
