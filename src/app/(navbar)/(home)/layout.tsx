@@ -1,4 +1,4 @@
-import Navbar from '../component/navbar/Navbar'
+import Navbar from '../../component/navbar/Navbar'
 import { HomeProvider } from './Context'
 
 export default function Layout({

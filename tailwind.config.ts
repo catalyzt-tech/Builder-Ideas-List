@@ -57,6 +57,10 @@ const config: Config = {
           from: { opacity: "0", transform: 'translateX(20%)' },
           to: { opacity: "1", transform: 'translateX(0)' },
         },
+        sliderightnoopa:{
+          from: { transform: 'translateX(10%)' },
+          to: { transform: 'translateX(0%)' },
+        },
         wave: {
           '0%': { transform: 'scale(0)' },
           '50%': { transform: 'scale(1)' },
@@ -70,6 +74,7 @@ const config: Config = {
         slidedown: 'slidedown 0.5s ease-in-out',
         slideleft: 'slideleft 0.5s ease-in-out',
         slideright: 'slideright 0.5s ease-in-out',
+        sliderightnoopa: 'sliderightnoopa 0.5s ease-in',
         wave: 'wave 0.5s linear infinite',
         slowfade: 'slowfade 0.5s ease-in-out',
       },

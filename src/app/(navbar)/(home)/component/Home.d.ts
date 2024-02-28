@@ -9,6 +9,7 @@ export type CheckBoxStateType = {
     "Type": string[]
     "Effort": string[]
     "Label": string[]
+    "Category": string[]
 }
 
 export type MarkDownData = {

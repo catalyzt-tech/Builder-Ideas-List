@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { MarkDownData } from '../../component/Home';
+import { MarkDownData } from '../../(home)/component/Home';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';

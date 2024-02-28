@@ -1,6 +1,5 @@
 .mcui-checkbox {
     display: flex;
-    flex-wrap: wrap;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;

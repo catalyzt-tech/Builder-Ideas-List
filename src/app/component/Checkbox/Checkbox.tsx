@@ -16,12 +16,12 @@ return (
             <input type="checkbox"
             {...props}
             />
-            <div>
+            <div className="min-w-[20px] min-h-[20px]">
                 <svg className="mcui-check" viewBox="-2 -2 35 35" aria-hidden="true">
                     <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
                 </svg>
             </div>
-            <h6 className="text-sm font-normal text-gray-900 flex flex-wrap">{label}</h6>
+            <h6 className="text-sm font-normal text-gray-900">{label}</h6>
         </label>
     </div>
 

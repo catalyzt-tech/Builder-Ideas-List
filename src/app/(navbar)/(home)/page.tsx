@@ -1,10 +1,10 @@
 
-import BreadCrump from '@/src/app/(navbar)/component/BreadCrump';
-import HeroSection from '@/src/app/(navbar)/component/HeroSection';
+import BreadCrump from '@/src/app/(navbar)/(home)/component/BreadCrump';
+import HeroSection from '@/src/app/(navbar)/(home)/component/HeroSection';
 import fs from 'fs';
 import path from 'path';
 import { MarkDownData } from './component/Home';
-import Cpage from './component/Cpage';
+import Cpage from './Cpage';
 
 async function getResources(): Promise<Omit<MarkDownData, "contentHtml">[]> {
   try {

@@ -3,13 +3,6 @@ import path from 'path';
 import matter from 'gray-matter';
 
 
-// ███╗   ███╗ █████╗ ██╗███╗   ██╗
-// ████╗ ████║██╔══██╗██║████╗  ██║
-// ██╔████╔██║███████║██║██╔██╗ ██║
-// ██║╚██╔╝██║██╔══██║██║██║╚██╗██║
-// ██║ ╚═╝ ██║██║  ██║██║██║ ╚████║
-// ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
-
 export async function getResources() {
     const directoryPath = path.join(process.cwd(), 'public', 'static');
     const fileNames = await fs.readdir(directoryPath);
