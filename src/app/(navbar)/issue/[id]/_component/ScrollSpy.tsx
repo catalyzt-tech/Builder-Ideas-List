@@ -1,5 +1,4 @@
 "use client"
-import Drawer from "@/src/app/component/Drawer/Drawer"
 import {useState} from "react"
 export default function ScrollSpy({
 
@@ -33,12 +32,7 @@ return (
             </div>
           </div>
         
-    <Drawer
-    open={state}
-    anchor="right"
-    >
-        <h6>test</h6>
-    </Drawer>
+  
     </>
 
     )
