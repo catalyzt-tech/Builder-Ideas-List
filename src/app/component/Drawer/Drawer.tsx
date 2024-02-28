@@ -11,48 +11,48 @@ const Drawer: React.FC<Partial<DrawerProps & {open:boolean,anchor:"top" | "right
     const {children, open, anchor} = props;
     
     const handleAnchor = () => {
-        if(anchor === "top") {
-            if(open) {
-                document.getElementById("sidenav-top")?.classList.add("anchor-top");
-                return "";
-            }
-            else if(!open){
-                document.getElementById("sidenav-top")?.classList.remove("anchor-top");
-                return "";
-            }
-        }   
-        else if(anchor === "right") {
-            if(open) {
-                document.getElementById("sidenav-right")?.classList.add("anchor-right");
-                return "";
-            }
-            else if(!open){
-                console.log("CORRECT CONDITION RUNNING")
-                document.getElementById("sidenav-right")?.classList.remove("anchor-right");
-                return "";
-            }
-        }
-        else if(anchor === "bottom") {
-            if(open) {
-                document.getElementById("sidenav-bottom")?.classList.add("anchor-bottom");
-                return "";
-            }
-            else if(!open){
-                document.getElementById("sidenav-bottom")?.classList.remove("anchor-bottom");
-                return "";
-            }
-        }
-        //left
+        // if(anchor === "top") {
+        //     if(open) {
+        //         document.getElementById("sidenav-top")?.classList.add("anchor-top");
+        //         return "";
+        //     }
+        //     else if(!open){
+        //         document.getElementById("sidenav-top")?.classList.remove("anchor-top");
+        //         return "";
+        //     }
+        // }   
+        // else if(anchor === "right") {
+        //     if(open) {
+        //         document.getElementById("sidenav-right")?.classList.add("anchor-right");
+        //         return "";
+        //     }
+        //     else if(!open){
+        //         console.log("CORRECT CONDITION RUNNING")
+        //         document.getElementById("sidenav-right")?.classList.remove("anchor-right");
+        //         return "";
+        //     }
+        // }
+        // else if(anchor === "bottom") {
+        //     if(open) {
+        //         document.getElementById("sidenav-bottom")?.classList.add("anchor-bottom");
+        //         return "";
+        //     }
+        //     else if(!open){
+        //         document.getElementById("sidenav-bottom")?.classList.remove("anchor-bottom");
+        //         return "";
+        //     }
+        // }
+        // //left
         
-        else {
-            if(open) {
-                document.getElementById("sidenav-left")?.classList.add("anchor-left")
-            }
-            else if(!open){
-                document.getElementById("sidenav-left")?.classList.remove("anchor-left")
-            }
+        // else {
+        //     if(open) {
+        //         document.getElementById("sidenav-left")?.classList.add("anchor-left")
+        //     }
+        //     else if(!open){
+        //         document.getElementById("sidenav-left")?.classList.remove("anchor-left")
+        //     }
 
-        }
+        // }
     }
 
     return (

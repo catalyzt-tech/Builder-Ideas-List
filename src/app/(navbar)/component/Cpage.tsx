@@ -2,10 +2,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import TabPage from './Tab';
 import GridCard from './GridCard';
-import { MarkDownData, TabStateType } from './Home';
+import { CheckBoxStateType, MarkDownData, TabStateType } from './Home';
 import ListCard from './ListCard';
 import { HomeContextType, useHome } from '../Context';
 import ReactPaginate from 'react-paginate';
+import Checkbox from '../../component/Checkbox/Checkbox';
 
 interface HomeProps {
     markdownContents:  Omit<MarkDownData, "contentHtml">[];
@@ -16,7 +17,7 @@ export default function Cpage({
 
 
     const {search}:HomeContextType = useHome?.()!;
-    const [currentPage, setCurrentPage] = useState(0);
+    const [currentPage, setCurrentPage] = useState<number>(0);
     const [loading, setLoading] = useState(false);
     const [state, setState] = useState<TabStateType>({
         index: 0,
@@ -26,9 +27,15 @@ export default function Cpage({
         view: "g",
         // badge = type
         currentBadge: "All",
+        filter: true,
     })
 
 
+    const [checkBox, setCheckBox] = useState<CheckBoxStateType>({
+        Type: [],
+        Effort: [],
+        Label: [],
+    })
    
     // if search !== "" then filter by item.title
     // if currentBadge !== "All" then filter with item.type
@@ -38,16 +45,28 @@ export default function Cpage({
                 item.title.toLowerCase().includes(search.toLowerCase()) : 
                 true;
         
-            const badgeCondition = state.currentBadge !== "All" ? 
-                item.type.includes(state.currentBadge) : 
-                true; 
-        
-            return searchCondition && badgeCondition;
+            // const badgeCondition = state.currentBadge !== "All" ? 
+            //     item.type.includes(state.currentBadge) : 
+            //     true; 
+            
+            const typeCondition = checkBox["Type"].length !== 0 ?
+            checkBox["Type"].some(elem => item.type.includes(elem)) :
+            true;
+
+            const effortCondition = checkBox["Effort"].length !== 0 ?
+            checkBox["Effort"].some(elem => item.effort.includes(elem)) :
+            true;
+
+            const labelCondition = checkBox["Label"].length !== 0 ?
+            checkBox["Label"].some(elem => item.labels.includes(elem)) :
+            true;
+            
+            return searchCondition && typeCondition && effortCondition && labelCondition;
         });
-    }, [markdownContents, search, state.currentBadge]);
+    }, [markdownContents, search, checkBox["Type"], checkBox["Effort"], checkBox["Label"]]);
 
 
-    const itemsPerPage = 2; 
+    const itemsPerPage = 12; 
     const pageCount = useMemo(() => {
         return Math.ceil(filteredMarkdownContent.length / itemsPerPage);
     } ,[filteredMarkdownContent])
@@ -70,6 +89,32 @@ export default function Cpage({
 
 
 
+    const filterItem = {
+        "Type": ["Project Idea", "Foundation Mission Request", "Delegate Mission Request"],
+        "Effort": ["Small", "Medium", "Large"],
+        "Label": ["OP Stack", "Attestations", "Chain Infra", "Consumer Apps", "Smart Contracts", "DeFi", "Developer Tooling", "Documentation", "Gaming", "Governance", "NFTs", "Protocol", "Wallets", "RetroPGF"]
+    }
+
+
+    const handleChangeCheckBox = (name: keyof CheckBoxStateType, value: string) => {
+        setCheckBox(prev => {
+            let temp = { ...prev };
+            
+            let index = temp[name].findIndex(elem => elem === value);
+            
+            if (index === -1) {
+                temp[name] = [...temp[name], value];
+            } else {
+                temp[name] = temp[name].filter(elem => elem !== value); 
+            }
+            
+            // console.log(temp);
+            return temp;
+        });
+    };
+    
+    // console.log(checkBox)
+
     return (
 
     <> 
@@ -81,19 +126,68 @@ export default function Cpage({
 
         <div className="mt-[2.5rem] relative">
             {state.view === "g" && loading === false ? 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 animate-slideleft">
+            <div className="animate-slideleft flex gap-6 ">
+                
 
-                <div className="col-span-1 p-2 flex flex-col gap-4 border">
-                    <h6>Type</h6>
+                {/*  
+
+                █▀▀ █░█ █▀▀ █▀▀ █▄▀ █▄▄ █▀█ ▀▄▀
+                █▄▄ █▀█ ██▄ █▄▄ █░█ █▄█ █▄█ █░█
+                
+                */}
+
+                {state.filter && 
+                <div className="flex flex-col gap-4 col-span-1 border min-w-60 h-fit rounded-lg p-2 animate-slideleft sticky top-24">
+                    <div className="flex flex-col gap-1  ">
+                        <h6 className="text-xs font-medium text-gray-400 mb-2">Type</h6>
+                        {filterItem["Type"].map((item, i) => (
+                            <Checkbox
+                            key={i}
+                            label={item}
+                            value={item}
+                            checked={checkBox["Type"].includes(item)}
+                            onChange={(e:React.ChangeEvent<HTMLInputElement>) => handleChangeCheckBox("Type" as keyof CheckBoxStateType, e.target.value)}
+                            />
+                        ))}
+                    </div>
+                    <hr className='h-[0.0625rem] bg-gray-200'/>
+                    <div className="flex flex-col gap-1  ">
+                        <h6 className="text-xs font-medium text-gray-400 mb-2">Effort</h6>
+                        {filterItem["Effort"].map((item, i) => (
+                            <Checkbox
+                            key={i}
+                            label={item}
+                            value={item}
+                            checked={checkBox["Effort"].includes(item)}
+                            onChange={(e:React.ChangeEvent<HTMLInputElement>) => handleChangeCheckBox("Effort" as keyof CheckBoxStateType, e.target.value)}
+                            />
+                        ))}
+                    </div>
+                    <hr className='h-[0.0625rem] bg-gray-200'/>
+                    <div className="flex flex-col gap-1  ">
+                        <h6 className="text-xs font-medium text-gray-400 mb-2">Label</h6>
+                        {filterItem["Label"].map((item, i) => (
+                            <Checkbox
+                            key={i}
+                            label={item}
+                            value={item}
+                            checked={checkBox["Label"].includes(item)}
+                            onChange={(e:React.ChangeEvent<HTMLInputElement>) => handleChangeCheckBox("Label" as keyof CheckBoxStateType, e.target.value)} 
+                            />
+                        ))}
+                    </div>
                 </div>
+                }
 
-                {currentItems.map((item, i) => (
-                        <React.Fragment key={i}>
+                <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 h-fit ">
+                    {currentItems.map((item, i) => (
+                        <div className="" key={i}>
                             <GridCard
                             data={item}
                             />
-                        </React.Fragment>
-                ))}
+                        </div>
+                    ))}
+                </div>
             </div>
             :
             <div className="animate-slideright">

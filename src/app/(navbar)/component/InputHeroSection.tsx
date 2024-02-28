@@ -14,7 +14,7 @@ export default function InputSection() {
             onChange={handleSearchChange}
             Icon={<SearchIcon/>}
             placeholder="Search project"
-            />
+        />
     )
 
 }

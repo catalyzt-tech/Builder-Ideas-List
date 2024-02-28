@@ -95,15 +95,16 @@ return (
                     setState={setState}
                     />
 
+      
                         {/* active #161616 ::: inactive #94A3B8 */}
-                    <div className="flex gap-2 border p-1.5 rounded-full">
-                            <div className={`px-1.5 py-0.5 ${state.view === "g" && "bg-gray-100 rounded-tl-xl rounded-bl-xl rounded-br-sm rounded-tr-sm"}`} onClick={() => setState(prev => ({...prev, view:"g"}))}>
+                    <div className="flex gap-2 border p-1.5  rounded-full h-10">
+                            <div className={`px-1 ${state.view === "g" && "bg-gray-100 rounded-tl-xl rounded-bl-xl rounded-br-sm rounded-tr-sm"}`} onClick={() => setState(prev => ({...prev, view:"g"}))}>
                                 <GridIcon fill={state.view === "g" ? "#161616" : "#94A3B8"} className="cursor-pointer block"/>
                             </div>
 
                             <div className="border w-[0.0625rem] border-gray-200"></div>
 
-                            <div className={`px-1.5 py-0.5 ${state.view === "l" && "bg-gray-100 rounded-tl-sm rounded-bl-sm rounded-br-xl rounded-tr-xl"}`} onClick={() => setState(prev => ({...prev, view:"l"}))}>
+                            <div className={`px-1 ${state.view === "l" && "bg-gray-100 rounded-tl-sm rounded-bl-sm rounded-br-xl rounded-tr-xl"}`} onClick={() => setState(prev => ({...prev, view:"l"}))}>
                                 <ListIcon fill={state.view === "l" ? "#161616" : "#94A3B8"} className="cursor-pointer block"/>
                             </div>
                     </div>
@@ -118,10 +119,12 @@ return (
              {/* overflow-x-auto scrollbar-small scrollbar-thumb pb-2 */}
             <div className="flex gap-2 items-center flex-wrap">
                    
-                    <div className="flex gap-2 border p-1.5 rounded-full px-3 py-2 cursor-pointer hover:bg-gray-100">
-                            <SettingIcon className=""/>
-                        <h6 className="text-base font-normal text-gray-600">Filters</h6>
-                        </div>
+                    <div 
+                    onClick={() => setState(prev => ({...prev, filter:!prev.filter}))}
+                    className="flex h-10 items-center gap-2 border  rounded-full px-3 py-2 cursor-pointer hover:bg-gray-100">
+                        <SettingIcon className=""/>
+                    <h6 className="text-base font-normal text-gray-600">Filters</h6>
+                    </div>
 
                     <div className="border w-[0.0625rem] h-[1.625rem] border-gray-200"></div>
 
@@ -129,6 +132,7 @@ return (
                     <div 
                     key={i}
                     className={` 
+                    h-10
                     hover:bg-secondaryRed hover:text-primaryRed hover:border hover:border-primaryRed
                     border rounded-full px-3 py-2 cursor-pointer transition-colors self-center shrink-0
                     ${state.currentBadge === item.text ?"bg-secondaryRed text-primaryRed border-secondaryRed" : "text-slate-900 border"}

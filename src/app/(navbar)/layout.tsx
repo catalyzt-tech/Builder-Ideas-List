@@ -11,11 +11,9 @@ export default function Layout({
          <div className="px-10 py-4 bg-white">
           <Navbar/>
         </div>
-        <div className="font-inter ">
           <HomeProvider>
             {children}
           </HomeProvider>
-        </div>
     </div>
   )
 }

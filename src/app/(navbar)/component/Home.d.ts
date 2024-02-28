@@ -2,6 +2,13 @@ export type TabStateType = {
     index: number;
     view: "g" | "l";
     currentBadge: string;
+    filter: boolean;
+}
+
+export type CheckBoxStateType = {
+    "Type": string[]
+    "Effort": string[]
+    "Label": string[]
 }
 
 export type MarkDownData = {

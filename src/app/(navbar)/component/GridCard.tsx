@@ -12,7 +12,7 @@ export default function GridCard({
     return (
 
         
-        <div className="flex flex-col gap-4 border rounded-md p-3">
+        <div className="flex flex-col gap-4 border rounded-md p-3 h-full" >
         <div>
             <h5 className="text-sm font-semibold text-gray-900 mb-0.5 line-clamp-1">{data.title}</h5>
             <p className="text-xs text-slate-500 font-normal line-clamp-2">{data.description}</p>

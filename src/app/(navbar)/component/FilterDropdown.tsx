@@ -1,5 +1,4 @@
 "use client"
-import SettingIcon from '@/public/icon/SettingsIcon'
 import { Menu, Transition } from '@headlessui/react'
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { TabStateType } from './Home'
@@ -18,7 +17,7 @@ return (
         <div>
           <Menu.Button className="">
           <div 
-            className={` 
+            className={` h-10
             hover:bg-secondaryRed hover:text-primaryRed hover:border hover:border-primaryRed
             border rounded-full px-3 py-2 cursor-pointer transition-colors 
             text-slate-900 flex gap-2 self-center shrink-0}

@@ -16,7 +16,7 @@ export default function ScrollSpy({
 return (
 
     <> 
-      <div className='hidden lg:block bg-white p-4 rounded-md shadow-md items-center w-56 h-min'>
+      <div className='hidden lg:block bg-white p-4 rounded-md shadow-md items-center w-56  '>
             <div className='mx-8 items-center'>
             <div className='text-base font-bold my-4'>
               ON THIS PAGE

@@ -38,6 +38,4 @@ export const HomeProvider = ({ children }: { children: React.ReactNode }) => {
     </HomeContext.Provider>
   );
 
-
-
 };
