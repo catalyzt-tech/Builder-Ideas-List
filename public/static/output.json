@@ -1,6 +1,6 @@
 [
   {
-    "id": "markdown1.md",
+    "id": "markdown1",
     "title": "Withdrawal Visualizer",
     "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
     "lang": "en-US",
@@ -10,7 +10,7 @@
     "labels": "OP Stack, Attestations"
   },
   {
-    "id": "markdown2.md",
+    "id": "markdown2",
     "title": "Mix",
     "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
     "lang": "en-US",
@@ -20,253 +20,13 @@
     "labels": "Chain Infra, Consumer Apps, Smart Contracts, DeFi, Developer Tooling"
   },
   {
-    "id": "markdown3.md",
+    "id": "markdown3",
     "title": "Mark",
     "description": "A UI to monitor OP Mainnet withdrawals for network safety.",
     "lang": "en-US",
     "type": "Delegate Mission Request",
     "category": "S5: Intent 1 - Progress towards technical decentralization",
     "effort": "Small",
-    "labels": "Documentation, Gaming, Governance, NFTs, Protocol, Wallets, RetroPGF"
-  },
-  {
-    "id": "markdown4.md",
-    "title": "Wit",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Foundation Mission Request",
-    "category": "S5: Intent 3 - Improve the Consumer Experience",
-    "effort": "Medium",
-    "labels": "OP Stack, Attestations"
-  },
-  {
-    "id": "markdown5.md",
-    "title": "Billy",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Project Idea",
-    "category": "S5: Intent 2 - Grow the Superchain",
-    "effort": "Large",
-    "labels": "Chain Infra, Consumer Apps, Smart Contracts, DeFi, Developer Tooling"
-  },
-  {
-    "id": "markdown6.md",
-    "title": "Mook",
-    "description": "A UI to monitor OP Mainnet withdrawals for network safety.",
-    "lang": "en-US",
-    "type": "Delegate Mission Request",
-    "category": "S5: Intent 1 - Progress towards technical decentralization",
-    "effort": "Small",
-    "labels": "Documentation, Gaming, Governance, NFTs, Protocol, Wallets, RetroPGF"
-  },
-  {
-    "id": "markdown7.md",
-    "title": "Max",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Foundation Mission Request",
-    "category": "S5: Intent 3 - Improve the Consumer Experience",
-    "effort": "Large",
-    "labels": "OP Stack, Attestations"
-  },
-  {
-    "id": "markdown8.md",
-    "title": "Ming",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Project Idea",
-    "category": "S5: Intent 2 - Grow the Superchain",
-    "effort": "Small",
-    "labels": "Chain Infra, Consumer Apps, Smart Contracts, DeFi, Developer Tooling"
-  },
-  {
-    "id": "markdown9.md",
-    "title": "Moy",
-    "description": "A UI to monitor OP Mainnet withdrawals for network safety.",
-    "lang": "en-US",
-    "type": "Delegate Mission Request",
-    "category": "S5: Intent 1 - Progress towards technical decentralization",
-    "effort": "Large",
-    "labels": "Documentation, Gaming, Governance, NFTs, Protocol, Wallets, RetroPGF"
-  },
-  {
-    "id": "markdown1.md",
-    "title": "Withdrawal Visualizer",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Foundation Mission Request",
-    "category": "S5: Intent 3 - Improve the Consumer Experience",
-    "effort": "Large",
-    "labels": "OP Stack, Attestations"
-  },
-  {
-    "id": "markdown2.md",
-    "title": "Mix",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Project Idea",
-    "category": "S5: Intent 2 - Grow the Superchain",
-    "effort": "Medium",
-    "labels": "Chain Infra, Consumer Apps, Smart Contracts, DeFi, Developer Tooling"
-  },
-  {
-    "id": "markdown3.md",
-    "title": "Mark",
-    "description": "A UI to monitor OP Mainnet withdrawals for network safety.",
-    "lang": "en-US",
-    "type": "Delegate Mission Request",
-    "category": "S5: Intent 1 - Progress towards technical decentralization",
-    "effort": "Small",
-    "labels": "Documentation, Gaming, Governance, NFTs, Protocol, Wallets, RetroPGF"
-  },
-  {
-    "id": "markdown4.md",
-    "title": "Wit",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Foundation Mission Request",
-    "category": "S5: Intent 3 - Improve the Consumer Experience",
-    "effort": "Medium",
-    "labels": "OP Stack, Attestations"
-  },
-  {
-    "id": "markdown5.md",
-    "title": "Billy",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Project Idea",
-    "category": "S5: Intent 2 - Grow the Superchain",
-    "effort": "Large",
-    "labels": "Chain Infra, Consumer Apps, Smart Contracts, DeFi, Developer Tooling"
-  },
-  {
-    "id": "markdown6.md",
-    "title": "Mook",
-    "description": "A UI to monitor OP Mainnet withdrawals for network safety.",
-    "lang": "en-US",
-    "type": "Delegate Mission Request",
-    "category": "S5: Intent 1 - Progress towards technical decentralization",
-    "effort": "Small",
-    "labels": "Documentation, Gaming, Governance, NFTs, Protocol, Wallets, RetroPGF"
-  },
-  {
-    "id": "markdown7.md",
-    "title": "Max",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Foundation Mission Request",
-    "category": "S5: Intent 3 - Improve the Consumer Experience",
-    "effort": "Large",
-    "labels": "OP Stack, Attestations"
-  },
-  {
-    "id": "markdown8.md",
-    "title": "Ming",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Project Idea",
-    "category": "S5: Intent 2 - Grow the Superchain",
-    "effort": "Small",
-    "labels": "Chain Infra, Consumer Apps, Smart Contracts, DeFi, Developer Tooling"
-  },
-  {
-    "id": "markdown9.md",
-    "title": "Moy",
-    "description": "A UI to monitor OP Mainnet withdrawals for network safety.",
-    "lang": "en-US",
-    "type": "Delegate Mission Request",
-    "category": "S5: Intent 1 - Progress towards technical decentralization",
-    "effort": "Large",
-    "labels": "Documentation, Gaming, Governance, NFTs, Protocol, Wallets, RetroPGF"
-  },
-  {
-    "id": "markdown1.md",
-    "title": "Withdrawal Visualizer",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Foundation Mission Request",
-    "category": "S5: Intent 3 - Improve the Consumer Experience",
-    "effort": "Large",
-    "labels": "OP Stack, Attestations"
-  },
-  {
-    "id": "markdown2.md",
-    "title": "Mix",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Project Idea",
-    "category": "S5: Intent 2 - Grow the Superchain",
-    "effort": "Medium",
-    "labels": "Chain Infra, Consumer Apps, Smart Contracts, DeFi, Developer Tooling"
-  },
-  {
-    "id": "markdown3.md",
-    "title": "Mark",
-    "description": "A UI to monitor OP Mainnet withdrawals for network safety.",
-    "lang": "en-US",
-    "type": "Delegate Mission Request",
-    "category": "S5: Intent 1 - Progress towards technical decentralization",
-    "effort": "Small",
-    "labels": "Documentation, Gaming, Governance, NFTs, Protocol, Wallets, RetroPGF"
-  },
-  {
-    "id": "markdown4.md",
-    "title": "Wit",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Foundation Mission Request",
-    "category": "S5: Intent 3 - Improve the Consumer Experience",
-    "effort": "Medium",
-    "labels": "OP Stack, Attestations"
-  },
-  {
-    "id": "markdown5.md",
-    "title": "Billy",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Project Idea",
-    "category": "S5: Intent 2 - Grow the Superchain",
-    "effort": "Large",
-    "labels": "Chain Infra, Consumer Apps, Smart Contracts, DeFi, Developer Tooling"
-  },
-  {
-    "id": "markdown6.md",
-    "title": "Mook",
-    "description": "A UI to monitor OP Mainnet withdrawals for network safety.",
-    "lang": "en-US",
-    "type": "Delegate Mission Request",
-    "category": "S5: Intent 1 - Progress towards technical decentralization",
-    "effort": "Small",
-    "labels": "Documentation, Gaming, Governance, NFTs, Protocol, Wallets, RetroPGF"
-  },
-  {
-    "id": "markdown7.md",
-    "title": "Max",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Foundation Mission Request",
-    "category": "S5: Intent 3 - Improve the Consumer Experience",
-    "effort": "Large",
-    "labels": "OP Stack, Attestations"
-  },
-  {
-    "id": "markdown8.md",
-    "title": "Ming",
-    "description": "This initiative aims to continue the development of open-source infrastructure for the Optimism Collective towards strategically enabling the governance-related incentives to achieve objectives of: increasing OP votable supply, increasing active OP delegations, and rewarding beneficial delegate behavior (including participation and involvement).",
-    "lang": "en-US",
-    "type": "Project Idea",
-    "category": "S5: Intent 2 - Grow the Superchain",
-    "effort": "Small",
-    "labels": "Chain Infra, Consumer Apps, Smart Contracts, DeFi, Developer Tooling"
-  },
-  {
-    "id": "markdown9.md",
-    "title": "Moy",
-    "description": "A UI to monitor OP Mainnet withdrawals for network safety.",
-    "lang": "en-US",
-    "type": "Delegate Mission Request",
-    "category": "S5: Intent 1 - Progress towards technical decentralization",
-    "effort": "Large",
     "labels": "Documentation, Gaming, Governance, NFTs, Protocol, Wallets, RetroPGF"
   }
 ]

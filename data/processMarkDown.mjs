@@ -36,7 +36,7 @@ async function getMarkDownData(id) {
   
     //@ts-ignore
     return {
-      id: id, 
+      id: id.split(".md")[0], 
       ...matterResult.data,
     };
 }
