@@ -40,7 +40,7 @@ async function getMarkDownData(id: string): Promise<MarkDownData> {
 
 export default async function page({ params }: { params: { id: string } }) {
   const data = await getResources(params.id);
-  // console.log(data);
+  console.log(data);
   return (
     <div className=" bg-gray-100">
       <div className="hidden lg:block px-[4rem] lg:px-[8rem] pt-[1.5rem] items-center">
@@ -87,10 +87,10 @@ export default async function page({ params }: { params: { id: string } }) {
           <ScrollSpy />
         </div>
 
-        <div className="w-full lg:w-3/4 flex flex-col gap-6">
+        <div className="w-full lg:w-3/4 flex flex-col">
           <section
             id="Overview"
-            className="px-8 bg-white p-4 lg:rounded-md lg:shadow-md items-center w-auto lg:mx-10 "
+            className="px-8 bg-white p-4 lg:rounded-md lg:shadow-md items-center w-auto lg:mx-10 lg:mb-6"
           >
             <div className="text-3xl font-bold my-4 ">
               Delegation Quest SDK Mission Request
@@ -110,9 +110,9 @@ export default async function page({ params }: { params: { id: string } }) {
               <div className="bg-red-50 text-sm text-red-600 p-2 rounded-full shadow-md  justify-center items-center flex ">
                 Delegate mission request
               </div>
-              <h6 className="bg-gray-50 text-sm text-gray-600 p-2 rounded-full shadow-md justify-center items-center flex">
+              <div className="bg-gray-50 text-sm text-gray-600 p-2 rounded-full shadow-md justify-center items-center flex">
                 S5: Intent 4 - Improve governance accessibility
-              </h6>
+              </div>
               <div className="bg-gray-50 text-sm text-gray-600 p-2 rounded-full shadow-md justify-center items-center flex ">
                 Medium Effort
               </div>
@@ -125,7 +125,7 @@ export default async function page({ params }: { params: { id: string } }) {
 
           <section
             id="ProjectSummary"
-            className="bg-white p-4 lg:rounded-md lg:shadow-md items-center w-auto lg:mx-10"
+            className="bg-white p-4 lg:rounded-md lg:shadow-md items-center w-auto lg:mx-10 lg:mb-6"
           >
             <div className="text-xl text-gray-900 font-bold my-4 mx-4">
               Project Summary

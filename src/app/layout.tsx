@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Navbar from './component/navbar/Navbar'
 import { Inter, Rubik } from 'next/font/google'
 
 const interFont = Inter({
@@ -15,7 +14,6 @@ const rubikFont = Rubik({
   variable: '--font-rubik',
 });
 
-const rubik = Rubik({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Builder Ideas List',

@@ -14,13 +14,13 @@ return (
             <table className="w-full text-sm text-left rtl:text-right table-fixed ">
                 <thead className="text-gray-700 text-base font-semibold ">
                     <tr>
-                        <th scope="col" className="px-6 py-3 w-5/12">
+                        <th scope="col" className="px-6 py-3 w-[40%] 2xl:w-5/12">
                             Project
                         </th>
-                        <th scope="col" className="px-6 py-3 w-5/12">
+                        <th scope="col" className="px-6 py-3 w-[40%] 2xl:w-5/12">
                             Color
                         </th>
-                        <th scope="col" className="px-6 py-3 w-2/12">
+                        <th scope="col" className="py-3 w-[20%] 2xl:w-2/12">
                             Estimate Effort
                         </th>
                     
@@ -46,12 +46,12 @@ return (
                                   <h6 className="text-xs font-normal line-clamp-2 break-all">{item.category}</h6>
                               </div>          
                               <div className="inline-flex px-2 py-1 rounded-full bg-slate-100 hover:bg-slate-200/75 cursor-pointer w-fit">
-                                  <h6 className="text-xs font-normal text-gray-600 line-clamp-2 break-all">{item.type}</h6>
+                                  <h6 className="text-xs font-normal text-gray-600 line-clamp-1 break-all">{item.type}</h6>
                               </div>      
                           </div>
                       </td>
                       <td className="px-6 py-4">
-                          <h6 className="text-sm font-normal text-gray-500">Extra large</h6>
+                          <h6 className="text-sm font-normal text-gray-500">{item.effort}</h6>
                       </td>
                   
                   </tr>

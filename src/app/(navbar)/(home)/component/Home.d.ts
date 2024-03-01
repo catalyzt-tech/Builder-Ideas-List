@@ -1,8 +1,19 @@
 export type TabStateType = {
+
+    // sort have four option
+    // a stand for sort by alphabet A-Z
+    // n stand for no sort
+    // le stand for low effort
+    // he stand for high effort
+    sort: "a" | "le" | "he" | "n";
     index: number;
+    // view have two option
+    // g stand for grid
+    // l stand for list
     view: "g" | "l";
-    currentBadge: string;
     filter: boolean;
+    dialog: boolean;
+    drawer: boolean;
 }
 
 export type CheckBoxStateType = {
@@ -10,6 +21,7 @@ export type CheckBoxStateType = {
     "Effort": string[]
     "Label": string[]
     "Category": string[]
+    "SkillSet": string[]
 }
 
 export type MarkDownData = {
@@ -22,5 +34,6 @@ export type MarkDownData = {
     effort: string;
     labels: string;
     contentHtml: string;
+    skillset: string;
 };
   

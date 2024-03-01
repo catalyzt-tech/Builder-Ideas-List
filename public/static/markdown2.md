@@ -6,6 +6,7 @@ type: Project Idea
 category: "S5: Intent 2 - Grow the Superchain"
 effort: Medium 
 labels: "Chain Infra, Consumer Apps, Smart Contracts, DeFi, Developer Tooling"
+skillset: Back End
 ---
 
 # Title

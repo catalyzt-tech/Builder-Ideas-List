@@ -25,7 +25,7 @@ export default async function Home () {
 
   return (
     <div className="">
-      <div className="px-[4rem] lg:px-[8rem] py-[2.5rem] bg-gradient-to-b from-[#E2E8F0] to-white">
+      <div className="px-4 md:px-[4rem] lg:px-[8rem] py-[2.5rem] bg-gradient-to-b from-[#E2E8F0] to-white">
         <BreadCrump />
 
         <div className="pt-14">
@@ -33,7 +33,7 @@ export default async function Home () {
         </div>
       </div>
 
-      <div className="px-[4rem] lg:px-[8rem] py-[2.5rem]">
+      <div className="px-4 md:px-[4rem] lg:px-[8rem] py-[2.5rem]">
         <div className="flex flex-col gap-1">
           <h6 className="text-slate-500 text-lg font-rubik">Explore</h6>
           <h4 className="text-slate-900 text-2xl font-semibold font-rubik">Open Project Idea</h4>

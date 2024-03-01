@@ -6,6 +6,7 @@ type: Delegate Mission Request
 category: "S5: Intent 1 - Progress towards technical decentralization"
 effort: Small 
 labels: "Documentation, Gaming, Governance, NFTs, Protocol, Wallets, RetroPGF"
+skillset: Full Stack
 ---
 
 # Title
