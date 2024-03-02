@@ -44,7 +44,7 @@
         {
           "id": "protocol-infra",
           "name": "Protocol Infrastructure",
-          "description": "Infrastructure needed for protocols to run and be used, such as RPC providers, node infra, etc."
+          "description": "Infrastructure needed for protocols to run and be used, such as RPC providers, node infra, etc, node infra, etc."
         },
         {
           "id": "dapp-idea",

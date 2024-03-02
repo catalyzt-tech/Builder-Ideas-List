@@ -1,5 +1,4 @@
 import Navbar from '../../component/navbar/Navbar'
-import { HomeProvider } from './Context'
 
 export default function Layout({
   children,
@@ -8,9 +7,7 @@ export default function Layout({
 }>) {
   return (
     <div className="">
-          <HomeProvider>
             {children}
-          </HomeProvider>
     </div>
   )
 }

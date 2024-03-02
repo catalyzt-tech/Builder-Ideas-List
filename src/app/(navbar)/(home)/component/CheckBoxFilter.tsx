@@ -5,21 +5,16 @@ import { CheckBoxStateType } from "./Home"
 import { newFilter } from "../Text"
 import { CheckBoxCategory, CheckBoxEffort, CheckBoxSkillset, CheckBoxType } from "./Filter/CheckBox"
 
-// export const filterItem = {
-//     "Type": ["Project Idea", "Foundation Mission Request", "Delegate Mission Request"],
-//     "Effort": ["Small", "Medium", "Large"],
-//     "Label": ["OP Stack", "Attestations", "Chain Infra", "Consumer Apps", "Smart Contracts", "DeFi", "Developer Tooling", "Documentation", "Gaming", "Governance", "NFTs", "Protocol", "Wallets", "RetroPGF"],
-//     "Category": ["S5: Intent 1 - Progress towards technical decentralization", "S5: Intent 2 - Grow the Superchain", "S5: Intent 3 - Improve the Consumer Experience", "S5: Intent 4 - Improve governance accessibility", "Ecosystem Idea", "Draft Idea", "Mad Science Project Idea", "Contribution Opportunity"],
-// }
-
-
 
 export default function CheckBoxFilter({
     checkBox,
-    handleChangeCheckBox
+    handleChangeCheckBox,
+    handleClearFilter
 }:{
-    checkBox: CheckBoxStateType
-    handleChangeCheckBox:(name: keyof CheckBoxStateType, value: string) => void
+    checkBox: CheckBoxStateType;
+    handleChangeCheckBox:(name: keyof CheckBoxStateType, value: string) => void;
+    handleClearFilter: () => void
+
 })  {
 
 
@@ -27,7 +22,19 @@ export default function CheckBoxFilter({
 
 return (
 
-      <div className="hidden lg:flex flex-col gap-4 col-span-1 border min-w-60 max-w-60 h-fit rounded-lg p-2 animate-slideleft sticky top-24">
+      <div className="hidden lg:flex flex-col gap-4 col-span-1 border min-w-60 max-w-60 h-fit rounded-lg p-2 animate-slideleft">
+        <div className="flex items-center justify-between gap-1 ">
+            <h6 className="text-sm font-bold text-gray-900 ">Filter</h6>
+            <button 
+            onClick={handleClearFilter}
+            className="underline">
+                <h6 className="text-xs font-normal text-gray-900 ">Clear Filters</h6>
+            </button>
+        </div>
+        <hr className='h-[0.0625rem] bg-gray-200'/>
+
+
+
         {newFilter["type"].length > 1 && 
            <>
             <div className="flex flex-col gap-1  ">

@@ -1,0 +1,53 @@
+.render ul {
+    padding-left: 2em;
+}
+.render li {
+    list-style: disc;
+}
+.render hr {
+    margin-top: 1rem/* 16px */;
+    margin-bottom: 1rem/* 16px */;
+}
+
+.render p {
+    font-size: 1rem/* 16px */;
+    line-height: 1.5rem/* 24px */;
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+.render h1 {
+    font-size: 1.875rem/* 30px */;
+    line-height: 2.25rem/* 36px */;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.render h2 {
+    font-size: 1.5rem/* 24px */;
+    line-height: 2rem/* 32px */;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.render h3 {
+    font-size: 1.25rem/* 20px */;
+    line-height: 1.75rem/* 28px */;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.render h4 {
+    font-size: 1.125rem/* 18px */;
+    line-height: 1.75rem/* 28px */;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.render h5 {
+    font-size: 1rem/* 16px */;
+    line-height: 1.5rem/* 24px */;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.render h6 {
+    font-size: 0.875rem/* 14px */;
+    line-height: 1.25rem/* 20px */;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39 / var(--tw-text-opacity));
+}

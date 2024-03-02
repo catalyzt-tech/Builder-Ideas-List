@@ -8,7 +8,10 @@ export default function Layout({
 }>) {
   return (
     <>
-    {/* <Navbar/> */}
+  <div className="py-4">
+
+    <Navbar/>
+  </div>
     {children}
     </>
   )

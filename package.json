@@ -19,6 +19,7 @@
     "react-dom": "^18",
     "react-headless-pagination": "^1.1.5",
     "react-paginate": "^8.2.0",
+    "react-tooltip": "^5.26.3",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1"
   },

@@ -25,10 +25,10 @@ export default function GridCard({
         </div>
     
         <div className="flex flex-col gap-2 w-full">
-            <div className="inline-flex px-2 py-1 rounded-full bg-secondaryRed grow-0 text-primaryRed cursor-pointer w-fit"> 
-                <h6 className="text-xs font-normal line-clamp-1 break-all">{data.category}</h6>
+            <div className="inline-flex px-2 py-1 rounded-full bg-secondaryRed hover:bg-red-100/80 hover:shadow-sm grow-0 text-primaryRed cursor-pointer w-fit"> 
+                <p className="text-xs font-normal line-clamp-1 break-all">{data.category}</p>
             </div>                
-            <div className="inline-flex px-2 py-1 rounded-full bg-slate-100 hover:bg-slate-200/75 cursor-pointer w-fit">
+            <div className="inline-flex px-2 py-1 rounded-full bg-slate-50 hover:bg-slate-100/90 hover:shadow-sm cursor-pointer w-fit">
                 <h6 className="text-xs font-normal text-gray-600 line-clamp-2 break-all">{data.type}</h6>
             </div>                
         </div>

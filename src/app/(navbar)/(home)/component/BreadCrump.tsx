@@ -8,19 +8,19 @@ export default function BreadCrump({
 
 return (
 
-        <div className="flex flex-wrap items-center gap-2 border-b pb-4 font-rubik">
-          <div className="flex gap-1.5 items-center">
+        <div className="hidden lg:flex flex-wrap items-center gap-2 border-b pb-4 font-inter">
+          <div className="flex gap-2 items-center">
             <HomeIcon/>
-            <h6 className="text-base font-extralight">Home</h6>
+            <h6 className="text-sm font-medium text-gray-700">Home</h6>
           </div>
         
-          <div className="text-base font-extralight text-slate-400">/</div>
+          <div className="text-sm font-medium text-gray-600">/</div>
           
-          <h6 className="text-base font-extralight">Explore</h6>
+          <h6 className="text-sm font-medium text-gray-700">RetroPGF</h6>
 
-          <div className="text-base font-extralight text-slate-400">/</div>
+          <div className="text-sm font-medium text-gray-600">/</div>
 
-          <h6 className="text-base font-extralight">Open Project Idea</h6>
+          <h6 className="text-sm font-medium text-gray-500">Open Project Idea</h6>
         
         </div>
 
