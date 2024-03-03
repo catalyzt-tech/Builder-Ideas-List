@@ -8,7 +8,7 @@ export default function Layout({
 }>) {
   return (
     <>
-  <div>
+  <div className="sticky top-0">
     <Navbar/>
   </div>
     {children}

@@ -192,3 +192,9 @@
   transition: all ease 0.16s;
   width: 100%;
 } 
+
+@media (min-height: 800px) {
+  .tall\:max-h-\[100vh\] {
+      max-height: 100vh;
+  }
+}

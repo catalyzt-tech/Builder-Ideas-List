@@ -8,9 +8,9 @@ const Navbar = () => {
 
   return (
     <>
-    <div className="flex items-center justify-between px-6 h-[72px]">
+    <div className="flex items-center justify-between px-6 h-[72px] bg-white shadow-md">
       <div>
-        <a className="text-custom-red font-rubik " href="/bridge/deposit">
+        <a className="text-custom-red font-rubik" href="/bridge/deposit">
           OPTIMISM
         </a>
       </div>
@@ -36,7 +36,7 @@ const Navbar = () => {
           </a>
 
           <li>
-            <a className="NavMenu flex items-center gap-1" href="#">
+            <a className="NavMenu flex items-center gap-1 z-50" href="#">
               More
               <div className="mt-[0.5px]">
                 <svg
@@ -56,7 +56,7 @@ const Navbar = () => {
                 </svg>
               </div>
             </a>
-            <ul className="Dropdown max-h-[80vh] overflow-y-scroll">
+            <ul className="Dropdown max-h-[80vh] tall:max-h-[100vh] overflow-y-scroll">
               <li className="Title">OPTIMISM</li>
               <li className="Content">
                 <a
