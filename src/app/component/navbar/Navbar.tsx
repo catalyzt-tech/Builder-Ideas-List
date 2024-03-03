@@ -56,7 +56,7 @@ const Navbar = () => {
                 </svg>
               </div>
             </a>
-            <ul className="Dropdown overflow-y-scroll">
+            <ul className="Dropdown max-h-[80vh] overflow-y-scroll">
               <li className="Title">OPTIMISM</li>
               <li className="Content">
                 <a

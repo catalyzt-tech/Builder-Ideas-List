@@ -1,7 +1,6 @@
 "use client";
 import { Transition, Dialog } from "@headlessui/react";
 import { Fragment, useState } from "react";
-
 import CloseIcon from "@/public/icon/CloseIcon";
 import "./Navbar.css";
 
@@ -126,9 +125,10 @@ export default function DrawerNav({
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h2"
-                    className="textTitle"
+                    className="textTitle flex justify-between"
                   >
-                    More
+                    <div>More</div>
+                    <div onClick={()=>setOpen2(false)}><CloseIcon></CloseIcon></div>
                   </Dialog.Title>
               <li className="DrawerTitle">OPTIMISM</li>
               <li className="DrawerContent">
