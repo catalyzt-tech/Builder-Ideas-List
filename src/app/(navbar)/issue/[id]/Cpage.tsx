@@ -1,5 +1,5 @@
 "use client"
-import { MutableRefObject, useRef } from "react";
+import { useRef } from "react";
 import { MarkDownData } from "../../(home)/component/Home";
 import OverViewSection from "./_component/OverViewSection";
 import ScrollSpy from "./_component/ScrollSpy";

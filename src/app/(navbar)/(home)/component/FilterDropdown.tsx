@@ -16,7 +16,7 @@ export default function FilterDropdown({
   function handleChangeSort(char: "a" | "le" | "he" | "n") {
     setState(prev => ({...prev, sort: char}))
   }
-
+  
   return (
     <div className="w-56 text-right">
       <Menu as="div" className="relative inline-block text-left">

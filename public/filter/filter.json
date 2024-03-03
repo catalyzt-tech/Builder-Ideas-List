@@ -58,6 +58,10 @@
         {
           "name": "retroPGF#4",
           "category-ids": ["dev-tooling", "dev-onboarding", "protocol-infra"]
+        },
+        {
+          "name": "retroPGF",
+          "category-ids": ["dev-tooling"]
         }
       ]
     },

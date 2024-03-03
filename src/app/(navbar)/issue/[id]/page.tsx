@@ -3,12 +3,8 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
-import ScrollSpy from "./_component/ScrollSpy";
 import { MarkDownData } from "../../(home)/component/Home";
 import BreadCrump from "./_component/BreadCrump";
-import ProjectSummarySection from "./_component/ProjectSummarySection";
-import SpecificationSection from "./_component/SpecificationSection";
-import OverViewSection from "./_component/OverViewSection";
 import Cpage from "./Cpage";
 
 async function getResources(file: string): Promise<MarkDownData> {

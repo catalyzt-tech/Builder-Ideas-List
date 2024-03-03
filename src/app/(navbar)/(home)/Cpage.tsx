@@ -1,5 +1,5 @@
 "use client"
-import React, { useMemo, useState } from 'react';
+import React, { Fragment, useEffect, useMemo, useState } from 'react';
 import TabPage from './component/Tab';
 import { CheckBoxStateType, MarkDownData, TabStateType } from './component/Home';
 import DialogFilter from './component/Dialog/DialogFilter';
@@ -7,6 +7,8 @@ import { newFilter } from './Text';
 import DrawerFilter from './component/DrawerFilter';
 import ProjectTab from './component/ProjectTab';
 import OverViewTab from './component/OverViewTab';
+import { useSearchParams } from 'next/navigation'
+import Filter from "@/public/filter/filter.json"
 
 
 interface HomeProps {
@@ -16,6 +18,11 @@ interface HomeProps {
 export default function Cpage({
     markdownContents
 }: HomeProps) {
+    const searchParams = useSearchParams()
+    const params = searchParams.get('grouping')
+    // for special case like #4 it doesn't appear on params variable
+    const hash = typeof window !== 'undefined' ? window.location.hash : '';
+    let fullQuery = params + hash
 
     const itemsPerPage = 15;
     // const { search }: HomeContextType = useHome?.()!;
@@ -127,9 +134,6 @@ export default function Cpage({
     const handlePageClick = (page: number) => {
         setCurrentPage(prev => page);
     };
-    // const handlePageClick = (selectedItem: { selected: number }) => {
-    //     setCurrentPage(prev => selectedItem.selected);
-    // };
 
     const handleChangeCheckBox = (name: keyof CheckBoxStateType, value: string) => {
         setCheckBox(prev => {
@@ -154,8 +158,27 @@ export default function Cpage({
             Label: [],
             Category: [],
             SkillSet: [],
-        })
+        })  
     }
+
+    function handleGrouping(search:string) {
+        Filter['url-link-groupings'].options.map((item, i) => {
+            if(item.name === search){
+                
+                console.log(search)
+                console.log(item['category-ids'])
+                setCheckBox(prev => ({...prev, Category:item['category-ids']}))
+            }
+        })
+
+    }
+
+    useEffect(() => {
+        if(fullQuery && fullQuery.length > 2) {
+            handleGrouping(fullQuery)
+        }        
+    }, [searchParams])
+    
 
     return (
 
@@ -209,7 +232,7 @@ export default function Cpage({
                 handleClearFilter={handleClearFilter}
             />
 
-
+         
         </>
 
     )
