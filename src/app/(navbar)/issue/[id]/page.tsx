@@ -65,7 +65,7 @@ export default async function page({ params }: { params: { id: string } }) {
 
   return (
     <div className=" bg-gray-100">
-      <div className="lg:px-[4rem] xl:px-[10rem] py-8">
+      <div className="lg:px-[4rem] xl:px-[10rem] lg:py-8">
         <BreadCrump content={content} />
       </div>
       <div className="lg:px-[4rem] lg:py-[1rem] xl:px-[10rem] xl:py-[1.5rem] flex justify-center">

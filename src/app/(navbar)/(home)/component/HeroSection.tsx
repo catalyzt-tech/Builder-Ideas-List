@@ -1,4 +1,3 @@
-
 import HeroIcon from "@/public/img/home_banner.png"
 import Image from "next/image";
 import BtnSection from "./BtnHeroSection";

@@ -11,7 +11,7 @@ export default function SpecificationSection({
 
 return (
 
-     <section
+     <section   
         ref={specificationRef}
         id="Specification"
         className=" bg-white p-6 lg:rounded-md lg:shadow-md items-center w-auto  lg:mb-6"

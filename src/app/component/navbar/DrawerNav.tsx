@@ -34,7 +34,7 @@ export default function DrawerNav({
                 <div />
                 <a
                   className="text-custom-red font-rubik "
-                  href="/bridge/deposit"
+                  href="/"
                 >
                   OPTIMISM
                 </a>

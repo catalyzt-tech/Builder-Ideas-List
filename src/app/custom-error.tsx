@@ -12,7 +12,7 @@ export default function Custom500({
 }) {
     return (
     <div className="min-h-[92vh] max-h-[92vh] overflow-hidden flex flex-col relative ">
-        <div className="flex-grow flex flex-col justify-center items-center text-center px-8 lg:px-0 ">
+        <div className="flex-grow flex flex-col justify-center items-center text-center px-8 lg:px-0 z-20">
             <div className="flex flex-col justify-center items-center">
                 <h6 className="text-xl lg:text-2xl font-medium text-gray-500">Error Status {status} </h6>
                 <h6 className="text-2xl lg:text-4xl font-medium text-gray-900">{titleError}</h6>

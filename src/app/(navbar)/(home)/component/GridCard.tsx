@@ -1,5 +1,4 @@
 import EffortIcon from "@/public/icon/EffortIcon";
-import ImpactIcon from "@/public/icon/ImpactIcon";
 import { MarkDownData } from "./Home";
 import Link from "next/link";
 

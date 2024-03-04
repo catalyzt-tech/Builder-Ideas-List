@@ -26,10 +26,10 @@ return (
       </div> */}
 
       <div className="hidden lg:flex flex-wrap items-center gap-4 border-b border-gray-300 pb-4 font-inter ">
-          <div className="flex gap-2 items-center">
+          <Link href={"/"} className="flex gap-2 items-center ">
             <HomeIcon/>
-            <h6 className="text-sm font-medium text-gray-700">Home</h6>
-          </div>
+            <h6 className="text-sm font-medium ">Home</h6>
+          </Link>
         
           <div className="text-sm font-medium text-gray-600">/</div>
           
@@ -37,7 +37,11 @@ return (
 
           <div className="text-sm font-medium text-gray-600">/</div>
 
-          <h6 className="text-sm font-medium text-gray-500">Open Project Idea</h6>
+          <h6 className="text-sm font-medium text-gray-700">Open Project Idea</h6>
+          
+          <div className="text-sm font-medium text-gray-600">/</div>
+          
+          <h6 className="text-sm font-medium text-gray-500">{content.title}</h6>
 
         </div>
     </>
