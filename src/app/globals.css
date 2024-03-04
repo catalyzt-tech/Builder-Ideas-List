@@ -32,18 +32,24 @@
     line-height: 2.25rem/* 36px */;
     --tw-text-opacity: 1;
     color: rgb(17 24 39 / var(--tw-text-opacity));
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 .render h2 {
     font-size: 1.5rem/* 24px */;
     line-height: 2rem/* 32px */;
     --tw-text-opacity: 1;
     color: rgb(17 24 39 / var(--tw-text-opacity));
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 .render h3 {
     font-size: 1.25rem/* 20px */;
     line-height: 1.75rem/* 28px */;
     --tw-text-opacity: 1;
     color: rgb(17 24 39 / var(--tw-text-opacity));
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 .render h4 {
     font-size: 1.125rem/* 18px */;
