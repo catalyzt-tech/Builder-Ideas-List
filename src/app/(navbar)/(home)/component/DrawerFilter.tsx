@@ -20,14 +20,12 @@ export default function DrawerFilter({
 }) {
 
   return (
-
-    <>
       <Transition appear show={open} as={Fragment}>
         <Dialog as="div"  className="block lg:hidden relative z-40 h-full w-full" onClose={onClose}>
           <div className="fixed inset-0 bg-black/25" />
 
           <div className="fixed inset-0 overflow-y-auto h-full w-screen">
-            <div className="flex h-full  items-center justify-center text-center ">
+            <div className="flex h-full items-center justify-center text-center ">
               <Transition.Child
                 as={Fragment}
                 enter="duration-500"
@@ -37,7 +35,7 @@ export default function DrawerFilter({
                 leaveFrom="translate-x-0"
                 leaveTo="-translate-x-full"
               >
-                <Dialog.Panel className="w-full h-full transform overflow-hidden bg-white p-4 text-left align-middle shadow-xl transition-all overflow-y-auto flex flex-col">
+                <Dialog.Panel className="w-full h-full transform overflow-x-hidden bg-white p-4 text-left shadow-xl transition-all overflow-y-scroll flex flex-col">
                   <Dialog.Title
                     as="div"
                     className="flex justify-between "
@@ -61,11 +59,11 @@ export default function DrawerFilter({
                           <div
                             key={i}
                             className={` 
-                      lg:block h-8
-                      hover:bg-secondaryRed hover:text-primaryRed hover:border hover:border-primaryRed
-                      border rounded-full px-3 py-1.5 cursor-pointer transition-colors self-center shrink-0
-                      ${checkBox["Type"].includes(item) ? "bg-secondaryRed text-primaryRed border-secondaryRed" : "text-slate-900 border"}
-                      `}
+                          lg:block h-8
+                          hover:bg-secondaryRed hover:text-primaryRed hover:border hover:border-primaryRed
+                          border rounded-full px-3 py-1.5 cursor-pointer transition-colors self-center shrink-0
+                          ${checkBox["Type"].includes(item) ? "bg-secondaryRed text-primaryRed border-secondaryRed" : "text-slate-900 border"}
+                          `}
                             onClick={() => {
                               handleChangeCheckBox("Type" as keyof CheckBoxStateType, item)
                             }}
@@ -79,7 +77,7 @@ export default function DrawerFilter({
                     <div className="flex flex-col gap-2">
                       <h6 className="text-xs font-medium text-gray-400 mb-1">Category</h6>
                       <div className="flex gap-2 items-center flex-wrap">
-                        {newFilter["category"].options.map((item, i) => (
+                        {newFilter["category"].map((item, i) => (
                           <div
                             key={i}
                             className={` 
@@ -166,20 +164,22 @@ export default function DrawerFilter({
                       </div>
                     </div>
                   </div>
-                  <div className="mt-8"></div>
-                  <div className="grid grid-cols-1 min-[305px]:grid-cols-2 gap-4 items-center content-center  w-full mt-auto ">
-                    <button
-                      onClick={handleClearFilter}
-                      className="bg-inherit hover:bg-gray-100 hover:text-primaryRed text-gray-900  h-12 flex items-center justify-center rounded-lg py-3 px-7 ">
-                      <h6 className="text-base font-semibold text-center ">Clear All</h6>
-                    </button>
 
-                    <button
-                      className="bg-primaryRed hover:bg-primaryRed/90 h-12 flex items-center justify-center rounded-lg py-3 px-7 "
+                  <div className="mt-8"/>
+
+                  <div className="grid grid-cols-1 min-[305px]:grid-cols-2 gap-4 items-center content-center  w-full  ">
+                    <div
+                      onClick={handleClearFilter}
+                      className="bg-inherit hover:bg-gray-100 hover:text-primaryRed text-gray-900 flex items-center justify-center rounded-lg py-3 px-7 cursor-pointer">
+                      <h6 className="text-base font-semibold text-center ">Clear All</h6>
+                    </div>
+
+                    <div
+                      className="bg-primaryRed hover:bg-primaryRed/90 flex items-center justify-center rounded-lg py-3 px-7 cursor-pointer"
                       onClick={onClose}
                     >
                       <h6 className="text-base font-semibold text-white">Apply</h6>
-                    </button>
+                    </div>
                   </div>
 
                 </Dialog.Panel>
@@ -188,6 +188,5 @@ export default function DrawerFilter({
           </div>
         </Dialog>
       </Transition>
-    </>
   )
 }

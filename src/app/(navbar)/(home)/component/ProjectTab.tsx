@@ -144,7 +144,7 @@ export default function ProjectTab({
                 ░█▄▄█ ░█─░█ ░█▄▄▀ ░█▄▄█ ░█▄▄▄
 
                 */}
-                {newFilter["category"].options.map((item, i) => (
+                {newFilter["category"].map((item, i) => (
                     <div
                         data-tooltip-id={item.id} 
                         key={i}
@@ -152,7 +152,7 @@ export default function ProjectTab({
                     lg:block h-10 group relative ctn-category shadow-
                     hover:bg-secondaryRed hover:text-primaryRed hover:border hover:border-primaryRed
                     border rounded-full px-3 py-2 cursor-pointer transition-colors self-center shrink-0
-                    ${checkBox["Category"].some((elem) => elem === (newFilter.category.options.find((elem) => elem.id === item.id))?.id) ? "bg-secondaryRed text-primaryRed border-secondaryRed" : "text-slate-900 border"}
+                    ${checkBox["Category"].some((elem) => elem === (newFilter.category.find((elem) => elem.id === item.id))?.id) ? "bg-secondaryRed text-primaryRed border-secondaryRed" : "text-slate-900 border"}
                     `}
                         onClick={() => {
                             handleChangeCheckBox("Category" as keyof CheckBoxStateType, item.id)

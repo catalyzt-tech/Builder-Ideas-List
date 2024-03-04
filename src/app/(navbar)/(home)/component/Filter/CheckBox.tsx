@@ -84,7 +84,7 @@ export function CheckBoxCategory({
 
 return (
     <> 
-        {newFilter["category"].options.map((item, i) => (
+        {newFilter["category"].map((item, i) => (
             <Checkbox
             key={i}
             label={item.name}

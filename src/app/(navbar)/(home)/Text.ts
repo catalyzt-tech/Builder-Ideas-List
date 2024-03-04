@@ -5,5 +5,5 @@ export const newFilter = {
     "effort": Filter.effort.options,
     "skillset": Filter.skillset,
     "labels": Filter.labels.options,
-    "category": Filter.category,
+    "category": Filter.category.options,
 }

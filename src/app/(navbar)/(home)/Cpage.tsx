@@ -63,7 +63,6 @@ export default function Cpage({
         setSearch(prev => e.target.value)
     }
 
-
     // if search !== "" then filter by item.title
     // if currentBadge !== "All" then filter with item.type
     const filteredMarkdownContent = useMemo(() => {
@@ -81,21 +80,18 @@ export default function Cpage({
                 checkBox["Effort"].some(elem => item.effort === elem) :
                 true;
 
-            // console.log(item.skillset)
-            // console.log(checkBox["SkillSet"])
             const skillSetCondition = checkBox["SkillSet"].length !== 0 ?
                 checkBox["SkillSet"].some(elem => item.skillset === elem) :
                 true;
 
             let categoryCondition: any;
             if (checkBox["Category"].length !== 0) {
-                let categoryId = newFilter.category.options.find((elem) => elem.name === item.category)!.id
+                let categoryId = newFilter.category.find((elem) => elem.name === item.category)?.id
                 categoryCondition = checkBox["Category"].some(elem => elem === categoryId)
             }
             else {
                 categoryCondition = true
             }
-
 
             const labelCondition = checkBox["Label"].length !== 0 ?
                 checkBox["Label"].some(elem => item.labels.split(', ').some(subElem => subElem === elem)) :
@@ -103,7 +99,7 @@ export default function Cpage({
 
             return searchCondition && typeCondition && effortCondition && labelCondition && categoryCondition && skillSetCondition;
         });
-    }, [markdownContents, search, checkBox]);
+    }, [markdownContents, search, checkBox, newFilter]);
 
 
 
