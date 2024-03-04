@@ -17,7 +17,7 @@ return (
         className=" bg-white p-6 lg:rounded-md lg:shadow-md items-center w-auto  lg:mb-6"
     > 
         <h6 className="text-3xl font-bold my-4 ">
-        {content.title}
+            {content.title}
         </h6>
         <hr className="hidden lg:block my-6  border-t border-gray-300" />
         <p className=" text-gray-500 text-base font-normal">

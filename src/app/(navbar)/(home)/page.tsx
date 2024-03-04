@@ -20,7 +20,7 @@ async function getResources(): Promise<{
     const overViewData = await getOverViewData("overview")
 
     // test loading page
-    await new Promise(resolve => setTimeout(resolve, 200));
+    // await new Promise(resolve => setTimeout(resolve, 200));
     return {jsonData, overViewData};
   } catch (error) {
     throw error; 

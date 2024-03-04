@@ -38,7 +38,7 @@ async function getMarkDownData(id: string): Promise<MarkDownData | string> {
     const contentHtml = processedContent.toString();
     
     // test loading page
-    await new Promise(resolve => setTimeout(resolve, 500))
+    // await new Promise(resolve => setTimeout(resolve, 200))
     
     //@ts-ignore
     return {

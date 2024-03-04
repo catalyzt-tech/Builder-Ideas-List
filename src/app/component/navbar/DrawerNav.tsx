@@ -31,7 +31,6 @@ export default function DrawerNav({
                 as="div"
                 className="flex justify-between items-center px-6 h-[72px]"
               >
-                <div />
                 <a
                   className="text-custom-red font-rubik "
                   href="/"
@@ -126,9 +125,12 @@ export default function DrawerNav({
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h2"
-                    className="textTitle"
+                    className="textTitle flex justify-between"
                   >
                     More
+                    <div className="cursor-pointer" onClick={() => setOpen2(false)}>
+                      <CloseIcon />
+                    </div>
                   </Dialog.Title>
               <li className="DrawerTitle">OPTIMISM</li>
               <li className="DrawerContent">

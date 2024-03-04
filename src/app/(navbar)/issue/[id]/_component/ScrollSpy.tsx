@@ -38,27 +38,23 @@ export default function ScrollSpy({
         <div className="text-base text-gray-900 font-bold">ON THIS PAGE</div>
         <ul
           className="flex flex-col items-start gap-4"
-          onClick={(event: React.SyntheticEvent) => {
-            event.preventDefault();
-            const target = event.target as HTMLAnchorElement;
-            const id = target.getAttribute("href")?.replace("#", "");
-            const element = document.getElementById(String(id));
-            if (element) {
-              const scrollTop = element.offsetTop - 40;
-              window.scrollTo({
-                top: scrollTop,
-                behavior: "smooth",
-              });
-            }
-          }}
+          // onClick={(event: React.SyntheticEvent) => {
+          //   event.preventDefault();
+           
+          // }}
         >
           <li className="list-none">
             <a
               id="Anchor"
-              className={`active flex ${
+              className={`active flex cursor-pointer hover:text-primaryRed ${
                 currentContent === "Overview" ? "pl-2 text-red-600 border-l-[3px] border-primaryRed" : ""
               }`}
-              href="#Overview"
+              onClick={() => {
+                if (overViewRef && overViewRef.current) {
+                  overViewRef.current.scrollIntoView({ behavior: "smooth", block: "center", inline: "start"  });
+                }
+              }}
+              // href="#Overview"
             >
               Overview
             </a>
@@ -77,10 +73,19 @@ export default function ScrollSpy({
           <li className="list-none">
             <a
               id="Anchor"
-              className={`active flex ${
+              className={`active flex cursor-pointer hover:text-primaryRed ${
                 currentContent === "Specification" ? "pl-2 text-red-600 border-l-[3px] border-primaryRed" : ""
               }`}
-              href="#Specification"
+              onClick={() => {
+                if (specificationRef && specificationRef.current) {
+                  window.scrollTo({
+                    top: specificationRef.current.offsetTop - 72,
+                    behavior: "smooth",
+                  });
+                  // specificationRef.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "start"  });
+                }
+              }}
+              // href="#Specification"
             >
               Specification
             </a>

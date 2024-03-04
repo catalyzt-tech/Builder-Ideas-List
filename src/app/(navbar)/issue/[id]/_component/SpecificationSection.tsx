@@ -12,11 +12,14 @@ export default function SpecificationSection({
 return (
 
      <section   
-        ref={specificationRef}
         id="Specification"
         className=" bg-white p-6 lg:rounded-md lg:shadow-md items-center w-auto  lg:mb-6"
+        // @ts-ignore
+        ref={specificationRef}
         >
-            <h6 className="text-2xl text-gray-900 font-bold my-4">
+            <h6 className="text-2xl text-gray-900 font-bold my-4" 
+           
+            >
             Specification
           </h6>
           <hr className="hidden lg:block my-6  border-t border-gray-300" />
