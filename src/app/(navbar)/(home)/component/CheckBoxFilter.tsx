@@ -22,7 +22,7 @@ export default function CheckBoxFilter({
 
 return (
 
-      <div className="hidden lg:flex flex-col gap-4 col-span-1 border min-w-60 max-w-60 h-fit rounded-lg p-2 animate-slideleft">
+      <div className="hidden lg:flex flex-col gap-4 col-span-1 border min-w-60 max-w-60 h-fit rounded-lg p-2 animate-slideleft z-10">
         <div className="flex items-center justify-between gap-1 ">
             <h6 className="text-sm font-bold text-gray-900 ">Filter</h6>
             <button 

@@ -17,7 +17,7 @@ export default function Cpage({
     return (
 
     <> 
-    <div className="sticky top-10 h-fit ">
+    <div className="sticky top-24 h-fit ">
           <ScrollSpy
             overViewRef={overViewRef}
             specificationRef={specificationRef}

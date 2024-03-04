@@ -7,7 +7,7 @@ import { CheckBoxStateType, MarkDownData, TabStateType } from "./Home";
 import Input from "@/src/app/component/Input";
 import SearchIcon from "@/public/icon/SearchIcon";
 import SettingIcon from "@/public/icon/SettingsIcon";
-import FilterDropdown from "./FilterDropdown";
+import SortDropDown from "./SortDropdown";
 import GridIcon from "@/public/icon/GridIcon";
 import ListIcon from "@/public/icon/ListIcon";
 import { newFilter } from "../Text"
@@ -78,7 +78,7 @@ export default function ProjectTab({
 
                     <div className="hidden lg:flex justify-end items-center gap-3 flex-wrap">
 
-                        <FilterDropdown
+                        <SortDropDown
                             state={state}
                             setState={setState}
                         />

@@ -1,4 +1,6 @@
+import { Suspense } from "react"
 import Navbar from "../component/navbar/Navbar"
+import Loading from "./loading"
 
 
 export default function Layout({
@@ -7,12 +9,11 @@ export default function Layout({
   children: React.ReactNode
 }>) {
   return (
-    <>
-  <div className="py-4">
-
-    <Navbar/>
-  </div>
-    {children}
-    </>
+    <Suspense fallback={<Loading/>}>
+        <div className="sticky top-0 z-40">
+      <Navbar/>
+    </div>
+      {children}
+    </Suspense>
   )
 }

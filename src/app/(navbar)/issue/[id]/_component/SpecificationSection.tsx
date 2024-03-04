@@ -1,5 +1,5 @@
 import { MarkDownData } from "../../../(home)/component/Home"
-import "./temp.css"
+
 export default function SpecificationSection({
     content,
     specificationRef

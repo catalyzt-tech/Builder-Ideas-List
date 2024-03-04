@@ -24,8 +24,7 @@ export type CheckBoxStateType = {
     "SkillSet": string[]
 }
 
-export type MarkDownData = {
-    id: string;
+export interface MarkDownData extends LoadMarkDownType {
     title: string;
     description: string;
     lang: string;
@@ -33,7 +32,11 @@ export type MarkDownData = {
     category: string;
     effort: string;
     labels: string;
-    contentHtml: string;
     skillset: string;
+};
+  
+export type LoadMarkDownType = {
+    id: string;
+    contentHtml: string;
 };
   

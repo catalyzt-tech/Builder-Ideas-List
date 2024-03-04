@@ -1,27 +1,80 @@
 
-import BreadCrump from '@/src/app/(navbar)/(home)/component/BreadCrump';
 import HeroSection from '@/src/app/(navbar)/(home)/component/HeroSection';
 import fs from 'fs';
 import path from 'path';
-import { MarkDownData } from './component/Home';
+import { LoadMarkDownType, MarkDownData } from './component/Home';
 import Cpage from './Cpage';
+import matter from "gray-matter";
+import { remark } from "remark";
+import html from "remark-html";
+import Custom500 from '../../custom-error';
 
-async function getResources(): Promise<Omit<MarkDownData, "contentHtml">[]> {
+async function getResources(): Promise<{
+  jsonData: Omit<MarkDownData, "contentHtml">[];
+  overViewData: string | LoadMarkDownType;
+}> {
   try {
-      const directoryPath = path.join(process.cwd(), 'public', 'static', 'output.json');
-      const fileContents = await fs.readFileSync(directoryPath, 'utf8');
+    
+    const jsonData = await getJsonData()
 
-      const jsonData = JSON.parse(fileContents);
-      return jsonData;
+    const overViewData = await getOverViewData("overview")
 
+    // test loading page
+    await new Promise(resolve => setTimeout(resolve, 200));
+    return {jsonData, overViewData};
   } catch (error) {
-      throw error; 
+    throw error; 
+  }
+}
+
+async function getJsonData(): Promise<Omit<MarkDownData, "contentHtml">[]>{
+  const directoryPath = path.join(process.cwd(), 'public', 'static', 'output.json');
+    
+  const fileContents = await fs.promises.readFile(directoryPath, 'utf8');
+  const jsonData: Omit<MarkDownData, "contentHtml">[] = JSON.parse(fileContents);
+  return jsonData;
+}
+
+async function getOverViewData(id: string): Promise<LoadMarkDownType | string> {
+  const encodedFileName = encodeURIComponent(id);
+  const fullPath = path.join(
+    process.cwd(),
+    "public",
+    "overview",
+    encodedFileName
+  ) + ".md";
+
+  try {
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const matterResult = matter(fileContents);
+
+    const processedContent = await remark()
+      .use(html)
+      .process(matterResult.content);
+
+    const contentHtml = processedContent.toString();
+    
+    //@ts-ignore
+    return {
+      id: id.replace(/\.md$/, ""),
+      contentHtml: contentHtml,
+    };
+  } catch (error) {
+    console.error("Error processing markdown data:", error);
+    return String(error)
   }
 }
 
 export default async function Home () {
   
-  const markdownContent = await getResources()
+  const {jsonData, overViewData} = await getResources()
+  if (typeof overViewData === "string") {
+    return <Custom500
+    errorMsg={overViewData}
+    status={500}
+    titleError="Get markdown overview failed"
+    />
+  }
 
   return (
     <div className="">
@@ -41,7 +94,8 @@ export default async function Home () {
         
         <div className="">
           <Cpage
-          markdownContents={markdownContent}
+          overViewData={overViewData}
+          markdownContents={jsonData}
           />
         </div>
       </div>

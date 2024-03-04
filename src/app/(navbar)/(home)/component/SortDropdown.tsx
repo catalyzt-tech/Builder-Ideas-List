@@ -5,7 +5,7 @@ import { TabStateType } from './Home'
 import SortIcon from '@/public/icon/SortIcon'
 import CorrectIcon from '@/public/icon/CorrectIcon'
 
-export default function FilterDropdown({
+export default function SortDropdown({
   state,
   setState
 }: {

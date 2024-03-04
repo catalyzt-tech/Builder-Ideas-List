@@ -10,7 +10,7 @@ export default function BreadCrump({
 return (
 
     <> 
-    <div className="hidden lg:block px-[4rem] lg:px-[8rem] pt-[1.5rem] items-center">
+    {/* <div className="hidden lg:block px-[4rem] lg:px-[8rem] pt-[1.5rem] items-center">
         <div className="flex items-center">
           <div className="pl-1 flex items-center">
             <HomeIcon/>
@@ -23,7 +23,23 @@ return (
           </a>
         </div>
         <hr className="my-4 border-t border-gray-300" />
-      </div>
+      </div> */}
+
+      <div className="hidden lg:flex flex-wrap items-center gap-4 border-b border-gray-300 pb-4 font-inter ">
+          <div className="flex gap-2 items-center">
+            <HomeIcon/>
+            <h6 className="text-sm font-medium text-gray-700">Home</h6>
+          </div>
+        
+          <div className="text-sm font-medium text-gray-600">/</div>
+          
+          <h6 className="text-sm font-medium text-gray-700">RetroPGF</h6>
+
+          <div className="text-sm font-medium text-gray-600">/</div>
+
+          <h6 className="text-sm font-medium text-gray-500">Open Project Idea</h6>
+
+        </div>
     </>
 
     )

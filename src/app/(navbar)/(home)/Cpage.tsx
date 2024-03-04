@@ -1,7 +1,7 @@
 "use client"
-import React, { Fragment, useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import TabPage from './component/Tab';
-import { CheckBoxStateType, MarkDownData, TabStateType } from './component/Home';
+import { CheckBoxStateType, LoadMarkDownType, MarkDownData, TabStateType } from './component/Home';
 import DialogFilter from './component/Dialog/DialogFilter';
 import { newFilter } from './Text';
 import DrawerFilter from './component/DrawerFilter';
@@ -13,10 +13,12 @@ import Filter from "@/public/filter/filter.json"
 
 interface HomeProps {
     markdownContents: Omit<MarkDownData, "contentHtml">[];
+    overViewData: LoadMarkDownType
 }
 
 export default function Cpage({
-    markdownContents
+    markdownContents,
+    overViewData
 }: HomeProps) {
     const searchParams = useSearchParams()
     const params = searchParams.get('grouping')
@@ -164,9 +166,6 @@ export default function Cpage({
     function handleGrouping(search:string) {
         Filter['url-link-groupings'].options.map((item, i) => {
             if(item.name === search){
-                
-                console.log(search)
-                console.log(item['category-ids'])
                 setCheckBox(prev => ({...prev, Category:item['category-ids']}))
             }
         })
@@ -178,6 +177,7 @@ export default function Cpage({
             handleGrouping(fullQuery)
         }        
     }, [searchParams])
+
     
 
     return (
@@ -189,7 +189,7 @@ export default function Cpage({
                 ─█▀▀█ ░█─── ░█─── 　 ░█▀▀█ ▀▀█▀▀ ░█▄─░█ 
                 ░█▄▄█ ░█─── ░█─── 　 ░█▀▀▄ ─░█── ░█░█░█ 
                 ░█─░█ ░█▄▄█ ░█▄▄█ 　 ░█▄▄█ ─░█── ░█──▀█
-        */}
+            */}
 
             <TabPage
                 state={state}
@@ -199,7 +199,9 @@ export default function Cpage({
 
 
             {state.index === 0 && 
-                <OverViewTab/>
+                <OverViewTab
+                overViewData={overViewData}
+                />
             }
             {state.index === 1 && 
                 <ProjectTab
