@@ -29,7 +29,7 @@ export default function ScrollSpy({
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [overViewRef, specificationRef]);
 
 
   return (

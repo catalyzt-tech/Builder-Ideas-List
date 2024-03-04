@@ -103,7 +103,7 @@ export default function Cpage({
 
             return searchCondition && typeCondition && effortCondition && labelCondition && categoryCondition && skillSetCondition;
         });
-    }, [markdownContents, search, checkBox["Type"], checkBox["Effort"], checkBox["Label"], checkBox["Category"], checkBox["SkillSet"]]);
+    }, [markdownContents, search, checkBox]);
 
 
 
@@ -176,7 +176,7 @@ export default function Cpage({
         if(fullQuery && fullQuery.length > 2) {
             handleGrouping(fullQuery)
         }        
-    }, [searchParams])
+    }, [fullQuery])
 
     
 

@@ -1,16 +1,3 @@
-แก่ route
-เอา type project ออก
-ดึงข้อมูล filter จาก json
-อะไรที่มีแค่ 1 อันไม่ต้อง filter แต่ต้องเลือกเป็นอันนี้เลย
-เพิ่ม skill set
-category มี tooltip
-
-type
-category
-effort
-skillset
-label
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
