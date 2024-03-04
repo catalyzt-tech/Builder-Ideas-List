@@ -50,23 +50,23 @@ return (
     )
 }
 
-export function CheckBoxSkillset({
+export function CheckBoxSkillsets({
   checkBox,
   handleChangeCheckBox,
 }:{
-  checkBox: Pick<CheckBoxStateType, "SkillSet">
+  checkBox: Pick<CheckBoxStateType, "SkillSets">
   handleChangeCheckBox: (name: keyof CheckBoxStateType, value: string) => void
 })  {
 
 return (
     <> 
-      {newFilter["skillset"].options.map((item, i) => (
+      {newFilter["skillsets"].options.map((item, i) => (
           <Checkbox
            key={i}
            label={item}
            value={item}
-           checked={checkBox["SkillSet"].includes(item)}
-           onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChangeCheckBox("SkillSet" as keyof CheckBoxStateType, e.target.value)}
+           checked={checkBox["SkillSets"].includes(item)}
+           onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChangeCheckBox("SkillSets" as keyof CheckBoxStateType, e.target.value)}
          />
         ))}
     </>

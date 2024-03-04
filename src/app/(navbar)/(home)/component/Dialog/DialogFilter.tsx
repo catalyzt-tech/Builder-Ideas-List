@@ -4,7 +4,7 @@ import { Fragment } from 'react'
 import CloseIcon from "@/public/icon/CloseIcon"
 import Checkbox from '@/src/app/component/Checkbox/Checkbox';
 import { CheckBoxStateType } from '../Home';
-import { CheckBoxCategory, CheckBoxEffort, CheckBoxSkillset, CheckBoxType } from '../Filter/CheckBox';
+import { CheckBoxCategory, CheckBoxEffort, CheckBoxSkillsets, CheckBoxType } from '../Filter/CheckBox';
 import { newFilter } from '../../Text';
 export default function DialogFilter({
   open,
@@ -64,33 +64,11 @@ export default function DialogFilter({
 
                   <div className="flex">
                     <div className=" flex flex-wrap gap-8">
-                      <div className="flex flex-wrap flex-col gap-1 ">
-                          <h6 className="text-xs font-medium text-gray-400 mb-2">Type</h6>
-                            <CheckBoxType
-                            checkBox={checkBox}
-                            handleChangeCheckBox={handleChangeCheckBox}
-                            />
-                       
-                        <div className={`flex flex-col gap-1 mt-8`}>
-                          <h6 className="text-xs font-medium text-gray-400 mb-2">Effort</h6>
-                            <CheckBoxEffort
-                            checkBox={checkBox}
-                            handleChangeCheckBox={handleChangeCheckBox}
-                            />
-                        </div>
-                      </div>
 
-                      <div className="flex flex-col gap-1  ">
-                        <h6 className="text-xs font-medium text-gray-400 mb-2">Category</h6>
-                          <CheckBoxCategory
-                          checkBox={checkBox}
-                          handleChangeCheckBox={handleChangeCheckBox}
-                          />
-                      </div>
-                     
-                      <div className="flex flex-col gap-1  ">
+
+                    <div className="flex flex-col gap-1  ">
                         <h6 className="text-xs font-medium text-gray-400 mb-2">Skill Set</h6>
-                          <CheckBoxSkillset
+                          <CheckBoxSkillsets
                           checkBox={checkBox}
                           handleChangeCheckBox={handleChangeCheckBox}
                           />
@@ -124,6 +102,37 @@ export default function DialogFilter({
                           </div>
                         </div>
                       </div>
+                            
+
+                      <div className={`flex flex-col gap-1 `}>
+                          <h6 className="text-xs font-medium text-gray-400 mb-2">Effort</h6>
+                            <CheckBoxEffort
+                            checkBox={checkBox}
+                            handleChangeCheckBox={handleChangeCheckBox}
+                            />
+                      </div>
+
+                      <div className="flex flex-col gap-1  ">
+                        <h6 className="text-xs font-medium text-gray-400 mb-2">Category</h6>
+                          <CheckBoxCategory
+                          checkBox={checkBox}
+                          handleChangeCheckBox={handleChangeCheckBox}
+                          />
+                      </div>
+                     
+                     {newFilter["type"].length > 1 && 
+                      <div className="flex flex-wrap flex-col gap-1 ">
+                        <h6 className="text-xs font-medium text-gray-400 mb-2">Type</h6>
+                          <CheckBoxType
+                          checkBox={checkBox}
+                          handleChangeCheckBox={handleChangeCheckBox}
+                          />
+                      </div>
+                     }
+
+                      
+
+                  
 
                     </div>
                   </div>

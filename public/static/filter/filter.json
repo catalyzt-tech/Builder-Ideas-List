@@ -56,7 +56,7 @@
     "url-link-groupings": {
       "options": [
         {
-          "name": "retroPGF#4",
+          "name": "retroPGF4",
           "category-ids": ["dev-tooling", "dev-onboarding", "protocol-infra"]
         },
         {
@@ -71,7 +71,7 @@
       "type": "single-option",
       "options": ["Tiny", "Small", "Medium", "Large", "Extra Large"]
     },
-    "skillset": {
+    "skillsets": {
       "description": "The skill sets involved in building the idea.",
       "char-limit": 50,
       "type": "multiple-options",

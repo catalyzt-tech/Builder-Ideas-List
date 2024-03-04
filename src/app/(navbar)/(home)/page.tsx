@@ -28,7 +28,7 @@ async function getResources(): Promise<{
 }
 
 async function getJsonData(): Promise<Omit<MarkDownData, "contentHtml">[]>{
-  const directoryPath = path.join(process.cwd(), 'public', 'static', 'output.json');
+  const directoryPath = path.join(process.cwd(), 'public', 'static', 'json', 'output.json');
     
   const fileContents = await fs.promises.readFile(directoryPath, 'utf8');
   const jsonData: Omit<MarkDownData, "contentHtml">[] = JSON.parse(fileContents);
@@ -40,6 +40,7 @@ async function getOverViewData(id: string): Promise<LoadMarkDownType | string> {
   const fullPath = path.join(
     process.cwd(),
     "public",
+    "static",
     "overview",
     encodedFileName
   ) + ".md";
@@ -78,7 +79,7 @@ export default async function Home () {
 
   return (
     <div className="">
-      <div className="px-4 md:px-[4rem] lg:px-[8rem] py-[2.5rem] bg-gradient-to-b from-[#E2E8F0] to-white ">
+      <div className="px-4 md:px-[4rem] lg:px-[8rem] py-[2.5rem] bg-gradient-to-b from-[#E2E8F0] text-gray-900 to-white ">
         {/* <BreadCrump /> */}
 
         <div className="pt-14 ">

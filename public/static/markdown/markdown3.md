@@ -2,11 +2,11 @@
 title: Mark 
 description: "A UI to monitor OP Mainnet withdrawals for network safety."
 lang: en-US
-type: Delegate Mission Request
-category: "S5: Intent 1 - Progress towards technical decentralization"
+type: Project Idea
+category: Protocol Infrastructure
 effort: Small 
 labels: "Documentation, Gaming, Governance, NFTs, Protocol, Wallets, RetroPGF"
-skillset: Full Stack
+skillsets: "Full Stack, Smart Contracts"
 ---
 
 # Title

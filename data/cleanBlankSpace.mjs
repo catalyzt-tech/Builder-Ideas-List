@@ -15,7 +15,8 @@ async function replaceWhitespaceWithHyphen(directoryPath) {
 
         for (const fileName of fileNames) {
             const filePath = path.join(directoryPath, fileName);
-            const newFileName = fileName.replace(/\s+/g, '-');
+            let newFileName = fileName.replace(/\s+/g, '-');
+            // console.log(newFileName)
             const newFilePath = path.join(directoryPath, newFileName);
 
             if (fileName !== newFileName) {
@@ -28,8 +29,16 @@ async function replaceWhitespaceWithHyphen(directoryPath) {
     }
 }
 
-const directoryPath = path.join(process.cwd(), 'public', 'static');
+const directoryPath = path.join(process.cwd(), 'public', 'static', 'markdown');
  
-console.info(`ℹ Cleaning Blank Space`);
+console.info(`
+░█▀▀█ ░█─── ░█▀▀▀ ─█▀▀█ ░█▄─░█ ▀█▀ ░█▄─░█ ░█▀▀█ 　 ░█▀▀█ ░█─── ─█▀▀█ ░█▄─░█ ░█─▄▀ 　 ░█▀▀▀█ ░█▀▀█ ─█▀▀█ ░█▀▀█ ░█▀▀▀ 
+░█─── ░█─── ░█▀▀▀ ░█▄▄█ ░█░█░█ ░█─ ░█░█░█ ░█─▄▄ 　 ░█▀▀▄ ░█─── ░█▄▄█ ░█░█░█ ░█▀▄─ 　 ─▀▀▀▄▄ ░█▄▄█ ░█▄▄█ ░█─── ░█▀▀▀ 
+░█▄▄█ ░█▄▄█ ░█▄▄▄ ░█─░█ ░█──▀█ ▄█▄ ░█──▀█ ░█▄▄█ 　 ░█▄▄█ ░█▄▄█ ░█─░█ ░█──▀█ ░█─░█ 　 ░█▄▄▄█ ░█─── ░█─░█ ░█▄▄█ ░█▄▄▄
+`);
 await replaceWhitespaceWithHyphen(directoryPath);
-console.info("✅ Cleaning Done");
+console.info(`
+░█▀▀▄ ░█▀▀▀█ ░█▄─░█ ░█▀▀▀ 
+░█─░█ ░█──░█ ░█░█░█ ░█▀▀▀ 
+░█▄▄▀ ░█▄▄▄█ ░█──▀█ ░█▄▄▄
+`);

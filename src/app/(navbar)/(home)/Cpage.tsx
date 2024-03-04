@@ -8,7 +8,9 @@ import DrawerFilter from './component/DrawerFilter';
 import ProjectTab from './component/ProjectTab';
 import OverViewTab from './component/OverViewTab';
 import { useSearchParams } from 'next/navigation'
-import Filter from "@/public/filter/filter.json"
+import Filter from "@/public/static/filter/filter.json"
+import { useParams } from "next/navigation";
+
 
 
 interface HomeProps {
@@ -21,10 +23,10 @@ export default function Cpage({
     overViewData
 }: HomeProps) {
     const searchParams = useSearchParams()
+    const detector = useParams()
     const params = searchParams.get('grouping')
     // for special case like #4 it doesn't appear on params variable
-    const hash = typeof window !== 'undefined' ? window.location.hash : '';
-    let fullQuery = params + hash
+    let fullQuery = params
 
     const itemsPerPage = 15;
     // const { search }: HomeContextType = useHome?.()!;
@@ -37,9 +39,9 @@ export default function Cpage({
         // le stand for low effort
         // he stand for high effort
         sort: "a",
-        // index = 1 mean project
         // index = 0 mean overview
-        index: 0,
+        // index = 1 mean project
+        index: -1,
         // view have two option
         // g stand for grid
         // l stand for list
@@ -56,7 +58,7 @@ export default function Cpage({
         Effort: [],
         Label: [],
         Category: [],
-        SkillSet: [],
+        SkillSets: [],
     })
 
     function handleSearchChange(e:React.ChangeEvent<HTMLInputElement>) {
@@ -80,8 +82,8 @@ export default function Cpage({
                 checkBox["Effort"].some(elem => item.effort === elem) :
                 true;
 
-            const skillSetCondition = checkBox["SkillSet"].length !== 0 ?
-                checkBox["SkillSet"].some(elem => item.skillset === elem) :
+            const skillSetsCondition = checkBox["SkillSets"].length !== 0 ?
+                checkBox["SkillSets"].some(elem => item.skillsets.split(', ').some(subElem => subElem === elem)):
                 true;
 
             let categoryCondition: any;
@@ -97,7 +99,7 @@ export default function Cpage({
                 checkBox["Label"].some(elem => item.labels.split(', ').some(subElem => subElem === elem)) :
                 true;
 
-            return searchCondition && typeCondition && effortCondition && labelCondition && categoryCondition && skillSetCondition;
+            return searchCondition && typeCondition && effortCondition && labelCondition && categoryCondition && skillSetsCondition;
         });
     }, [markdownContents, search, checkBox, newFilter]);
 
@@ -155,7 +157,7 @@ export default function Cpage({
             Effort: [],
             Label: [],
             Category: [],
-            SkillSet: [],
+            SkillSets: [],
         })  
     }
 
@@ -165,17 +167,35 @@ export default function Cpage({
                 setCheckBox(prev => ({...prev, Category:item['category-ids']}))
             }
         })
-
     }
 
     useEffect(() => {
         if(fullQuery && fullQuery.length > 2) {
             handleGrouping(fullQuery)
-        }        
+        } 
+        // index = 0 mean overview
+        // index = 1 mean project
+        
     }, [fullQuery])
 
-    
 
+    useEffect(() => {
+        const currentHash = window.location.hash
+        switch (currentHash) {
+            case "#overview":
+                setState(prev => ({...prev, index: 0}))
+                break;
+            case "#project":
+                setState(prev => ({...prev, index: 1}))
+                break;
+                
+            default:
+                setState(prev => ({...prev, index: 0}))
+                break;
+        }
+    }, [detector])
+
+    
     return (
 
         <>

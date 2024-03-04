@@ -185,7 +185,7 @@ export default function ProjectTab({
                 ░█─── ░█▄▄█ ░█▄▄▄█ ░█──░█ ░█─░█ ─░█── 
                 ░█▄▄█ ░█─░█ ──░█── ░█▄▄▄█ ─▀▄▄▀ ─░█──
             */}
-            <div className="mt-[2.5rem] relative">
+            <div className="mt-[2.5rem] relative animate-slideup">
                 {state.view === "g" ?
                     <div className="animate-slideleft flex gap-6 ">
 

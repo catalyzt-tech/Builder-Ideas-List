@@ -3,7 +3,7 @@
 import Checkbox from "@/src/app/component/Checkbox/Checkbox"
 import { CheckBoxStateType } from "./Home"
 import { newFilter } from "../Text"
-import { CheckBoxCategory, CheckBoxEffort, CheckBoxSkillset, CheckBoxType } from "./Filter/CheckBox"
+import { CheckBoxCategory, CheckBoxEffort, CheckBoxSkillsets, CheckBoxType } from "./Filter/CheckBox"
 
 
 export default function CheckBoxFilter({
@@ -34,48 +34,16 @@ return (
         <hr className='h-[0.0625rem] bg-gray-200'/>
 
 
-
-        {newFilter["type"].length > 1 && 
-           <>
-            <div className="flex flex-col gap-1  ">
-            <h6 className="text-xs font-medium text-gray-400 mb-2">Type</h6>
-            <CheckBoxType
-                checkBox={checkBox}
-                handleChangeCheckBox={handleChangeCheckBox}
-            />
-        </div>
-        <hr className='h-[0.0625rem] bg-gray-200'/>
-           </>
-        }
-
-        <div className="flex flex-col gap-1 ">
-            <h6 className="text-xs font-medium text-gray-400 mb-2">Category</h6>
-            <CheckBoxCategory
-                checkBox={checkBox}
-                handleChangeCheckBox={handleChangeCheckBox}
-            />
-        </div>
-        <hr className='h-[0.0625rem] bg-gray-200'/>
-
-
-        <div className="flex flex-col gap-1  ">
-            <h6 className="text-xs font-medium text-gray-400 mb-2">Effort</h6>
-            <CheckBoxEffort
-            checkBox={checkBox}
-            handleChangeCheckBox={handleChangeCheckBox}
-            />
-        </div>
-        <hr className='h-[0.0625rem] bg-gray-200'/>
-       
+     
         <div className="flex flex-col gap-1  ">
             <h6 className="text-xs font-medium text-gray-400 mb-2">SkillSet</h6>
-            <CheckBoxSkillset
+            <CheckBoxSkillsets
             checkBox={checkBox}
             handleChangeCheckBox={handleChangeCheckBox}
             />
         </div>
         <hr className='h-[0.0625rem] bg-gray-200'/>
-       
+
         <div className="flex flex-col gap-1  ">
             <h6 className="text-xs font-medium text-gray-400 mb-2">Label</h6>
             {newFilter["labels"].map((item, i) => (
@@ -88,7 +56,44 @@ return (
                 />
             ))}
         </div>
-        
+        <hr className='h-[0.0625rem] bg-gray-200'/>
+
+        <div className="flex flex-col gap-1  ">
+            <h6 className="text-xs font-medium text-gray-400 mb-2">Effort</h6>
+            <CheckBoxEffort
+            checkBox={checkBox}
+            handleChangeCheckBox={handleChangeCheckBox}
+            />
+        </div>
+        <hr className='h-[0.0625rem] bg-gray-200'/>
+
+        <div className="flex flex-col gap-1 ">
+            <h6 className="text-xs font-medium text-gray-400 mb-2">Category</h6>
+            <CheckBoxCategory
+                checkBox={checkBox}
+                handleChangeCheckBox={handleChangeCheckBox}
+            />
+        </div>
+        {newFilter["type"].length > 1 && <hr className='h-[0.0625rem] bg-gray-200'/>}
+
+        {newFilter["type"].length > 1 && 
+           <>
+            <div className="flex flex-col gap-1  ">
+            <h6 className="text-xs font-medium text-gray-400 mb-2">Type</h6>
+            <CheckBoxType
+                checkBox={checkBox}
+                handleChangeCheckBox={handleChangeCheckBox}
+            />
+        </div>
+        <hr className='h-[0.0625rem] bg-gray-200'/>
+        </>
+        }
+
+      
+
+      
+       
+     
      
     </div>
 

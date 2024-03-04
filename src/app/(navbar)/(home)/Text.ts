@@ -1,9 +1,9 @@
-import Filter from "@/public/filter/filter.json"
+import Filter from "@/public/static/filter/filter.json"
 
 export const newFilter = {
     "type": Filter.type.options,
     "effort": Filter.effort.options,
-    "skillset": Filter.skillset,
+    "skillsets": Filter.skillsets,
     "labels": Filter.labels.options,
     "category": Filter.category.options,
 }

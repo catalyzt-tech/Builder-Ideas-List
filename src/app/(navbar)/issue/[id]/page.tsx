@@ -10,8 +10,8 @@ import Custom500 from "../../../custom-error";
 
 async function getResources(file: string): Promise<MarkDownData | string> {
   try {
-    const postDataPromises = getMarkDownData(file);
-    return await postDataPromises;
+    const postDataPromises = await getMarkDownData(file);
+    return postDataPromises;
   } catch (error) {
     console.error("Error fetching resources:", error);
     return "Failed to fetch resources";
@@ -24,6 +24,7 @@ async function getMarkDownData(id: string): Promise<MarkDownData | string> {
     process.cwd(),
     "public",
     "static",
+    "markdown",
     encodedFileName
   ) + ".md";
 

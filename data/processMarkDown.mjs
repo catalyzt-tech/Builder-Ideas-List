@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 
 
 export async function getResources() {
-    const directoryPath = path.join(process.cwd(), 'public', 'static');
+    const directoryPath = path.join(process.cwd(), 'public', 'static', 'markdown');
     const fileNames = await fs.readdir(directoryPath);
 
     let postDataPromises = [];
@@ -19,7 +19,7 @@ export async function getResources() {
 
     const jsonData = JSON.stringify(postData, null, 2);
 
-    const outputPath = path.join(process.cwd(), './public/static/output.json');
+    const outputPath = path.join(process.cwd(), './public/static/json/output.json');
     
     await fs.writeFile(outputPath, jsonData);
 
@@ -29,7 +29,7 @@ export async function getResources() {
 // Promise<MarkDownData>
 async function getMarkDownData(id) {
   
-    const fullPath = path.join(process.cwd(), 'public', 'static', id); 
+    const fullPath = path.join(process.cwd(), 'public', 'static', 'markdown', id); 
     const fileContents = await fs.readFile(fullPath, 'utf8'); 
   
     const matterResult = matter(fileContents);
@@ -41,6 +41,14 @@ async function getMarkDownData(id) {
     };
 }
 
-console.info(`ℹ Generating Parties`);
+console.info(`
+░█▀▀█ ░█▀▀▀ ░█▄─░█ ░█▀▀▀ ░█▀▀█ ─█▀▀█ ▀▀█▀▀ ▀█▀ ░█▄─░█ ░█▀▀█ 　 ░█▀▄▀█ ─█▀▀█ ░█▀▀█ ░█─▄▀ ░█▀▀▄ ░█▀▀▀█ ░█──░█ ░█▄─░█ 
+░█─▄▄ ░█▀▀▀ ░█░█░█ ░█▀▀▀ ░█▄▄▀ ░█▄▄█ ─░█── ░█─ ░█░█░█ ░█─▄▄ 　 ░█░█░█ ░█▄▄█ ░█▄▄▀ ░█▀▄─ ░█─░█ ░█──░█ ░█░█░█ ░█░█░█ 
+░█▄▄█ ░█▄▄▄ ░█──▀█ ░█▄▄▄ ░█─░█ ░█─░█ ─░█── ▄█▄ ░█──▀█ ░█▄▄█ 　 ░█──░█ ░█─░█ ░█─░█ ░█─░█ ░█▄▄▀ ░█▄▄▄█ ░█▄▀▄█ ░█──▀█
+`);
 await getResources();
-console.info("✅ Parties Done");
+console.info(`
+░█▀▀▄ ░█▀▀▀█ ░█▄─░█ ░█▀▀▀ 
+░█─░█ ░█──░█ ░█░█░█ ░█▀▀▀ 
+░█▄▄▀ ░█▄▄▄█ ░█──▀█ ░█▄▄▄
+`);

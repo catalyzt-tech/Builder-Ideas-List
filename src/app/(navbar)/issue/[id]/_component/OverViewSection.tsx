@@ -48,8 +48,8 @@ return (
             </div>
            
             <div className="flex gap-3 items-center flex-wrap">
-                <p className="text-base font-normal text-gray-400">Skillset:</p>
-                <h6 className="text-base font-semibold text-gray-600">{content.skillset}</h6>
+                <p className="text-base font-normal text-gray-400">Skillsets:</p>
+                <h6 className="text-base font-semibold text-gray-600">{content.skillsets}</h6>
             </div>
             
             <div className="flex gap-3 items-center flex-wrap">
