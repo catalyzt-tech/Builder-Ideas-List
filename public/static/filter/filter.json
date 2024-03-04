@@ -1,0 +1,107 @@
+{
+    "title": {
+      "description": "The title for the request.",
+      "char-limit": 75,
+      "type": "text"
+    },
+    "description": {
+      "description": "A description of the request. Covers the core ask of the request.",
+      "char-limit": 250,
+      "type": "text"
+    },
+    "lang": {
+      "description": "The language for the request",
+      "char-limit": 6,
+      "type": "single-option",
+      "options": [{ "ENG": "en-US" }]
+    },
+    "type": {
+      "description": "The type of request.  Ideas List 2.0 ONLY has Project Ideas.",
+      "char-limit": 50,
+      "type": "single-option",
+      "options": ["Project Idea"]
+    },
+    "category": {
+      "description": "The category of the request.",
+      "char-limit": 50,
+      "type": "single-option",
+      "options": [
+        {
+          "id": "dev-tooling",
+          "name": "Developer Tooling",
+          "description": "Tooling to help developers build or deploy dapps for the Superchain."
+        },
+        {
+          "id": "dev-onboarding",
+          "name": "Developer Onboarding",
+          "description": "Tooling, guides & tutorials designed to onboard developers into the Superchain."
+        },
+        {
+          "id": "dev-experiment",
+          "name": "Developer Experimentation",
+          "description": "Technical experimentation for out there ideas. Lets test the bounds of what is possible!"
+        },
+        {
+          "id": "protocol-infra",
+          "name": "Protocol Infrastructure",
+          "description": "Infrastructure needed for protocols to run and be used, such as RPC providers, node infra, etc, node infra, etc."
+        },
+        {
+          "id": "dapp-idea",
+          "name": "Dapp Idea",
+          "description": "An idea for a dapp that is currently missing in the Superchain ecosystem."
+        }
+      ]
+    },
+    "url-link-groupings": {
+      "options": [
+        {
+          "name": "retroPGF4",
+          "category-ids": ["dev-tooling", "dev-onboarding", "protocol-infra"]
+        },
+        {
+          "name": "retroPGF",
+          "category-ids": ["dev-tooling"]
+        }
+      ]
+    },
+    "effort": {
+      "description": "The estimated effort needed to complete the request.",
+      "char-limit": 50,
+      "type": "single-option",
+      "options": ["Tiny", "Small", "Medium", "Large", "Extra Large"]
+    },
+    "skillsets": {
+      "description": "The skill sets involved in building the idea.",
+      "char-limit": 50,
+      "type": "multiple-options",
+      "options": [
+          "Front End", 
+          "Back End", 
+          "Full Stack", 
+          "Smart Contracts", 
+          "Protocol"
+      ]
+    },
+    "labels": {
+      "description": "The labels for the request.",
+      "char-limit": 50,
+      "type": "multiple-options",
+      "options": [
+        "OP Stack",
+        "Attestations",
+        "Chain Infra",
+        "Consumer Apps",
+        "Smart Contracts",
+        "DeFi",
+        "Developer Tooling",
+        "Documentation",
+        "Gaming",
+        "Governance",
+        "NFTs",
+        "Protocol",
+        "Wallets",
+        "RetroPGF"
+      ]
+    }
+  }
