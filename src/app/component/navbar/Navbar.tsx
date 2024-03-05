@@ -1,45 +1,40 @@
-"use client"
-import React, { useState } from "react";
-import DrawerNav from "./DrawerNav";
-import "./Navbar.css";
-import Link from "next/link";
+'use client'
+import React, { useState } from 'react'
+import DrawerNav from './DrawerNav'
+import './Navbar.css'
+import Link from 'next/link'
 
 const Navbar = () => {
-  const [open , setOpen] = useState(false)
-
+  const [open, setOpen] = useState(false)
+  const menu = [
+    { name: 'RetroPGF', link: 'https://app.optimism.io/retropgf-signup' },
+    { name: 'Bridge', link: 'https://app.optimism.io/bridge/deposit' },
+    { name: 'Airdrop', link: 'https://app.optimism.io/airdrops' },
+  ]
   return (
     <>
-      <div className="bg-white sticky top-0 z-20 shadow-md flex items-center justify-between px-6 h-[72px] ">
-        <div>
-          <Link className="text-custom-red font-rubik " href="/">
+      <div className="bg-white sticky top-0 z-20 shadow-md flex items-center px-6 h-18">
+        <div className="mr-12">
+          <Link className="text-custom-red font-rubik !font-semibold" href="/">
             OPTIMISM
           </Link>
         </div>
-
-        <div className="hidden lg:flex space-x-8 pr-2 items-center text-custom font-rubik">
-          <ul className="flex gap-8">
-            <a href="https://app.optimism.io/retropgf-signup" target="_blank">
-              <li className="NavMenu">
-                <div>RetroPGF</div>
-              </li>
-            </a>
-
-            <a href="https://app.optimism.io/bridge/deposit" target="_blank">
-              <li className="NavMenu">
-                <div>Bridge</div>
-              </li>
-            </a>
-
-            <a href="https://app.optimism.io/airdrops" target="_blank">
-              <li className="NavMenu">
-                <div>Airdrop</div>
-              </li>
-            </a>
-
+        <div className="hidden lg:flex space-x-8 pr-2 items-center text-custom ">
+          <ul className="flex gap-8 !font-inter   ">
+            {menu.map((item, index) => (
+              <a href={item.link} target="_blank" key={index}>
+                <li className="NavMenu !font-medium">
+                  <ul>{item.name}</ul>
+                </li>
+              </a>
+            ))}
             <li>
-              <a className="NavMenu flex items-center gap-1" href="#">
+              <a
+                className="NavMenu flex items-center gap-1 !font-medium"
+                href="#"
+              >
                 More
-                <div className="mt-[0.5px]">
+                <div className="mt-0.5">
                   <svg
                     width="16"
                     height="16"
@@ -57,7 +52,8 @@ const Navbar = () => {
                   </svg>
                 </div>
               </a>
-              <ul className="Dropdown overflow-y-auto max-h-[90vh]">
+
+              <ul className="Dropdown overflow-y-auto max-h-90vh">
                 <li className="Title">OPTIMISM</li>
                 <li className="Content">
                   <a
@@ -187,28 +183,25 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="flex lg:hidden Hamburger cursor-pointer" onClick={()=>setOpen(true)}>
+        <div
+          className="flex lg:hidden Hamburger cursor-pointer"
+          onClick={() => setOpen(true)}
+        >
           <a href="#">
-          <svg
-            fill="#424242"
-            width="24px"
-            height="24px"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M2,4A1,1,0,0,1,3,3H21a1,1,0,0,1,0,2H3A1,1,0,0,1,2,4Zm1,9H21a1,1,0,0,0,0-2H3a1,1,0,0,0,0,2Zm0,8H21a1,1,0,0,0,0-2H3a1,1,0,0,0,0,2Z" />
-          </svg>
+            <svg
+              fill="#424242"
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M2,4A1,1,0,0,1,3,3H21a1,1,0,0,1,0,2H3A1,1,0,0,1,2,4Zm1,9H21a1,1,0,0,0,0-2H3a1,1,0,0,0,0,2Zm0,8H21a1,1,0,0,0,0-2H3a1,1,0,0,0,0,2Z" />
+            </svg>
           </a>
         </div>
       </div>
-      
-      <DrawerNav
-      open={open}
-      onClose={()=>setOpen(false)}
-      ></DrawerNav>
-
-    
+      <DrawerNav open={open} onClose={() => setOpen(false)}></DrawerNav>
     </>
-  );
-};
-export default Navbar;
+  )
+}
+export default Navbar

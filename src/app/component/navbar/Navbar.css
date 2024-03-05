@@ -23,6 +23,7 @@
   height: 72px;
   display: flex;
   align-items: center;
+  font-weight: 600;
 }
 
 .NavMenu:hover {
@@ -181,7 +182,7 @@
   align-self: stretch;
 }
 
-.DrawerLink { 
+.DrawerLink {
   display: flex;
   align-items: center;
   height: 48px;
@@ -191,4 +192,21 @@
   text-decoration: none;
   transition: all ease 0.16s;
   width: 100%;
-} 
+}
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-wrapper:hover .Dropdown {
+  display: block;
+}
+
+.Dropdown {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
