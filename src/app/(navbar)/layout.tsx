@@ -11,11 +11,13 @@ export default function Layout({
 }>) {
   return (
     <Suspense fallback={<Loading />}>
-      <div className="sticky top-0 z-40">
-        <Navbar />
+      <div className="">
+        <div className="sticky top-0 z-40">
+          <Navbar />
+        </div>
+        {children}
+        <Footer />
       </div>
-      {children}
-      <Footer />
     </Suspense>
   )
 }

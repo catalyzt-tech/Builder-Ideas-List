@@ -78,7 +78,7 @@ export default async function Home () {
   }
 
   return (
-    <div className="">
+    <div className="min-h-screen">
       <div className="px-4 md:px-[4rem] lg:px-[8rem] py-[2.5rem] bg-gradient-to-b from-[#E2E8F0] text-gray-900 to-white ">
         {/* <BreadCrump /> */}
 
