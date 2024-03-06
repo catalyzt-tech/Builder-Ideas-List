@@ -187,7 +187,7 @@ export default function ProjectTab({
             */}
             <div className="mt-[2.5rem] relative animate-slideup">
                 {state.view === "g" ?
-                    <div className="animate-slideleft flex gap-6 ">
+                    <div className="animate-slideleft flex gap-6">
 
                         {/*  
                             ░█▀▀█ ░█─░█ ░█▀▀▀ ░█▀▀█ ░█─▄▀ ░█▀▀█ ░█▀▀▀█ ▀▄░▄▀ 
@@ -204,13 +204,16 @@ export default function ProjectTab({
                         }
 
                         <div className={`w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 h-fit`}>
-                            {currentItems.map((item, i) => (
+                            {currentItems.length !== 0 ? currentItems.map((item, i) => (
                                 <div className="" key={i}>
                                     <GridCard
                                         data={item}
                                     />
                                 </div>
-                            ))}
+                            ))
+                            :
+                            <h6 className="col-span-1 lg:col-span-2 xl:col-span-3 text-xl font-medium text-gray-500 text-center w-full">0 Items Found</h6>
+                            }
                         </div>
                     </div>
                     :

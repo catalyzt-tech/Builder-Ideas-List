@@ -24,7 +24,7 @@ export default function Cpage({
           />
         </div>
 
-        <div className="w-full lg:w-3/4 flex flex-col lg:mx-10">
+        <div className="w-full lg:w-3/4 flex flex-col lg:gap-8 lg:mx-10">
             <OverViewSection
             content={content}
             overViewRef={overViewRef}

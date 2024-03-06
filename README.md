@@ -1,11 +1,10 @@
-skillset
-label
-effort
-category
-type
+Tmr work before meeting (22.45)
 
-Skill set เป็น multi select
-แก้ table
+Adding "Contribution" (Contributor, discussion-link, execution-status)
+execution: เเต่ละ status จะมีสีของตัวเอง เเละต้อง add เข้า filter (Both project tab + detail)
+discussion-link: เป็น ปุ่มเเดง ๆ อยู่ซักส่วนของ specification ไม่ก็ overview ในหน้า content (only detail)
+contributor: โชว์เป็น static text ในช่อง overview (only detail)
+Adding "Author" to only detail page. => static text
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

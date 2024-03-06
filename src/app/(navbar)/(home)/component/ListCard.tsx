@@ -49,7 +49,7 @@ return (
                               <div className="inline-flex px-2 py-1 rounded-full bg-slate-100 hover:bg-slate-200/75 cursor-pointer w-fit">
                                   <h6 className="text-xs font-normal text-gray-600 line-clamp-1 break-all">{item.type}</h6>
                               </div>    
-                              {item.labels.split(",").map((subItem, i) => (
+                              {item.labels.map((subItem, i) => (
                               <div
                               key={i} 
                               className="inline-flex px-2 py-1 rounded-full bg-slate-100 hover:bg-slate-200/75 cursor-pointer w-fit">

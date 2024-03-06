@@ -9,7 +9,8 @@ export default function OverViewSection({
     overViewRef: React.MutableRefObject<HTMLElement | null>;
 })  {
 
-return (
+
+return (    
 
     <section
         ref={overViewRef}
@@ -49,13 +50,43 @@ return (
            
             <div className="flex gap-3 items-center flex-wrap">
                 <p className="text-base font-normal text-gray-400">Skillsets:</p>
-                <h6 className="text-base font-semibold text-gray-600">{content.skillsets}</h6>
+                <h6 className="text-base font-semibold text-gray-600">{content.skillsets.toString()}</h6>
             </div>
-            
+
+            <div className="flex gap-3 items-center flex-wrap">
+                <p className="text-base font-normal text-gray-400">Authors:</p>
+                <h6 className="text-base font-semibold text-gray-600">
+                    {content.authors.toString()}
+                </h6>
+            </div>
+
+            <div className="flex gap-3 items-center flex-wrap">
+                <p className="text-base font-normal text-gray-400">Contributors:</p>
+                <h6 className="text-base font-semibold text-gray-600">
+                    {content.contribution.contributors.toString()}
+                </h6>
+            </div>
+
+            <div className="flex gap-3 items-center flex-wrap">
+                <p className="text-base font-normal text-gray-400">Execution:</p>
+                <h6 className="text-base font-semibold text-gray-600">
+                    {content.contribution["execution-status"]}
+                </h6>
+            </div>
+
+
+
             <div className="flex gap-3 items-center flex-wrap">
                 <p className="text-base font-normal text-gray-400">Labels:</p>
-                <h6 className="text-base font-semibold text-gray-600">{content.labels}</h6>
+                <h6 className="text-base font-semibold text-gray-600">{content.labels.toString()}</h6>
             </div>
+
+            <a
+            className="w-fit   mt-8 border px-4 py-2 bg-primaryRed text-white rounded-md hover:bg-primaryRed/90 shadow-md"
+            href={content.contribution["discussion-link"][0]}
+            >
+                <h6 className="text-gray-100 text-center text-md font-medium">Discussion Link</h6>
+            </a>
 
         </div>
     </section>

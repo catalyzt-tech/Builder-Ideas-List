@@ -50,6 +50,29 @@ return (
     )
 }
 
+export function CheckBoxExecutionStatus({
+  checkBox,
+  handleChangeCheckBox,
+}:{
+  checkBox: Pick<CheckBoxStateType, "ExecutionStatus">
+  handleChangeCheckBox: (name: keyof CheckBoxStateType, value: string) => void
+})  {
+
+return (
+    <> 
+      {newFilter["execution-status"].map((item, i) => (
+          <Checkbox
+           key={i}
+           label={item.name}
+           value={item.id}
+           checked={checkBox["ExecutionStatus"].includes(item.id)}
+           onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChangeCheckBox("ExecutionStatus" as keyof CheckBoxStateType, e.target.value)}
+         />
+        ))}
+    </>
+    )
+}
+
 export function CheckBoxSkillsets({
   checkBox,
   handleChangeCheckBox,
