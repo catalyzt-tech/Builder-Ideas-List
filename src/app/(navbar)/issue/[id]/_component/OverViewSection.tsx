@@ -1,4 +1,5 @@
 "use client"
+import { handleStatus } from "../../../(home)/component/GridCard";
 import { MarkDownData } from "../../../(home)/component/Home"
 
 export default function OverViewSection({
@@ -17,6 +18,13 @@ return (
         id="Overview"
         className=" bg-white p-6 lg:rounded-md lg:shadow-md items-center w-auto  lg:mb-6"
     > 
+
+        <div className="flex gap-1 items-center py-0.5 px-1 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-50 w-fit">
+            {handleStatus(content.contribution["execution-status"])}
+        </div>
+
+
+
         <h6 className="text-3xl font-bold my-4 ">
             {content.title}
         </h6>

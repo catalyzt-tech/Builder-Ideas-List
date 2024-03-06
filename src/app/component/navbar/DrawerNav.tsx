@@ -4,6 +4,7 @@ import { Fragment, useState } from 'react'
 
 import CloseIcon from '@/public/icon/CloseIcon'
 import './Navbar.css'
+import Link from 'next/link'
 
 export default function DrawerNav({
   open,
@@ -29,11 +30,12 @@ export default function DrawerNav({
             <Dialog.Panel className="w-full h-full transform overflow-hidden bg-white  text-left align-middle shadow-xl transition-all  overflow-y-auto">
               <Dialog.Title
                 as="div"
-                className="flex justify-between items-center px-6 h-[72px]"
+                
+                className="flex justify-between items-center px-6 h-16"
               >
-                <a className="text-custom-red font-rubik " href="/">
+                <Link className="text-custom-red font-rubik !font-semibold " href="/">
                   OPTIMISM
-                </a>
+                </Link>
                 <div
                   className="cursor-pointer Hamburger flex"
                   onClick={onClose}

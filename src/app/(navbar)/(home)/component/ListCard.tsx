@@ -1,6 +1,7 @@
 import LinkIcon from "@/public/icon/LinkIcon";
 import { MarkDownData } from "./Home";
 import Link from "next/link";
+import { handleStatus } from "./GridCard";
 
 export default function ListCard({
     currentItems
@@ -8,8 +9,13 @@ export default function ListCard({
     currentItems:Omit<MarkDownData, "contentHtml">[]
 })  {
 
+
+
+
+
 return (
 
+   
     <> 
     {currentItems.length!== 0 ?
         <div className="relative overflow-x-hidden">
@@ -31,12 +37,15 @@ return (
                     { currentItems.map((item, i) => (
                     <tr className="border " key={i}>
                       <th scope="row" className="py-4 px-3 flex flex-col">
+                                <div className="flex gap-1 items-center py-0.5 px-1 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-50 w-fit mb-2">
+                                    {handleStatus(item.contribution["execution-status"])}
+                                </div>
                               <Link href={`/issue/${item.id}`} 
-                              className="flex gap-1 items-center cursor-pointer hover:underline">
-                                  <h6 className="text-sm font-bold text-gray-900">{item.title}</h6>
+                              className="flex gap-1 items-center cursor-pointer ">
+                                  <h6 className="hover:underline text-sm font-bold text-gray-900">{item.title}</h6>
                                   <LinkIcon/>
                               </Link>
-                              <p className="text-sm font-normal text-gray-500 line-clamp-2">
+                              <p className="text-sm font-normal text-gray-500 line-clamp-2 ">
                                   {item.description}
                             </p>
 

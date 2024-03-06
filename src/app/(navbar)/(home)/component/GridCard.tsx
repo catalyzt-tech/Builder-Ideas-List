@@ -9,80 +9,81 @@ import StatusInProgressClose from "@/public/icon/StatusInProgressClose";
 import StatusInProgressOpen from "@/public/icon/StatusInProgressOpen";
 import StatusAbandoned from "@/public/icon/StatusAbandoned";
 
+export function handleStatus(status:string) {
+    switch (status) {
+       
+        case "Not Started":
+            return (
+                <>
+                <StatusNotStart/>
+                   <div className="flex gap-1 items-center">
+                       <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
+                   </div>
+               </>
+            )
+        case "In Discussion":
+            return (
+                <>
+                <StatusInDiscussion/>
+                   <div className="flex gap-1 items-center">
+                       <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
+                   </div>
+               </>
+            )
+        case "In Progress - Open to Contributors":
+            return (
+                <>
+                <StatusInProgressOpen/>
+                   <div className="flex gap-1 items-center">
+                       <h6 className="text-xs font-medium text-gray-900 line-clamp-1">In Progress - Open</h6>
+                   </div>
+               </>
+            )
+        case "In Progress - Closed Contributor(s)":
+            return (
+                <>
+                <StatusInProgressClose/>
+                   <div className="flex gap-1 items-center">
+                       <h6 className="text-xs font-medium text-gray-900 line-clamp-1">In Progress - Closed</h6>
+                   </div>
+               </>
+            )
+        case "Completed":
+            return (
+                <>
+                <StatusCheck/>
+                    <div className="flex gap-1 items-center">
+                        <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
+                    </div>
+                </>
+            )
+        case "Abandoned":
+            return (
+                <>
+                <StatusAbandoned/>
+                    <div className="flex gap-1 items-center">
+                        <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
+                    </div>
+                </>
+            )
+
+
+        default:
+            return (
+                    <div className="flex gap-1 items-center">
+                        <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
+                    </div>
+            )
+    }
+}
+
+
 export default function GridCard({
     data
 }:{
     data:Omit<MarkDownData, "contentHtml">
 })  {
     // {data.contribution["execution-status"]}
-    function handleStatus(status:string) {
-        switch (status) {
-           
-            case "Not Started":
-                return (
-                    <>
-                    <StatusNotStart/>
-                       <div className="flex gap-1 items-center">
-                           <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
-                       </div>
-                   </>
-                )
-            case "In Discussion":
-                return (
-                    <>
-                    <StatusInDiscussion/>
-                       <div className="flex gap-1 items-center">
-                           <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
-                       </div>
-                   </>
-                )
-            case "In Progress - Open to Contributors":
-                return (
-                    <>
-                    <StatusInProgressOpen/>
-                       <div className="flex gap-1 items-center">
-                           <h6 className="text-xs font-medium text-gray-900 line-clamp-1">In Progress - Open</h6>
-                       </div>
-                   </>
-                )
-            case "In Progress - Closed Contributor(s)":
-                return (
-                    <>
-                    <StatusInProgressClose/>
-                       <div className="flex gap-1 items-center">
-                           <h6 className="text-xs font-medium text-gray-900 line-clamp-1">In Progress - Closed</h6>
-                       </div>
-                   </>
-                )
-            case "Completed":
-                return (
-                    <>
-                    <StatusCheck/>
-                        <div className="flex gap-1 items-center">
-                            <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
-                        </div>
-                    </>
-                )
-            case "Abandoned":
-                return (
-                    <>
-                    <StatusAbandoned/>
-                        <div className="flex gap-1 items-center">
-                            <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
-                        </div>
-                    </>
-                )
-
-
-            default:
-                return (
-                        <div className="flex gap-1 items-center">
-                            <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
-                        </div>
-                )
-                break;
-        }
-    }
 
     return (
 

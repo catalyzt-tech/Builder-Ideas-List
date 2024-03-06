@@ -73,6 +73,28 @@ export default function DrawerFilter({
                         ))}
                       </div>
                     </div>
+                   
+                    <div className="flex flex-col gap-2">
+                      <h6 className="text-xs font-medium text-gray-400">Execution Status</h6>
+                      <div className="flex gap-2 items-center flex-wrap">
+                        {newFilter["execution-status"].map((item, i) => (
+                          <div
+                            key={i}
+                            className={` 
+                          lg:block h-8
+                          hover:bg-secondaryRed hover:text-primaryRed hover:border hover:border-primaryRed
+                          border rounded-full px-3 py-1.5 cursor-pointer transition-colors self-center shrink-0
+                          ${checkBox["ExecutionStatus"].includes(item.id) ? "bg-secondaryRed text-primaryRed border-secondaryRed" : "text-slate-900 border"}
+                          `}
+                            onClick={() => {
+                              handleChangeCheckBox("ExecutionStatus" as keyof CheckBoxStateType, item.id)
+                            }}
+                          >
+                            <p className=" text-sm font-normal ">{item.name}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
 
                     <div className="flex flex-col gap-2">
                       <h6 className="text-xs font-medium text-gray-400 mb-1">Category</h6>
