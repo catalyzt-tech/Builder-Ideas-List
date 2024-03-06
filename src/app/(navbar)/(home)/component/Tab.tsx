@@ -26,26 +26,28 @@ export default function TabPage({
         },
       
     ]
-
   
 
 
-return (
+    return (
 
         <div className=" mt-[2rem] flex flex-col gap-4 ">
             <div className="flex justify-between gap-4 border-b">
                 <div className="flex gap-8 ">
                     {tab.map((item, i) => (
-                        <Link
-                        href={`/#${item.text.toLowerCase()}`}
+                        <a
+                            href={`#${item.text.toLowerCase()}`}
                             key={i}
                             id={"#" + item.text.toLowerCase()}
-                            onClick={() => handleChangeIndex(i)}
+                            onClick={() => {
+                                handleChangeIndex(i)
+                                // document.getElementById("#" + item.text.toLowerCase())?.scrollIntoView()
+                            }}
                             className={`${item.index === state.index ? "text-slate-900" : "text-slate-500"} hover:text-primaryRed  cursor-pointer flex items-center gap-2 px-4 py-1.5 relative`}
                         >
                             {item.index === state.index && <div className="absolute inset-x-0 bottom-0 h-0.5 bg-primaryRed animate-slideup"></div>}
                             <h6 className="font-rubik text-lg font-normal">{item.text}</h6>
-                        </Link>
+                        </a>
                     ))}
                 </div>
             </div>
