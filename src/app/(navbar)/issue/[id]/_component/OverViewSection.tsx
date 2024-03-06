@@ -74,7 +74,7 @@ return (
             <div className="flex gap-3 items-center flex-wrap">
                 <p className="text-base font-normal text-gray-400">Skillsets:</p>
                 {content.skillsets.map((item, i) => (
-                    <h6 className="text-base font-semibold text-gray-600">
+                    <h6 className="text-base font-semibold text-gray-600" key={i}>
                         {i !== content.skillsets.length -1 ? item + "," : item}
                     </h6>
                 ))}
@@ -91,7 +91,7 @@ return (
                 <p className="text-base font-normal text-gray-400">Contributors:</p>
                 <h6 className="text-base font-semibold text-gray-600">
                 {content.contribution.contributors.map((item, i) => (
-                    <h6 className="text-base font-semibold text-gray-600">
+                    <h6 className="text-base font-semibold text-gray-600" key={i}>
                         {i !== content.contribution.contributors.length -1 ? item + "," : item}
                     </h6>
                 ))}
@@ -110,7 +110,7 @@ return (
             <div className="flex flex-wrap gap-3 items-center">
                 <p className="text-base font-normal text-gray-400">Labels:</p>
                 {content.labels.map((item, i) => (
-                    <h6 className="text-base font-semibold text-gray-600">
+                    <h6 className="text-base font-semibold text-gray-600" key={i}>
                         {i !== content.labels.length -1 ? item + "," : item}
                     </h6>
                 ))}
