@@ -19,6 +19,7 @@ return (
             sizeCheckbox='min-w-[20px] min-h-[20px]'
             label={item}
             value={item}
+            className="cursor-pointer"
             checked={checkBox["Type"].includes(item)}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChangeCheckBox("Type" as keyof CheckBoxStateType, e.target.value)}
           />
@@ -42,6 +43,7 @@ return (
            key={i}
            label={item}
            value={item}
+           className="cursor-pointer"
            checked={checkBox["Effort"].includes(item)}
            onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChangeCheckBox("Effort" as keyof CheckBoxStateType, e.target.value)}
          />
@@ -65,6 +67,7 @@ return (
            key={i}
            label={item.name}
            value={item.id}
+           className="cursor-pointer"
            checked={checkBox["ExecutionStatus"].includes(item.id)}
            onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChangeCheckBox("ExecutionStatus" as keyof CheckBoxStateType, e.target.value)}
          />
@@ -88,6 +91,7 @@ return (
            key={i}
            label={item}
            value={item}
+           className="cursor-pointer"
            checked={checkBox["SkillSets"].includes(item)}
            onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChangeCheckBox("SkillSets" as keyof CheckBoxStateType, e.target.value)}
          />
@@ -112,6 +116,7 @@ return (
             key={i}
             label={item.name}
             value={item.id}
+            className="cursor-pointer"
             checked={checkBox["Category"].includes(item.id)}
             onChange={(e:React.ChangeEvent<HTMLInputElement>) => handleChangeCheckBox("Category" as keyof CheckBoxStateType, e.target.value)} 
             />
