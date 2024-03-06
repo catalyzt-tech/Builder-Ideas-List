@@ -1,4 +1,5 @@
 "use client"
+import { handleStatus } from "../../../(home)/component/GridCard";
 import { MarkDownData } from "../../../(home)/component/Home"
 
 export default function OverViewSection({
@@ -9,13 +10,21 @@ export default function OverViewSection({
     overViewRef: React.MutableRefObject<HTMLElement | null>;
 })  {
 
-return (
+
+return (    
 
     <section
         ref={overViewRef}
         id="Overview"
         className=" bg-white p-6 lg:rounded-md lg:shadow-md items-center w-auto  lg:mb-6"
     > 
+
+        <div className="flex gap-1 items-center py-0.5 px-1 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-50 w-fit">
+            {handleStatus(content.contribution["execution-status"])}
+        </div>
+
+
+
         <h6 className="text-3xl font-bold my-4 ">
             {content.title}
         </h6>
@@ -49,13 +58,43 @@ return (
            
             <div className="flex gap-3 items-center flex-wrap">
                 <p className="text-base font-normal text-gray-400">Skillsets:</p>
-                <h6 className="text-base font-semibold text-gray-600">{content.skillsets}</h6>
+                <h6 className="text-base font-semibold text-gray-600">{content.skillsets.toString()}</h6>
             </div>
-            
+
+            <div className="flex gap-3 items-center flex-wrap">
+                <p className="text-base font-normal text-gray-400">Authors:</p>
+                <h6 className="text-base font-semibold text-gray-600">
+                    {content.authors.toString()}
+                </h6>
+            </div>
+
+            <div className="flex gap-3 items-center flex-wrap">
+                <p className="text-base font-normal text-gray-400">Contributors:</p>
+                <h6 className="text-base font-semibold text-gray-600">
+                    {content.contribution.contributors.toString()}
+                </h6>
+            </div>
+
+            <div className="flex gap-3 items-center flex-wrap">
+                <p className="text-base font-normal text-gray-400">Execution:</p>
+                <h6 className="text-base font-semibold text-gray-600">
+                    {content.contribution["execution-status"]}
+                </h6>
+            </div>
+
+
+
             <div className="flex gap-3 items-center flex-wrap">
                 <p className="text-base font-normal text-gray-400">Labels:</p>
-                <h6 className="text-base font-semibold text-gray-600">{content.labels}</h6>
+                <h6 className="text-base font-semibold text-gray-600">{content.labels.toString()}</h6>
             </div>
+
+            <a
+            className="w-fit   mt-8 border px-4 py-2 bg-primaryRed text-white rounded-md hover:bg-primaryRed/90 shadow-md"
+            href={content.contribution["discussion-link"][0]}
+            >
+                <h6 className="text-gray-100 text-center text-md font-medium">Discussion Link</h6>
+            </a>
 
         </div>
     </section>

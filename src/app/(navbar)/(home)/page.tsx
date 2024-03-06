@@ -8,6 +8,7 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 import Custom500 from '../../custom-error';
+import Footer from '../../component/footer/Footer';
 
 async function getResources(): Promise<{
   jsonData: Omit<MarkDownData, "contentHtml">[];
@@ -78,6 +79,7 @@ export default async function Home () {
   }
 
   return (
+    <>
     <div className="min-h-screen">
       <div className="px-4 md:px-[4rem] lg:px-[8rem] py-[2.5rem] bg-gradient-to-b from-[#E2E8F0] text-gray-900 to-white ">
         {/* <BreadCrump /> */}
@@ -100,7 +102,10 @@ export default async function Home () {
           />
         </div>
       </div>
+
     </div>
+      <Footer />
+    </>
   );
 };
 

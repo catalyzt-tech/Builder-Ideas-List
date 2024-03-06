@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import TabPage from './component/Tab';
 import { CheckBoxStateType, LoadMarkDownType, MarkDownData, TabStateType } from './component/Home';
 import DialogFilter from './component/Dialog/DialogFilter';
-import { newFilter } from './Text';
+import { categoryKeyAndValue, newFilter } from './Text';
 import DrawerFilter from './component/DrawerFilter';
 import ProjectTab from './component/ProjectTab';
 import OverViewTab from './component/OverViewTab';
@@ -23,7 +23,7 @@ export default function Cpage({
     overViewData
 }: HomeProps) {
     const searchParams = useSearchParams()
-    const detector = useParams()
+    const sectionDetector = useParams()
     const params = searchParams.get('grouping')
     // for special case like #4 it doesn't appear on params variable
     let fullQuery = params
@@ -59,6 +59,7 @@ export default function Cpage({
         Label: [],
         Category: [],
         SkillSets: [],
+        ExecutionStatus: [],
     })
 
     function handleSearchChange(e:React.ChangeEvent<HTMLInputElement>) {
@@ -81,9 +82,9 @@ export default function Cpage({
             const effortCondition = checkBox["Effort"].length !== 0 ?
                 checkBox["Effort"].some(elem => item.effort === elem) :
                 true;
-
+            
             const skillSetsCondition = checkBox["SkillSets"].length !== 0 ?
-                checkBox["SkillSets"].some(elem => item.skillsets.split(', ').some(subElem => subElem === elem)):
+                checkBox["SkillSets"].some(elem => item.skillsets.some(subElem => subElem === elem)):
                 true;
 
             let categoryCondition: any;
@@ -95,14 +96,22 @@ export default function Cpage({
                 categoryCondition = true
             }
 
+            let executionCondition: any;
+            if (checkBox["ExecutionStatus"].length !== 0) {
+                let executionId = newFilter['execution-status'].find((elem) => elem.name === item.contribution['execution-status'])?.id
+                executionCondition = checkBox["ExecutionStatus"].some(elem => elem === executionId)
+            }
+            else {
+                executionCondition = true
+            }
+
             const labelCondition = checkBox["Label"].length !== 0 ?
-                checkBox["Label"].some(elem => item.labels.split(', ').some(subElem => subElem === elem)) :
+                checkBox["Label"].some(elem => item.labels.some(subElem => subElem === elem)) :
                 true;
 
-            return searchCondition && typeCondition && effortCondition && labelCondition && categoryCondition && skillSetsCondition;
+            return searchCondition && typeCondition && effortCondition && labelCondition && categoryCondition && skillSetsCondition && executionCondition;
         });
     }, [markdownContents, search, checkBox, newFilter]);
-
 
 
     const pageCount = useMemo(() => {
@@ -158,7 +167,8 @@ export default function Cpage({
             Label: [],
             Category: [],
             SkillSets: [],
-        })  
+            ExecutionStatus: [],
+        })
     }
 
     function handleGrouping(search:string) {
@@ -193,7 +203,7 @@ export default function Cpage({
                 setState(prev => ({...prev, index: 0}))
                 break;
         }
-    }, [detector])
+    }, [sectionDetector])
 
     
     return (
@@ -219,6 +229,7 @@ export default function Cpage({
                 overViewData={overViewData}
                 />
             }
+
             {state.index === 1 && 
                 <ProjectTab
                     checkBox={checkBox}

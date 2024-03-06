@@ -16,7 +16,6 @@ export default function Layout({
           <Navbar />
         </div>
         {children}
-        <Footer />
       </div>
     </Suspense>
   )
