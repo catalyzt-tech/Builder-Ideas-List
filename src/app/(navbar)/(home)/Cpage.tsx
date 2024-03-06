@@ -250,6 +250,7 @@ export default function Cpage({
                 checkBox={checkBox}
                 handleChangeCheckBox={handleChangeCheckBox}
                 open={state.dialog}
+                handleClearFilter={handleClearFilter}
                 onClose={() => setState(prev => ({ ...prev, dialog: false }))}
             />
 

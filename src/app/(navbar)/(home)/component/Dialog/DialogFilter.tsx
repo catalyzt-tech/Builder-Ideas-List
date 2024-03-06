@@ -10,11 +10,13 @@ export default function DialogFilter({
   open,
   onClose,
   checkBox,
-  handleChangeCheckBox
+  handleChangeCheckBox,
+  handleClearFilter
 }: {
   open: boolean;
   onClose: () => void,
   checkBox: CheckBoxStateType
+  handleClearFilter: () => void
   handleChangeCheckBox: (name: keyof CheckBoxStateType, value: string) => void
 }) {
 
@@ -144,7 +146,9 @@ export default function DialogFilter({
                     </div>
                   </div>
 
-                  <h6 className="text-sm text-end cursor-pointer font-bold text-gray-900 underline mt-3 hover:text-primaryRed">Clear Filters</h6>
+                  <h6 
+                  onClick={handleClearFilter}
+                  className="text-sm text-end cursor-pointer font-bold text-gray-900 underline mt-3 hover:text-primaryRed">Clear Filters</h6>
 
                 </Dialog.Panel>
               </Transition.Child>

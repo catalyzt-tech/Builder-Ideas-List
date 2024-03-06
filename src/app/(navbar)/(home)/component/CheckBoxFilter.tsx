@@ -3,7 +3,7 @@ import { Disclosure, Transition } from '@headlessui/react'
 import Checkbox from "@/src/app/component/Checkbox/Checkbox"
 import { CheckBoxStateType } from "./Home"
 import { newFilter } from "../Text"
-import { CheckBoxCategory, CheckBoxEffort, CheckBoxExecutionStatus, CheckBoxSkillsets, CheckBoxType } from "./Filter/CheckBox"
+import { CheckBoxEffort, CheckBoxExecutionStatus, CheckBoxSkillsets, CheckBoxType } from "./Filter/CheckBox"
 
 
 export default function CheckBoxFilter({

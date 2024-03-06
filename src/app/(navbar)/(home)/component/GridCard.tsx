@@ -1,17 +1,17 @@
 import EffortIcon from "@/public/icon/EffortIcon";
 import { MarkDownData } from "./Home";
 import Link from "next/link";
-import { categoryKeyAndValue } from "../Text";
+import { categoryKeyAndValue, newFilter } from "../Text";
 import StatusCheck from "@/public/icon/StatusCheck";
 import StatusNotStart from "@/public/icon/StatusNotStart";
 import StatusInDiscussion from "@/public/icon/StatusInDiscussion";
 import StatusInProgressClose from "@/public/icon/StatusInProgressClose";
 import StatusInProgressOpen from "@/public/icon/StatusInProgressOpen";
 import StatusAbandoned from "@/public/icon/StatusAbandoned";
+import { Tooltip as ReactTooltip } from "react-tooltip";
 
 export function handleStatus(status:string) {
     switch (status) {
-       
         case "Not Started":
             return (
                 <>
@@ -91,8 +91,22 @@ export default function GridCard({
         <div className="flex flex-col gap-4 border rounded-md p-3 h-full" >
         
         <div className="flex justify-between items-center">
-            <div className="flex gap-1 items-center py-0.5 px-1 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-50">
+            <div 
+            data-tooltip-id={data.contribution["execution-status"]} 
+            className="flex gap-1 items-center py-0.5 px-1 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-100 bg-gray-50">
                    {handleStatus(data.contribution["execution-status"])}
+                   <ReactTooltip
+                        opacity={100}
+                        id={data.contribution["execution-status"]}
+                        place="top"
+                        variant="error"
+                        style={{ zIndex: 99 }}
+                        className="text-sm font-light"
+                        content={
+                            newFilter["execution-status"].find((elem) => elem.name === data.contribution["execution-status"])?.description
+                        }
+                    />
+
             </div>
         </div>
 

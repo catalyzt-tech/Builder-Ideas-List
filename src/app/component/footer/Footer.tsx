@@ -11,9 +11,9 @@ const Footer = ({color="bg-white"}:{
     return (
             <footer
                 id="footer"
-                className={`w-full py-8  text-sm font-normal ${color}`}>
-                <div className="flex items-center justify-center gap-x-4">
-                    <h6 className="text-sm text-gray-700">
+                className={`w-full py-8  text-xs font-normal ${color}`}>
+                <div className="flex flex-wrap items-center justify-center gap-x-4">
+                    <h6 className="text-xs text-gray-700">
                         © 2024 Optimism
                     </h6>
                     <a href="https://github.com/catalyzt-team/Builder-Ideas-List">

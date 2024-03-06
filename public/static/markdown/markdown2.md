@@ -23,10 +23,6 @@ Furthermore, the open-source nature of the SDK underpins this mission’s object
 ---
 
 #### Please explain alignment with the relevant Intent
-1. First item
-2. Second item
-3. Third item
-4. Fourth item
 
 - Development
 - Plug-ins
@@ -40,5 +36,4 @@ Furthermore, the open-source nature of the SDK underpins this mission’s object
 - Promotion
 - Campaign Analysis and Retrospective
 
-![The San Juan Mountains are beautiful!](https://images.pexels.com/photos/1003914/pexels-photo-1003914.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
 
