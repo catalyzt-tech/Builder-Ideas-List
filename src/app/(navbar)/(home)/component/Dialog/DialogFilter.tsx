@@ -19,7 +19,6 @@ export default function DialogFilter({
   handleClearFilter: () => void
   handleChangeCheckBox: (name: keyof CheckBoxStateType, value: string) => void
 }) {
-
   return (
 
     <>
@@ -75,6 +74,16 @@ export default function DialogFilter({
                         />
                       </div>
 
+
+                      <div className={`flex flex-col gap-1 `}>
+                        <h6 className="text-xs font-medium text-gray-400 mb-2">Effort</h6>
+                        <CheckBoxEffort
+                          checkBox={checkBox}
+                          handleChangeCheckBox={handleChangeCheckBox}
+                        />
+                      </div>
+
+
                       <div className="flex flex-col gap-1  ">
                         <h6 className="text-xs font-medium text-gray-400 mb-2">Skill Set</h6>
                         <CheckBoxSkillsets
@@ -82,6 +91,17 @@ export default function DialogFilter({
                           handleChangeCheckBox={handleChangeCheckBox}
                         />
                       </div>
+
+
+                    
+                      <div className="flex flex-col gap-1  ">
+                        <h6 className="text-xs font-medium text-gray-400 mb-2">Category</h6>
+                        <CheckBoxCategory
+                          checkBox={checkBox}
+                          handleChangeCheckBox={handleChangeCheckBox}
+                        />
+                      </div>
+
 
 
                       <div className="flex flex-col gap-1  ">
@@ -113,23 +133,7 @@ export default function DialogFilter({
                       </div>
 
 
-                      <div className={`flex flex-col gap-1 `}>
-                        <h6 className="text-xs font-medium text-gray-400 mb-2">Effort</h6>
-                        <CheckBoxEffort
-                          checkBox={checkBox}
-                          handleChangeCheckBox={handleChangeCheckBox}
-                        />
-                      </div>
-
-                      <div className="flex flex-col gap-1  ">
-                        <h6 className="text-xs font-medium text-gray-400 mb-2">Category</h6>
-                        <CheckBoxCategory
-                          checkBox={checkBox}
-                          handleChangeCheckBox={handleChangeCheckBox}
-                        />
-                      </div>
-
-                      {newFilter["type"].length > 1 &&
+                      {/* {newFilter["type"].length > 1 &&
                         <div className="flex flex-wrap flex-col gap-1 ">
                           <h6 className="text-xs font-medium text-gray-400 mb-2">Type</h6>
                           <CheckBoxType
@@ -137,7 +141,7 @@ export default function DialogFilter({
                             handleChangeCheckBox={handleChangeCheckBox}
                           />
                         </div>
-                      }
+                      } */}
 
 
 

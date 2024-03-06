@@ -52,7 +52,7 @@ export default function DrawerFilter({
                   <hr className="my-3 border-gray-200 m-0  w-full" />
                   <div className="flex flex-col gap-4">
 
-                    <div className="flex flex-col gap-2">
+                    {/* <div className="flex flex-col gap-2">
                       <h6 className="text-xs font-medium text-gray-400">Type</h6>
                       <div className="flex gap-2 items-center flex-wrap">
                         {newFilter["type"].map((item, i) => (
@@ -72,7 +72,7 @@ export default function DrawerFilter({
                           </div>
                         ))}
                       </div>
-                    </div>
+                    </div> */}
                    
                     <div className="flex flex-col gap-2">
                       <h6 className="text-xs font-medium text-gray-400">Execution Status</h6>
@@ -91,6 +91,30 @@ export default function DrawerFilter({
                             }}
                           >
                             <p className=" text-sm font-normal ">{item.name}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                      
+
+                    <div className="flex flex-col gap-2">
+                      <h6 className="text-xs font-medium text-gray-400 mb-1">Effort</h6>
+                      <div className="flex gap-2 items-center flex-wrap">
+                        {newFilter["effort"].map((item, i) => (
+                          <div
+                            key={i}
+                            className={` 
+                        lg:block h-8
+                        hover:bg-secondaryRed hover:text-primaryRed hover:border hover:border-primaryRed
+                        border rounded-full px-3 py-1.5 cursor-pointer transition-colors self-center shrink-0
+                        ${checkBox["Effort"].includes(item) ? "bg-secondaryRed text-primaryRed border-secondaryRed" : "text-slate-900 border"}
+                        `}
+                            onClick={() => {
+                              handleChangeCheckBox("Effort" as keyof CheckBoxStateType, item)
+                            }}
+                          >
+                            <p className=" text-sm font-normal ">{item}</p>
                           </div>
                         ))}
                       </div>
@@ -118,28 +142,6 @@ export default function DrawerFilter({
                       </div>
                     </div>
 
-
-                    <div className="flex flex-col gap-2">
-                      <h6 className="text-xs font-medium text-gray-400 mb-1">Effort</h6>
-                      <div className="flex gap-2 items-center flex-wrap">
-                        {newFilter["effort"].map((item, i) => (
-                          <div
-                            key={i}
-                            className={` 
-                        lg:block h-8
-                        hover:bg-secondaryRed hover:text-primaryRed hover:border hover:border-primaryRed
-                        border rounded-full px-3 py-1.5 cursor-pointer transition-colors self-center shrink-0
-                        ${checkBox["Effort"].includes(item) ? "bg-secondaryRed text-primaryRed border-secondaryRed" : "text-slate-900 border"}
-                        `}
-                            onClick={() => {
-                              handleChangeCheckBox("Effort" as keyof CheckBoxStateType, item)
-                            }}
-                          >
-                            <p className=" text-sm font-normal ">{item}</p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
 
                     <div className="flex flex-col gap-2">
                       <h6 className="text-xs font-medium text-gray-400 mb-1">Skill Sets</h6>
