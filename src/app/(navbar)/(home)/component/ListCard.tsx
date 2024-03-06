@@ -2,6 +2,8 @@ import LinkIcon from "@/public/icon/LinkIcon";
 import { MarkDownData } from "./Home";
 import Link from "next/link";
 import { handleStatus } from "./GridCard";
+import { newFilter } from "../Text";
+import { Tooltip as ReactTooltip } from "react-tooltip";
 
 export default function ListCard({
     currentItems
@@ -34,12 +36,27 @@ return (
                     </tr>
                 </thead>
                 <tbody>
-                    { currentItems.map((item, i) => (
+
+                    {currentItems.map((item, i) => (
                     <tr className="border " key={i}>
-                      <th scope="row" className="py-4 px-3 flex flex-col">
-                                <div className="flex gap-1 items-center py-0.5 px-1 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-50 w-fit mb-2">
-                                    {handleStatus(item.contribution["execution-status"])}
-                                </div>
+                      <th className="py-4 px-3 flex flex-col">
+                            <div 
+                            data-tooltip-id={item.contribution["execution-status"]} 
+                            className="flex gap-1 items-center py-0.5 px-1 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-100 bg-gray-50 w-fit mb-2">
+                                {handleStatus(item.contribution["execution-status"])}
+                                <ReactTooltip   
+                                opacity={100}
+                                id={item.contribution["execution-status"]}
+                                place="top"
+                                variant="error"
+                                style={{ zIndex: 99 }}
+                                className="text-sm font-light"
+                                content={
+                                    newFilter["execution-status"].find((elem) => elem.name === item.contribution["execution-status"])?.description
+                                }
+                            />
+                            </div>
+
                               <Link href={`/issue/${item.id}`} 
                               className="flex gap-1 items-center cursor-pointer ">
                                   <h6 className="hover:underline text-sm font-bold text-gray-900">{item.title}</h6>

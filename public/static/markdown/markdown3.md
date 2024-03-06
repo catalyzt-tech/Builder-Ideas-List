@@ -28,17 +28,6 @@ Furthermore, the open-source nature of the SDK underpins this mission’s object
 3. Third item
 4. Fourth item
 
-- Development
-- Plug-ins
-- Frontend
-- Campaign Planning
-- Partnerships and Marketing Coordination
-- Promotion of Quests and DAO
-- Quest Design and Coordination
-- Delegation Campaign
-- Quest Operations
-- Promotion
-- Campaign Analysis and Retrospective
 
 ![The San Juan Mountains are beautiful!](https://images.pexels.com/photos/1003914/pexels-photo-1003914.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
 

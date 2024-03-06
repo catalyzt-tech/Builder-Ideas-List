@@ -167,7 +167,7 @@ export default function ProjectTab({
                             place="top"
                             variant="error"
                             style={{ zIndex: 99 }}
-                            className="tooltip-category"
+                            className="text-sm font-light"
                             content={item.description}
                         />
 

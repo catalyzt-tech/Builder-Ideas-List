@@ -76,7 +76,7 @@ export default async function page({ params }: { params: { id: string } }) {
       </div>
     </div>
       <Footer 
-      color="bg-gray-100"
+      color="bg-white lg:bg-gray-100"
       />
    </>
   );

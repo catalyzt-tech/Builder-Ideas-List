@@ -1,6 +1,8 @@
 "use client"
+import { newFilter } from "../../../(home)/Text";
 import { handleStatus } from "../../../(home)/component/GridCard";
 import { MarkDownData } from "../../../(home)/component/Home"
+import { Tooltip as ReactTooltip } from "react-tooltip";
 
 export default function OverViewSection({
     content,
@@ -19,8 +21,21 @@ return (
         className=" bg-white p-6 lg:rounded-md lg:shadow-md items-center w-auto  lg:mb-6"
     > 
 
-        <div className="flex gap-1 items-center py-0.5 px-1 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-50 w-fit">
+        <div 
+        data-tooltip-id={content.contribution["execution-status"]} 
+        className="flex gap-1 items-center py-0.5 px-1 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-100 bg-gray-50 w-fit">
             {handleStatus(content.contribution["execution-status"])}
+            <ReactTooltip   
+                opacity={100}
+                id={content.contribution["execution-status"]}
+                place="top"
+                variant="error"
+                style={{ zIndex: 99 }}
+                className="text-sm font-light"
+                content={
+                    newFilter["execution-status"].find((elem) => elem.name === content.contribution["execution-status"])?.description
+                }
+            />
         </div>
 
 
@@ -58,7 +73,11 @@ return (
            
             <div className="flex gap-3 items-center flex-wrap">
                 <p className="text-base font-normal text-gray-400">Skillsets:</p>
-                <h6 className="text-base font-semibold text-gray-600">{content.skillsets.toString()}</h6>
+                {content.skillsets.map((item, i) => (
+                    <h6 className="text-base font-semibold text-gray-600">
+                        {i !== content.skillsets.length -1 ? item + "," : item}
+                    </h6>
+                ))}
             </div>
 
             <div className="flex gap-3 items-center flex-wrap">
@@ -71,7 +90,11 @@ return (
             <div className="flex gap-3 items-center flex-wrap">
                 <p className="text-base font-normal text-gray-400">Contributors:</p>
                 <h6 className="text-base font-semibold text-gray-600">
-                    {content.contribution.contributors.toString()}
+                {content.contribution.contributors.map((item, i) => (
+                    <h6 className="text-base font-semibold text-gray-600">
+                        {i !== content.contribution.contributors.length -1 ? item + "," : item}
+                    </h6>
+                ))}
                 </h6>
             </div>
 
@@ -84,9 +107,13 @@ return (
 
 
 
-            <div className="flex gap-3 items-center flex-wrap">
+            <div className="flex flex-wrap gap-3 items-center">
                 <p className="text-base font-normal text-gray-400">Labels:</p>
-                <h6 className="text-base font-semibold text-gray-600">{content.labels.toString()}</h6>
+                {content.labels.map((item, i) => (
+                    <h6 className="text-base font-semibold text-gray-600">
+                        {i !== content.labels.length -1 ? item + "," : item}
+                    </h6>
+                ))}
             </div>
 
             <a
