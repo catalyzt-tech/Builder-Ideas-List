@@ -2,18 +2,99 @@ import EffortIcon from "@/public/icon/EffortIcon";
 import { MarkDownData } from "./Home";
 import Link from "next/link";
 import { categoryKeyAndValue } from "../Text";
+import StatusCheck from "@/public/icon/StatusCheck";
+import StatusNotStart from "@/public/icon/StatusNotStart";
+import StatusInDiscussion from "@/public/icon/StatusInDiscussion";
+import StatusInProgressClose from "@/public/icon/StatusInProgressClose";
+import StatusInProgressOpen from "@/public/icon/StatusInProgressOpen";
+import StatusAbandoned from "@/public/icon/StatusAbandoned";
 
 export default function GridCard({
     data
 }:{
     data:Omit<MarkDownData, "contentHtml">
 })  {
-    //📝     // "category": "S5: Intent 2 - Grow the Superchain",
+    // {data.contribution["execution-status"]}
+    function handleStatus(status:string) {
+        switch (status) {
+           
+            case "Not Started":
+                return (
+                    <>
+                    <StatusNotStart/>
+                       <div className="flex gap-1 items-center">
+                           <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
+                       </div>
+                   </>
+                )
+            case "In Discussion":
+                return (
+                    <>
+                    <StatusInDiscussion/>
+                       <div className="flex gap-1 items-center">
+                           <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
+                       </div>
+                   </>
+                )
+            case "In Progress - Open to Contributors":
+                return (
+                    <>
+                    <StatusInProgressOpen/>
+                       <div className="flex gap-1 items-center">
+                           <h6 className="text-xs font-medium text-gray-900 line-clamp-1">In Progress - Open</h6>
+                       </div>
+                   </>
+                )
+            case "In Progress - Closed Contributor(s)":
+                return (
+                    <>
+                    <StatusInProgressClose/>
+                       <div className="flex gap-1 items-center">
+                           <h6 className="text-xs font-medium text-gray-900 line-clamp-1">In Progress - Closed</h6>
+                       </div>
+                   </>
+                )
+            case "Completed":
+                return (
+                    <>
+                    <StatusCheck/>
+                        <div className="flex gap-1 items-center">
+                            <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
+                        </div>
+                    </>
+                )
+            case "Abandoned":
+                return (
+                    <>
+                    <StatusAbandoned/>
+                        <div className="flex gap-1 items-center">
+                            <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
+                        </div>
+                    </>
+                )
+
+
+            default:
+                return (
+                        <div className="flex gap-1 items-center">
+                            <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
+                        </div>
+                )
+                break;
+        }
+    }
 
     return (
 
         
         <div className="flex flex-col gap-4 border rounded-md p-3 h-full" >
+        
+        <div className="flex justify-between items-center">
+            <div className="flex gap-1 items-center py-0.5 px-1 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-50">
+                   {handleStatus(data.contribution["execution-status"])}
+            </div>
+        </div>
+
         <div>
             <Link 
             className="text-sm font-semibold text-gray-900 mb-0.5 line-clamp-1 hover:underline"
@@ -48,15 +129,7 @@ export default function GridCard({
             </div>
         </div>
 
-        <div className="flex justify-between items-center">
-            <div className="flex gap-1 items-center">
-                <EffortIcon/>
-                <div className="flex gap-1 items-center">
-                    <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{data.contribution["execution-status"]}</h6>
-                    <h6 className="text-xs font-medium text-gray-500">Execution Status</h6>
-                </div>
-            </div>
-        </div>
+     
     </div>
     
     

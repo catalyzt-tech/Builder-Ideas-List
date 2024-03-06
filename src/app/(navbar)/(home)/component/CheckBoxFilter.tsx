@@ -75,9 +75,9 @@ return (
                 >
                     <Disclosure.Panel className="text-sm text-gray-500">
                     <CheckBoxExecutionStatus
-            checkBox={checkBox}
-            handleChangeCheckBox={handleChangeCheckBox}
-            />
+                    checkBox={checkBox}
+                    handleChangeCheckBox={handleChangeCheckBox}
+                    />
                     </Disclosure.Panel>
                 </Transition>
             </>
@@ -85,7 +85,7 @@ return (
         </Disclosure>
 
 
-
+        <hr className='h-[0.0625rem] bg-gray-200'/>
 
           {/* 
               ░█▀▀▀█ ░█─▄▀ ▀█▀ ░█─── ░█─── 　 ░█▀▀▀█ ░█▀▀▀ ▀▀█▀▀ 
@@ -253,8 +253,6 @@ return (
         </Disclosure>
 
       
-        <hr className='h-[0.0625rem] bg-gray-200'/>
-    
 
        
         {/* <hr className='h-[0.0625rem] bg-gray-200'/> */}

@@ -11,6 +11,7 @@ export default function ListCard({
 return (
 
     <> 
+    {currentItems.length!== 0 ?
         <div className="relative overflow-x-hidden">
             <table className="w-full text-sm text-left rtl:text-right table-fixed ">
                 <thead className="text-gray-700 text-base font-semibold ">
@@ -27,8 +28,8 @@ return (
                     </tr>
                 </thead>
                 <tbody>
-                  {currentItems.length!== 0 && currentItems.map((item, i) => (
-                      <tr className="border " key={i}>
+                    { currentItems.map((item, i) => (
+                    <tr className="border " key={i}>
                       <th scope="row" className="py-4 px-3 flex flex-col">
                               <Link href={`/issue/${item.id}`} 
                               className="flex gap-1 items-center cursor-pointer hover:underline">
@@ -63,11 +64,16 @@ return (
                       </td>
                   
                   </tr>
-                  ))}
+                    ))}
                 
                 </tbody>
             </table>
         </div>
+        
+        :
+        <h6 className="col-span-1 lg:col-span-2 xl:col-span-3 text-xl font-medium text-gray-500 text-center w-full">0 Items Found</h6>
+
+        }
 
     </>
 

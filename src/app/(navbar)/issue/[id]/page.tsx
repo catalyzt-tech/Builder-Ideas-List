@@ -7,6 +7,7 @@ import { MarkDownData } from "../../(home)/component/Home";
 import BreadCrump from "./_component/BreadCrump";
 import Cpage from "./Cpage";
 import Custom500 from "../../../custom-error";
+import Footer from "@/src/app/component/footer/Footer";
 
 async function getResources(file: string): Promise<MarkDownData | string> {
   try {
@@ -65,6 +66,7 @@ export default async function page({ params }: { params: { id: string } }) {
   }
 
   return (
+   <>
     <div className=" bg-gray-100">
       <div className="lg:px-[4rem] xl:px-[10rem] lg:py-8">
         <BreadCrump content={content} />
@@ -73,5 +75,9 @@ export default async function page({ params }: { params: { id: string } }) {
         <Cpage content={content} />
       </div>
     </div>
+      <Footer 
+      color="bg-gray-100"
+      />
+   </>
   );
 }
