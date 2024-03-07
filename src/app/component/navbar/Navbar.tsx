@@ -13,7 +13,7 @@ const Navbar = () => {
   ]
   return (
     <>
-      <div className="bg-white sticky top-0 z-20 shadow-md flex items-center px-6 h-16 lg:justify-start justify-between w-full">
+      <div className="bg-white sticky top-0 z-20 shadow-md flex items-center lg:justify-start justify-between px-6 h-16">
         <div className="mr-12">
           <Link className="text-custom-red font-rubik !font-semibold" href="/">
             OPTIMISM
@@ -200,6 +200,9 @@ const Navbar = () => {
           </a>
         </div>
       </div>
+
+          
+
       <DrawerNav open={open} onClose={() => setOpen(false)}></DrawerNav>
     </>
   )

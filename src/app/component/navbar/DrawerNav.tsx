@@ -16,7 +16,7 @@ export default function DrawerNav({
   const [open2, setOpen2] = useState(false)
 
   return (
-    <>
+    <Transition appear show={open} as={Fragment}>
       <Dialog
         open={open}
         as="div"
@@ -27,11 +27,21 @@ export default function DrawerNav({
 
         <div className="fixed inset-0 overflow-y-auto h-full w-screen">
           <div className="flex h-full  items-center justify-center text-center ">
+          <Transition.Child
+                as={Fragment}
+                enter="duration-500"
+                enterFrom="- opacity-0"
+                enterTo=" opacity-100"
+                leave="ease-out duration-500"
+                leaveFrom=""
+                leaveTo=""
+              >
+                
             <Dialog.Panel className="w-full h-full transform overflow-hidden bg-white  text-left align-middle shadow-xl transition-all  overflow-y-auto">
               <Dialog.Title
                 as="div"
                 
-                className="flex justify-between items-center px-6 h-16"
+                className="flex justify-between items-center px-6 h-16 mr-4"
               >
                 <Link className="text-custom-red font-rubik !font-semibold " href="/">
                   OPTIMISM
@@ -94,6 +104,8 @@ export default function DrawerNav({
                 <hr className="my-3 border-gray-200 m-0  w-full" />
               </ul>
             </Dialog.Panel>
+            </Transition.Child>
+
           </div>
         </div>
         <Transition appear show={open2} as={Fragment}>
@@ -269,6 +281,6 @@ export default function DrawerNav({
           </Dialog>
         </Transition>
       </Dialog>
-    </>
+    </Transition>
   )
 }

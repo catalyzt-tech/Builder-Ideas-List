@@ -10,7 +10,8 @@ labels: ["OP Stack", "Attestations"]
 skillsets: ["Front End Development", "Back End Development"]
 contribution:
     contributors: ["@amanwithwings (GitHub) - DeepDAO"]
-    discussion-link: ["https://github.com/ethereum-optimism/ecosystem-contributions/issues/33"]
+    discussion-link: "https://github.com/ethereum-optimism/ecosystem-contributions/issues/33"
+    links: ["https://github.com/ethereum-optimism/ecosystem-contributions/issues/33", "https://github.com/ethereum-optimism/ecosystem-contributions/issues/33"]
     execution-status: "Not Started"
 ---
 
@@ -21,12 +22,13 @@ contribution:
 ##### h5
 ###### h6
 
-***test bol***
+***test bold***
 
 ```test```
 
-> Block Quote
+A *cat* meow
 
+> Block Quote
 
 
 # Please explain alignment with the relevant Intent
@@ -37,7 +39,7 @@ Furthermore, the open-source nature of the SDK underpins this mission’s object
 
 ---
 
-#### Please explain alignment with the relevant Intent
+# H1 Please explain alignment with the relevant Intent
 1. First item
 2. Second item
 3. Third item

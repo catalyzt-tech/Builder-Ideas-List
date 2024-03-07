@@ -9,7 +9,7 @@ export default function OverViewTab({
 
 return (
 
-    <div className="animate-slideup p-8"> 
+    <div className="animate-slideup"> 
         <div className="render" dangerouslySetInnerHTML={{__html: overViewData.contentHtml}} />
     </div>
 

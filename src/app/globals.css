@@ -32,16 +32,16 @@
     line-height: 2.25rem/* 36px */;
     --tw-text-opacity: 1;
     color: rgb(17 24 39 / var(--tw-text-opacity));
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
 }
 .render h2 {
     font-size: 1.5rem/* 24px */;
     line-height: 2rem/* 32px */;
     --tw-text-opacity: 1;
     color: rgb(17 24 39 / var(--tw-text-opacity));
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
 }
 .render h3 {
     font-size: 1.25rem/* 20px */;
