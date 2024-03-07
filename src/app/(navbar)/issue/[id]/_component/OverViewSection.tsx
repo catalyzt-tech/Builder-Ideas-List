@@ -21,7 +21,7 @@ export default function OverViewSection({
         <section
             ref={overViewRef}
             id="Overview"
-            className=" bg-white p-2 lg:p-6 lg:rounded-md lg:shadow-md items-center w-auto  lg:mb-6"
+            className=" bg-white p-3 sm:p-4 md:p-6 lg:rounded-md lg:shadow-md items-center w-auto  lg:mb-6"
         >
 
             <div

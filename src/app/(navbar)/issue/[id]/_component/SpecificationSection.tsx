@@ -14,7 +14,7 @@ return (
      <section   
         id="Specification"
         //  min-h-[60vh]
-        className=" bg-white p-6 lg:rounded-md lg:shadow-md items-center w-auto  lg:mb-6"
+        className=" bg-white  p-3 sm:p-4 md:p-6  lg:rounded-md lg:shadow-md items-center w-auto  lg:mb-6"
         // @ts-ignore
         ref={specificationRef}
         >
