@@ -36,7 +36,8 @@ export interface MarkDownData extends LoadMarkDownType {
     skillsets: string[];
     contribution: {
         contributors: string[],
-        "discussion-link": string[],
+        "discussion-link": string,
+        links: string[];
         "execution-status": string
     };
     authors: string[];

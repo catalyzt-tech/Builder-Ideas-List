@@ -23,7 +23,9 @@
       "contributors": [
         "@amanwithwings (GitHub) - DeepDAO"
       ],
-      "discussion-link": [
+      "discussion-link": "https://github.com/ethereum-optimism/ecosystem-contributions/issues/33",
+      "links": [
+        "https://github.com/ethereum-optimism/ecosystem-contributions/issues/33",
         "https://github.com/ethereum-optimism/ecosystem-contributions/issues/33"
       ],
       "execution-status": "Not Started"
@@ -37,7 +39,8 @@
     "type": "Project Idea",
     "category": "Developer Experimentation",
     "authors": [
-      "@smartcontracts (GitHub) - OP Labs"
+      "@smartcontracts (GitHub) - OP Labs",
+      "Testing user"
     ],
     "effort": "Medium",
     "labels": [
@@ -52,9 +55,14 @@
     ],
     "contribution": {
       "contributors": [
-        "@amanwithwings (GitHub) - DeepDAO"
+        "@amanwithwings (GitHub) - DeepDAO",
+        "TGRZiminiar"
       ],
       "discussion-link": [
+        "https://github.com/ethereum-optimism/ecosystem-contributions/issues/33"
+      ],
+      "links": [
+        "https://github.com/ethereum-optimism/ecosystem-contributions/issues/33",
         "https://github.com/ethereum-optimism/ecosystem-contributions/issues/33"
       ],
       "execution-status": "In Discussion"
@@ -85,12 +93,17 @@
     ],
     "contribution": {
       "contributors": [
-        "@amanwithwings (GitHub) - DeepDAO"
+        "@amanwithwings (GitHub) - DeepDAO",
+        "TGRZiminiar"
       ],
       "discussion-link": [
         "https://github.com/ethereum-optimism/ecosystem-contributions/issues/33"
       ],
-      "execution-status": "In Progress - Open to Contributors"
+      "links": [
+        "https://github.com/ethereum-optimism/ecosystem-contributions/issues/33",
+        "https://github.com/ethereum-optimism/ecosystem-contributions/issues/33"
+      ],
+      "execution-status": "In Progress - Open"
     }
   }
 ]

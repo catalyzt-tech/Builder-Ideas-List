@@ -9,9 +9,10 @@ effort: Small
 labels: ["Documentation", "Gaming", "Governance", "NFTs", "Protocol", "Wallets"]
 skillsets: ["Full Stack Development", "Smart Contracts Development"]
 contribution:
-    contributors: ["@amanwithwings (GitHub) - DeepDAO"]
+    contributors: ["@amanwithwings (GitHub) - DeepDAO", "TGRZiminiar"]    
     discussion-link: ["https://github.com/ethereum-optimism/ecosystem-contributions/issues/33"]
-    execution-status: "In Progress - Open to Contributors"
+    links: ["https://github.com/ethereum-optimism/ecosystem-contributions/issues/33", "https://github.com/ethereum-optimism/ecosystem-contributions/issues/33"]
+    execution-status: "In Progress - Open"
 ---
 
 # Please explain alignment with the relevant Intent

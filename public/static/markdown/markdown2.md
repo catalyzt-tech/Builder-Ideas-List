@@ -4,13 +4,14 @@ description: "This initiative aims to continue the development of open-source in
 lang: en-US
 type: Project Idea
 category: Developer Experimentation
-authors: ["@smartcontracts (GitHub) - OP Labs"]
+authors: ["@smartcontracts (GitHub) - OP Labs", "Testing user"]
 effort: Medium 
 labels: ["Chain Infra", "Consumer Apps", "Smart Contracts", "DeFi", "Developer Tooling"]
 skillsets: ["Back End Development"]
 contribution:
-    contributors: ["@amanwithwings (GitHub) - DeepDAO"]
+    contributors: ["@amanwithwings (GitHub) - DeepDAO", "TGRZiminiar"]
     discussion-link: ["https://github.com/ethereum-optimism/ecosystem-contributions/issues/33"]
+    links: ["https://github.com/ethereum-optimism/ecosystem-contributions/issues/33", "https://github.com/ethereum-optimism/ecosystem-contributions/issues/33"]
     execution-status: "In Discussion"
 ---
 

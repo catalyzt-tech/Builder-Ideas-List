@@ -1,7 +1,6 @@
 import { Suspense } from "react"
 import Navbar from "../component/navbar/Navbar"
 import Loading from "./loading"
-import Footer from "../component/footer/Footer"
 
 
 export default function Layout({

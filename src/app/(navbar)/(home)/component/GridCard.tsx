@@ -30,21 +30,21 @@ export function handleStatus(status:string) {
                    </div>
                </>
             )
-        case "In Progress - Open to Contributors":
+        case "In Progress - Open":
             return (
                 <>
                 <StatusInProgressOpen/>
                    <div className="flex gap-1 items-center">
-                       <h6 className="text-xs font-medium text-gray-900 line-clamp-1">In Progress - Open</h6>
+                       <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
                    </div>
                </>
             )
-        case "In Progress - Closed Contributor(s)":
+        case "In Progress - Closed":
             return (
                 <>
                 <StatusInProgressClose/>
                    <div className="flex gap-1 items-center">
-                       <h6 className="text-xs font-medium text-gray-900 line-clamp-1">In Progress - Closed</h6>
+                       <h6 className="text-xs font-medium text-gray-900 line-clamp-1">{status}</h6>
                    </div>
                </>
             )
