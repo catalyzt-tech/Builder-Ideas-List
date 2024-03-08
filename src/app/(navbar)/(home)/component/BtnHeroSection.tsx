@@ -9,10 +9,10 @@ export default function BtnHeroSection() {
 
   return (
     <button
-      className="hidden lg:block -48 border px-7 py-3 bg-[#FF0420] text-white rounded-3xl  shadow-md hover:opacity-90 hover:scale-105 transition ease-linear"
+      className="hidden lg:block -48 border px-8 py-4 bg-[#FF0420] text-white rounded-full  shadow-md hover:opacity-90 transition ease-linear duration-300 hover:bg-white hover:text-[#FF0420] hover:border-[#FF0420]"
       onClick={handleClickBtn}
     >
-      <h6 className=" font-semibold">Start Exploring &darr;</h6>
+      <div className=" font-semibold">Start Exploring &darr;</div>
     </button>
   )
 }

@@ -32,8 +32,8 @@ export default function ListCard({
             </thead>
             <tbody>
               {currentItems.map((item, i) => (
-                <tr className="border " key={i}>
-                  <th className="py-4 px-3 flex flex-col">
+                <tr className="border" key={i}>
+                  <th className="p-5 flex flex-col">
                     <div
                       data-tooltip-id={item.contribution['execution-status']}
                       className="flex gap-1 items-center py-0.5 px-1 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-100 bg-gray-50 w-fit mb-2"
@@ -58,7 +58,7 @@ export default function ListCard({
 
                     <Link
                       href={`/issue/${item.id}`}
-                      className="flex gap-1 items-center cursor-pointer "
+                      className="flex gap-1 pb-2  items-center cursor-pointer "
                     >
                       <h6 className="hover:underline text-sm font-bold text-gray-900">
                         {item.title}

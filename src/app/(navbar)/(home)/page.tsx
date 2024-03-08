@@ -79,8 +79,8 @@ export default async function Home() {
   return (
     <>
       <div className="min-h-screen">
-        <div className="px-4 md:px-[4rem] lg:px-[8rem] py-[2.5rem] bg-gradient-to-b  from-[#ffe6e6] text-gray-300 to-white ">
-          <div className="pt-20  md:pt-14 md:my-8">
+        <div className="px-4  md:px-[4rem] lg:px-[8rem] py-[2.5rem] bg-gradient-to-b  from-[#ffe6e6] text-gray-300 to-white">
+          <div className="pt-20 md:pt-14 md:my-8">
             <HeroSection />
           </div>
         </div>
