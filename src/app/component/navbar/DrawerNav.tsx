@@ -85,7 +85,7 @@ export default function DrawerNav({
                 >
                   <Link
                     className="text-custom-red font-rubik !font-semibold "
-                    href="/"
+                    href="https://optimism.io/join"
                   >
                     OPTIMISM
                   </Link>
@@ -100,12 +100,11 @@ export default function DrawerNav({
                   {menu.map((item, index) => (
                     <li key={index} className="DrawerNavBox">
                       <a href={item.link} className="DrawerNav">
-                        {' '}
                         {item.name}
                       </a>
                     </li>
                   ))}
-                  <li className="DrawerNavBox" onClick={() => setOpen2(true)}>
+                  {/* <li className="DrawerNavBox" onClick={() => setOpen2(true)}>
                     <a href="#" className="DrawerNav">
                       More
                       <svg
@@ -124,7 +123,7 @@ export default function DrawerNav({
                         />
                       </svg>
                     </a>
-                  </li>
+                  </li> */}
                   <hr className="my-3 border-gray-200 m-0  w-full" />
                 </ul>
               </Dialog.Panel>
@@ -160,7 +159,7 @@ export default function DrawerNav({
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  {/* <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                     <Dialog.Title
                       as="h2"
                       className="textTitle flex justify-between"
@@ -191,7 +190,7 @@ export default function DrawerNav({
                         <hr className="Line" />
                       </div>
                     ))}
-                  </Dialog.Panel>
+                  </Dialog.Panel> */}
                 </Transition.Child>
               </div>
             </div>

@@ -53,20 +53,23 @@ const Navbar = () => {
     <>
       <div className="bg-white border-b sticky top-0 z-20  flex items-center lg:justify-start justify-between px-6 h-[4.5em]">
         <div className="mr-12">
-          <Link className="text-custom-red font-rubik !font-semibold" href="/">
+          <Link
+            className="text-custom-red font-rubik !font-semibold"
+            href="https://optimism.io/join"
+          >
             OPTIMISM
           </Link>
         </div>
         <div className="hidden lg:flex space-x-8 pr-2 items-center text-custom ">
-          <ul className="flex gap-8 !font-inter   ">
+          <ul className="flex gap-8 !font-inter  ">
             {menu.map((item, index) => (
               <a href={item.link} key={index}>
-                <li className="NavMenu !font-medium">
+                <li className="NavMenu !font-medium transition ease-in-out duration-300">
                   <ul>{item.name}</ul>
                 </li>
               </a>
             ))}
-            <li>
+            {/* <li>
               <a
                 className="NavMenu flex items-center gap-1 !font-medium"
                 href="#"
@@ -111,7 +114,7 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-            </li>
+            </li> */}
           </ul>
         </div>
 
