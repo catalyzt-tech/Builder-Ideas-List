@@ -1,8 +1,7 @@
-import HeroIcon from '@/public/img/home_banner.png'
 import Image from 'next/image'
-import BtnSection from './BtnHeroSection'
+import BtnHeroSection from './BtnHeroSection'
 
-export default function HeroSection({}: {}) {
+export default function HeroSection() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 sm:gap-16 md:gap-24 lg:gap-32 xl:gap-40 ">
       {/* lg:max-w-[30rem] xl:max-w-[36rem] */}
@@ -15,7 +14,7 @@ export default function HeroSection({}: {}) {
           Opportunities, Get Involved, and Make an Impact Today.
         </p>
         <div className="">
-          <BtnSection />
+          <BtnHeroSection />
         </div>
       </div>
       <div className="flex justify-center animate-slideright duration-1000">

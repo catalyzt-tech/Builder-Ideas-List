@@ -80,7 +80,7 @@ export default async function Home() {
     <>
       <div className="min-h-screen">
         <div className="px-4 md:px-[4rem] lg:px-[8rem] py-[2.5rem] bg-gradient-to-b  from-[#ffe6e6] text-gray-300 to-white ">
-          <div className=" pt-14 ">
+          <div className=" pt-14 my-8">
             <HeroSection />
           </div>
         </div>
@@ -89,10 +89,9 @@ export default async function Home() {
           <div className="flex flex-col gap-1 ">
             <h6 className="text-slate-500 text-lg font-rubik">Explore</h6>
             <h4 className="text-slate-900 text-2xl font-semibold font-rubik">
-              Explore Project Idea
+              Project Ideas
             </h4>
           </div>
-
           <div className="">
             <Cpage overViewData={overViewData} markdownContents={jsonData} />
           </div>

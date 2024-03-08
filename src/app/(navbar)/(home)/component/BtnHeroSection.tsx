@@ -1,8 +1,8 @@
 'use client'
-export default function BtnSection() {
+export default function BtnHeroSection() {
   const handleClickBtn = () => {
     window.scrollTo({
-      top: 400,
+      top: 450,
       behavior: 'smooth',
     })
   }
