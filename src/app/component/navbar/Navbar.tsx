@@ -10,6 +10,7 @@ const Navbar = () => {
     { name: 'RetroPGF', link: 'https://app.optimism.io/retropgf-signup' },
     { name: 'Bridge', link: 'https://app.optimism.io/bridge/deposit' },
     { name: 'Airdrop', link: 'https://app.optimism.io/airdrops' },
+    { name: 'Builder', link: '/' },
   ]
 
   const dropdownMenu = [
@@ -50,7 +51,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-white border-b sticky top-0 z-20  flex items-center lg:justify-start justify-between px-6 h-18">
+      <div className="bg-white border-b sticky top-0 z-20  flex items-center lg:justify-start justify-between px-6 h-[4.5em]">
         <div className="mr-12">
           <Link className="text-custom-red font-rubik !font-semibold" href="/">
             OPTIMISM
@@ -59,7 +60,7 @@ const Navbar = () => {
         <div className="hidden lg:flex space-x-8 pr-2 items-center text-custom ">
           <ul className="flex gap-8 !font-inter   ">
             {menu.map((item, index) => (
-              <a href={item.link} target="_blank" key={index}>
+              <a href={item.link} key={index}>
                 <li className="NavMenu !font-medium">
                   <ul>{item.name}</ul>
                 </li>

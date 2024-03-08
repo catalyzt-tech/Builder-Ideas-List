@@ -5,7 +5,16 @@ export default function HeroSection() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 sm:gap-16 md:gap-24 lg:gap-32 xl:gap-40 ">
       {/* lg:max-w-[30rem] xl:max-w-[36rem] */}
-      <div className="flex flex-col animate-slideleft duration-200">
+      <div className="flex justify-center animate-slidedown duration-1000 md:hidden">
+        <Image
+          src="img/sunny.svg"
+          alt="retro hero icon"
+          width={200}
+          height={200}
+          className="animate-none"
+        />
+      </div>
+      <div className="flex flex-col text-center md:text-left animate-slideleft duration-200">
         <h6 className="text-slate-900 text-4xl font-semibold font-rubik ">
           Welcome to Builder Ideas
         </h6>
@@ -17,7 +26,7 @@ export default function HeroSection() {
           <BtnHeroSection />
         </div>
       </div>
-      <div className="flex justify-center animate-slideright duration-1000">
+      <div className="hidden md:flex md:justify-center animate-slideright duration-1000">
         <Image
           src="img/sunny.svg"
           alt="retro hero icon"

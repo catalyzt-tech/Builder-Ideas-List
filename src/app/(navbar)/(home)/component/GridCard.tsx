@@ -123,7 +123,7 @@ export default function GridCard({
 
       <div>
         <Link
-          className="text-sm font-semibold text-gray-900 mb-0.5 line-clamp-1 hover:underline"
+          className="text-base font-semibold text-gray-900 mb-2 line-clamp-1 hover:underline"
           href={`/issue/${data.id}`}
         >
           {data.title}
