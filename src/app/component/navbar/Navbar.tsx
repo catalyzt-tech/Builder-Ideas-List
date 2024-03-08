@@ -11,9 +11,46 @@ const Navbar = () => {
     { name: 'Bridge', link: 'https://app.optimism.io/bridge/deposit' },
     { name: 'Airdrop', link: 'https://app.optimism.io/airdrops' },
   ]
+
+  const dropdownMenu = [
+    {
+      title: 'OPTIMISM',
+      items: [
+        { name: 'About Optimism', link: 'https://www.optimism.io/about' },
+        { name: 'Superchain', link: 'https://app.optimism.io/superchain' },
+      ],
+    },
+    {
+      title: 'GOVERNANCE',
+      items: [
+        { name: 'Optimist NFT', link: 'https://app.optimism.io/optimist-nft' },
+        { name: 'OP Collective', link: 'https://app.optimism.io/announcement' },
+        { name: 'About RetroPGF', link: 'https://app.optimism.io/retropgf' },
+        { name: 'Delegates', link: 'https://vote.optimism.io' },
+        { name: 'Forum', link: 'https://gov.optimism.io/' },
+      ],
+    },
+    {
+      title: 'ECOSYSTEM',
+      items: [
+        { name: 'Apps', link: 'https://www.optimism.io/apps/all' },
+        { name: 'Quests', link: 'https://app.optimism.io/quests' },
+      ],
+    },
+    {
+      title: 'DEVELOPERS',
+      items: [
+        { name: 'Superchain Faucet', link: 'https://app.optimism.io/faucet' },
+        { name: 'Documentation', link: 'https://docs.optimism.io/' },
+        { name: 'Github', link: 'https://github.com/ethereum-optimism/' },
+        { name: 'Bug bounty', link: 'https://immunefi.com/bounty/optimism/' },
+      ],
+    },
+  ]
+
   return (
     <>
-      <div className="bg-white sticky top-0 z-20 shadow-md flex items-center lg:justify-start justify-between px-6 h-16">
+      <div className="bg-white border-b sticky top-0 z-20  flex items-center lg:justify-start justify-between px-6 h-18">
         <div className="mr-12">
           <Link className="text-custom-red font-rubik !font-semibold" href="/">
             OPTIMISM
@@ -54,130 +91,24 @@ const Navbar = () => {
               </a>
 
               <ul className="Dropdown overflow-y-auto max-h-90vh">
-                <li className="Title">OPTIMISM</li>
-                <li className="Content">
-                  <a
-                    className="Link"
-                    href="https://www.optimism.io/about"
-                    target="_blank"
-                  >
-                    <span>About Optimism</span>
-                  </a>
-                </li>
-                <li className="Content">
-                  <a
-                    className="Link"
-                    href="https://app.optimism.io/superchain"
-                    target="_blank"
-                  >
-                    <span>Superchain</span>
-                  </a>
-                </li>
-                <li className="Line"></li>
-                <li className="Title">GOVERNANCE</li>
-                <li className="Content">
-                  <a
-                    className="Link"
-                    href="https://app.optimism.io/optimist-nft"
-                    target="_blank"
-                  >
-                    <span>Optimist NFT</span>
-                  </a>
-                </li>
-                <li className="Content">
-                  <a
-                    className="Link"
-                    href="https://app.optimism.io/announcement"
-                    target="_blank"
-                  >
-                    <span>OP Collective</span>
-                  </a>
-                </li>
-                <li className="Content">
-                  <a
-                    className="Link"
-                    href="https://app.optimism.io/retropgf"
-                    target="_blank"
-                  >
-                    <span>About RetroPGF</span>
-                  </a>
-                </li>
-                <li className="Content">
-                  <a
-                    className="Link"
-                    href="https://vote.optimism.io"
-                    target="_blank"
-                  >
-                    <span>Delegates</span>
-                  </a>
-                </li>
-                <li className="Content">
-                  <a
-                    className="Link"
-                    href="https://gov.optimism.io/"
-                    target="_blank"
-                  >
-                    <span>Forum</span>
-                  </a>
-                </li>
-                <li className="Line"></li>
-                <li className="Title">ECOSYSTEM</li>
-                <li className="Content">
-                  <a
-                    className="Link"
-                    href="https://www.optimism.io/apps/all"
-                    target="_blank"
-                  >
-                    <span>Apps</span>
-                  </a>
-                </li>
-                <li className="Content">
-                  <a
-                    className="Link"
-                    href="https://app.optimism.io/quests"
-                    target="_blank"
-                  >
-                    <span>Quests</span>
-                  </a>
-                </li>
-                <li className="Line"></li>
-                <li className="Title">DEVELOPERS</li>
-                <li className="Content">
-                  <a
-                    className="Link"
-                    href="https://app.optimism.io/faucet"
-                    target="_blank"
-                  >
-                    <span>Superchain Faucet</span>
-                  </a>
-                </li>
-                <li className="Content">
-                  <a
-                    className="Link"
-                    href="https://docs.optimism.io/"
-                    target="_blank"
-                  >
-                    <span>Documentation</span>
-                  </a>
-                </li>
-                <li className="Content">
-                  <a
-                    className="Link"
-                    href="https://github.com/ethereum-optimism/"
-                    target="_blank"
-                  >
-                    <span>Github</span>
-                  </a>
-                </li>
-                <li className="Content">
-                  <a
-                    className="Link"
-                    href="https://immunefi.com/bounty/optimism/"
-                    target="_blank"
-                  >
-                    <span>Bug bounty</span>
-                  </a>
-                </li>
+                {dropdownMenu.map((section, sectionIndex) => (
+                  <li className="Content" key={sectionIndex}>
+                    <span className="Title">{section.title}</span>
+                    <li className="Content">
+                      {section.items.map((item, itemIndex) => (
+                        <a
+                          className="Link"
+                          href={item.link}
+                          target="_blank"
+                          key={itemIndex}
+                        >
+                          {item.name}
+                        </a>
+                      ))}
+                      <div className="Line"></div>
+                    </li>
+                  </li>
+                ))}
               </ul>
             </li>
           </ul>
@@ -200,8 +131,6 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-
-          
 
       <DrawerNav open={open} onClose={() => setOpen(false)}></DrawerNav>
     </>

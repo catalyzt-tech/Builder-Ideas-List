@@ -1,7 +1,6 @@
-import { Suspense } from "react"
-import Navbar from "../component/navbar/Navbar"
-import Loading from "./loading"
-
+import { Suspense } from 'react'
+import Navbar from '../component/navbar/Navbar'
+import Loading from './loading'
 
 export default function Layout({
   children,

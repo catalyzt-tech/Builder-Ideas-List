@@ -1,21 +1,18 @@
-"use client"
+'use client'
 export default function BtnSection() {
+  const handleClickBtn = () => {
+    window.scrollTo({
+      top: 400,
+      behavior: 'smooth',
+    })
+  }
 
-
-    function handleClickBtn(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-          window.scrollTo({
-            top: 450,
-            behavior: "smooth",
-          });
-    }
-
-    return (
-        <button
-        className="hidden lg:block -48 border px-4 py-2 bg-primaryRed text-white rounded-md hover:bg-primaryRed/90 shadow-md"
-        onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleClickBtn(e)}
-        >
-            <h6 className="font-semibold">Start Exploring</h6>
-        </button>
-    )
-
+  return (
+    <button
+      className="hidden lg:block -48 border px-7 py-3 bg-[#FF0420] text-white rounded-3xl  shadow-md hover:opacity-90 hover:scale-105 transition ease-linear"
+      onClick={handleClickBtn}
+    >
+      <h6 className=" font-semibold">Start Exploring &darr;</h6>
+    </button>
+  )
 }
