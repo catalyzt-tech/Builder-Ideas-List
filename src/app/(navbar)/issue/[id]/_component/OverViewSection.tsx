@@ -25,18 +25,24 @@ export default function OverViewSection({
     >
        <button 
             onClick={() => router.back()}
-            className=" flex gap-2 items-center mb-10">
-              {/* <h6 className="text-sm font-medium text-gray-700 ">&larr; </h6> */}
-              <HomeIcon
-              fill="#6b7280"
-              />
-              <h6 className="text-sm font-medium text-gray-500 ">Home</h6>
+            className=" lg:hidden flex gap-3 items-center mb-10 hover:bg-gray-50 rounded-full p-2 ">
+            <svg className="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+          </svg>
+        <h6 className="text-sm font-medium text-gray-500 ">Home</h6>
 
         </button>
+     
+      <h6 className="text-3xl font-bold my-4 ">{content.title}</h6>
+      
+      <hr className="hidden lg:block my-6  border-t border-gray-300" />
+      <p className=" text-gray-500 text-base font-normal">
+        {content.description}
+      </p>
 
       <div
         data-tooltip-id={content.contribution['execution-status']}
-        className="flex gap-1 items-center py-0.5 px-1 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-100 bg-gray-50 w-fit"
+        className="flex gap-1 items-center py-0.5 px-1 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-100 bg-gray-50 w-fit my-4 -mx-1"
       >
         {handleStatus(content.contribution['execution-status'])}
         <ReactTooltip
@@ -54,11 +60,6 @@ export default function OverViewSection({
         />
       </div>
 
-      <h6 className="text-3xl font-bold my-4 ">{content.title}</h6>
-      <hr className="hidden lg:block my-6  border-t border-gray-300" />
-      <p className=" text-gray-500 text-base font-normal">
-        {content.description}
-      </p>
 
       <div className="flex flex-col  my-4 flex-wrap gap-2">
         <div className="flex gap-3 items-center flex-wrap">
