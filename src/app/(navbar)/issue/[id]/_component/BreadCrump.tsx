@@ -1,5 +1,4 @@
 "use client"
-import Link from "next/link"
 import { MarkDownData } from "../../../(home)/component/Home"
 import HomeIcon from "@/public/icon/Home"
 import { useRouter } from 'next/navigation'

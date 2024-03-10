@@ -7,7 +7,6 @@ import {
   CheckBoxEffort,
   CheckBoxExecutionStatus,
   CheckBoxSkillsets,
-  CheckBoxType,
 } from './Filter/CheckBox'
 
 interface CheckBoxFilterProps {

@@ -1,5 +1,4 @@
 "use client"
-import Link from "next/link"
 import { CheckBoxStateType, TabStateType } from "./Home"
 export default function TabPage({
     state,

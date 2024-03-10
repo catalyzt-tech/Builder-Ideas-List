@@ -8,7 +8,7 @@ import {
   TabStateType,
 } from './component/Home'
 import DialogFilter from './component/Dialog/DialogFilter'
-import { categoryKeyAndValue, newFilter } from './Text'
+import { newFilter } from './Text'
 import DrawerFilter from './component/DrawerFilter'
 import ProjectTab from './component/ProjectTab'
 import OverViewTab from './component/OverViewTab'
