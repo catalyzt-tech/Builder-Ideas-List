@@ -74,7 +74,7 @@ export default async function page({ params }: { params: { id: string } }) {
           <Cpage content={content} />
         </div>
       </div>
-      <Footer color="bg-white lg:bg-gray-100" />
+      <Footer color="bg-white lg:bg-gray-50" />
     </>
   )
 }
