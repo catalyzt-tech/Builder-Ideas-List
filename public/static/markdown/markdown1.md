@@ -12,7 +12,7 @@ contribution:
     contributors: ["@amanwithwings (GitHub) - DeepDAO"]
     discussion-link: "https://github.com/ethereum-optimism/ecosystem-contributions/issues/33"
     links: ["https://github.com/ethereum-optimism/ecosystem-contributions/issues/33", "https://github.com/ethereum-optimism/ecosystem-contributions/issues/33"]
-    execution-status: "Not Started"
+    execution-status: "Completed"
 ---
 
 # h1 
