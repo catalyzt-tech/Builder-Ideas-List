@@ -16,7 +16,11 @@ const rubikFont = Rubik({
 
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
   title: 'Buider Ideas',
+=======
+  title: 'Builder Ideas List',
+>>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
   description: 'Explore ideas for your next project.',
 }
 

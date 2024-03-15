@@ -62,7 +62,11 @@ export default function DrawerNav({
       <Dialog
         open={open}
         as="div"
+<<<<<<< HEAD
         className="flex lg:hidden relative z-40"
+=======
+        className="flex lg:hidden relative z-40 " 
+>>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
         onClose={onClose}
       >
         <div className="fixed inset-0 bg-black/25" />
@@ -81,7 +85,11 @@ export default function DrawerNav({
               <Dialog.Panel className="w-full h-full transform overflow-hidden bg-white  text-left align-middle shadow-xl transition-all  overflow-y-auto">
                 <Dialog.Title
                   as="div"
+<<<<<<< HEAD
                   className="flex justify-between items-center px-6 h-16 mr-4"
+=======
+                  className="flex justify-between items-center px-6 h-16 mr-4 h-[4.5em]"
+>>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
                 >
                   <Link
                     className="text-custom-red font-rubik !font-semibold "

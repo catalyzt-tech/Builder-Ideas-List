@@ -1,14 +1,24 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 import { MarkDownData } from '../../(home)/component/Home'
+<<<<<<< HEAD
 import BreadCrump from './_component/BreadCrump'
 import Cpage from './Cpage'
 import Custom500 from '../../../custom-error'
 import Footer from '@/src/app/component/footer/Footer'
+=======
+import Cpage from './Cpage'
+import Custom500 from '../../../custom-error'
+import Footer from '@/src/app/component/footer/Footer'
+import BreadCrump from './_component/BreadCrump'
+>>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
 
 async function getResources(file: string): Promise<MarkDownData | string> {
   try {
@@ -23,7 +33,11 @@ async function getResources(file: string): Promise<MarkDownData | string> {
 async function getMarkDownData(id: string): Promise<MarkDownData | string> {
   const encodedFileName = encodeURIComponent(id)
   const fullPath =
+<<<<<<< HEAD
     path.join(process.cwd(), 'contributions', encodedFileName) +
+=======
+    path.join(process.cwd(), 'public', 'static', 'markdown', encodedFileName) +
+>>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
     '.md'
 
   try {
@@ -70,11 +84,20 @@ export default async function page({ params }: { params: { id: string } }) {
         <div className="lg:px-[4rem] xl:px-[10rem] lg:py-8">
           <BreadCrump content={content} />
         </div>
+<<<<<<< HEAD
         <div className="lg:px-[4rem] lg:pb-[1rem] xl:px-[10rem] xl:pb-[1.5rem] flex justify-center">
           <Cpage content={content} />
         </div>
       </div>
       <Footer color="bg-white lg:bg-gray-100" />
+=======
+        
+        <div className="lg:px-[4rem] lg:py-[1rem] xl:px-[10rem] xl:py-[1.5rem] flex justify-center">
+          <Cpage content={content} />
+        </div>
+      </div>
+      <Footer color="bg-white lg:bg-gray-50" />
+>>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
     </>
   )
 }

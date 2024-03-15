@@ -4,7 +4,11 @@ import matter from 'gray-matter';
 
 
 export async function getResources() {
+<<<<<<< HEAD
     const directoryPath = path.join(process.cwd(), 'contributions');
+=======
+    const directoryPath = path.join(process.cwd(), 'public', 'static', 'markdown');
+>>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
     const fileNames = await fs.readdir(directoryPath);
 
     let postDataPromises = [];
@@ -29,7 +33,11 @@ export async function getResources() {
 // Promise<MarkDownData>
 async function getMarkDownData(id) {
   
+<<<<<<< HEAD
     const fullPath = path.join(process.cwd(), 'contributions', id); 
+=======
+    const fullPath = path.join(process.cwd(), 'public', 'static', 'markdown', id); 
+>>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
     const fileContents = await fs.readFile(fullPath, 'utf8'); 
   
     const matterResult = matter(fileContents);
@@ -41,6 +49,20 @@ async function getMarkDownData(id) {
     };
 }
 
+<<<<<<< HEAD
 console.info(`Processing markdown files...`);
 await getResources();
 console.info(`Markdown Done ✅`);
+=======
+console.info(`
+░█▀▀█ ░█▀▀▀ ░█▄─░█ ░█▀▀▀ ░█▀▀█ ─█▀▀█ ▀▀█▀▀ ▀█▀ ░█▄─░█ ░█▀▀█ 　 ░█▀▄▀█ ─█▀▀█ ░█▀▀█ ░█─▄▀ ░█▀▀▄ ░█▀▀▀█ ░█──░█ ░█▄─░█ 
+░█─▄▄ ░█▀▀▀ ░█░█░█ ░█▀▀▀ ░█▄▄▀ ░█▄▄█ ─░█── ░█─ ░█░█░█ ░█─▄▄ 　 ░█░█░█ ░█▄▄█ ░█▄▄▀ ░█▀▄─ ░█─░█ ░█──░█ ░█░█░█ ░█░█░█ 
+░█▄▄█ ░█▄▄▄ ░█──▀█ ░█▄▄▄ ░█─░█ ░█─░█ ─░█── ▄█▄ ░█──▀█ ░█▄▄█ 　 ░█──░█ ░█─░█ ░█─░█ ░█─░█ ░█▄▄▀ ░█▄▄▄█ ░█▄▀▄█ ░█──▀█
+`);
+await getResources();
+console.info(`
+░█▀▀▄ ░█▀▀▀█ ░█▄─░█ ░█▀▀▀ 
+░█─░█ ░█──░█ ░█░█░█ ░█▀▀▀ 
+░█▄▄▀ ░█▄▄▄█ ░█──▀█ ░█▄▄▄
+`);
+>>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07

@@ -41,7 +41,13 @@ async function getJsonData(): Promise<Omit<MarkDownData, 'contentHtml'>[]> {
 async function getOverViewData(id: string): Promise<LoadMarkDownType | string> {
   const encodedFileName = encodeURIComponent(id)
   const fullPath =
+<<<<<<< HEAD
     path.join(process.cwd(), 'README.md')
+=======
+    path.join(process.cwd(), 'public', 'static', 'overview', encodedFileName) +
+    '.md'
+
+>>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
   try {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const matterResult = matter(fileContents)
