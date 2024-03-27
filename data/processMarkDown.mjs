@@ -3,17 +3,8 @@ import path from 'path'
 import matter from 'gray-matter'
 
 export async function getResources() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const directoryPath = path.join(process.cwd(), 'contributions');
-=======
-    const directoryPath = path.join(process.cwd(), 'public', 'static', 'markdown');
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
-    const fileNames = await fs.readdir(directoryPath);
-=======
   const directoryPath = path.join(process.cwd(), 'contributions')
   const fileNames = await fs.readdir(directoryPath)
->>>>>>> ori/main
 
   let postDataPromises = []
 
@@ -39,42 +30,6 @@ export async function getResources() {
 
 // Promise<MarkDownData>
 async function getMarkDownData(id) {
-<<<<<<< HEAD
-  
-<<<<<<< HEAD
-    const fullPath = path.join(process.cwd(), 'contributions', id); 
-=======
-    const fullPath = path.join(process.cwd(), 'public', 'static', 'markdown', id); 
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
-    const fileContents = await fs.readFile(fullPath, 'utf8'); 
-  
-    const matterResult = matter(fileContents);
-  
-    //@ts-ignore
-    return {
-      id: id.split(".md")[0], 
-      ...matterResult.data,
-    };
-}
-
-<<<<<<< HEAD
-console.info(`Processing markdown files...`);
-await getResources();
-console.info(`Markdown Done ✅`);
-=======
-console.info(`
-░█▀▀█ ░█▀▀▀ ░█▄─░█ ░█▀▀▀ ░█▀▀█ ─█▀▀█ ▀▀█▀▀ ▀█▀ ░█▄─░█ ░█▀▀█ 　 ░█▀▄▀█ ─█▀▀█ ░█▀▀█ ░█─▄▀ ░█▀▀▄ ░█▀▀▀█ ░█──░█ ░█▄─░█ 
-░█─▄▄ ░█▀▀▀ ░█░█░█ ░█▀▀▀ ░█▄▄▀ ░█▄▄█ ─░█── ░█─ ░█░█░█ ░█─▄▄ 　 ░█░█░█ ░█▄▄█ ░█▄▄▀ ░█▀▄─ ░█─░█ ░█──░█ ░█░█░█ ░█░█░█ 
-░█▄▄█ ░█▄▄▄ ░█──▀█ ░█▄▄▄ ░█─░█ ░█─░█ ─░█── ▄█▄ ░█──▀█ ░█▄▄█ 　 ░█──░█ ░█─░█ ░█─░█ ░█─░█ ░█▄▄▀ ░█▄▄▄█ ░█▄▀▄█ ░█──▀█
-`);
-await getResources();
-console.info(`
-░█▀▀▄ ░█▀▀▀█ ░█▄─░█ ░█▀▀▀ 
-░█─░█ ░█──░█ ░█░█░█ ░█▀▀▀ 
-░█▄▄▀ ░█▄▄▄█ ░█──▀█ ░█▄▄▄
-`);
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
-=======
   const fullPath = path.join(process.cwd(), 'contributions', id)
   const fileContents = await fs.readFile(fullPath, 'utf8')
 
@@ -90,4 +45,3 @@ console.info(`
 console.info(`Processing markdown files...`)
 await getResources()
 console.info(`Markdown Done ✅`)
->>>>>>> ori/main

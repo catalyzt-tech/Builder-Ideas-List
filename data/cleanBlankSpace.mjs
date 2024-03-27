@@ -29,24 +29,8 @@ async function replaceWhitespaceWithHyphen(directoryPath) {
     }
 }
 
-<<<<<<< HEAD
 const directoryPath = path.join(process.cwd(), 'contributions');
  
 console.info('Cleaning blank space...');
 await replaceWhitespaceWithHyphen(directoryPath);
 console.info(`Markdown Cleaned ✅`);
-=======
-const directoryPath = path.join(process.cwd(), 'public', 'static', 'markdown');
- 
-console.info(`
-░█▀▀█ ░█─── ░█▀▀▀ ─█▀▀█ ░█▄─░█ ▀█▀ ░█▄─░█ ░█▀▀█ 　 ░█▀▀█ ░█─── ─█▀▀█ ░█▄─░█ ░█─▄▀ 　 ░█▀▀▀█ ░█▀▀█ ─█▀▀█ ░█▀▀█ ░█▀▀▀ 
-░█─── ░█─── ░█▀▀▀ ░█▄▄█ ░█░█░█ ░█─ ░█░█░█ ░█─▄▄ 　 ░█▀▀▄ ░█─── ░█▄▄█ ░█░█░█ ░█▀▄─ 　 ─▀▀▀▄▄ ░█▄▄█ ░█▄▄█ ░█─── ░█▀▀▀ 
-░█▄▄█ ░█▄▄█ ░█▄▄▄ ░█─░█ ░█──▀█ ▄█▄ ░█──▀█ ░█▄▄█ 　 ░█▄▄█ ░█▄▄█ ░█─░█ ░█──▀█ ░█─░█ 　 ░█▄▄▄█ ░█─── ░█─░█ ░█▄▄█ ░█▄▄▄
-`);
-await replaceWhitespaceWithHyphen(directoryPath);
-console.info(`
-░█▀▀▄ ░█▀▀▀█ ░█▄─░█ ░█▀▀▀ 
-░█─░█ ░█──░█ ░█░█░█ ░█▀▀▀ 
-░█▄▄▀ ░█▄▄▄█ ░█──▀█ ░█▄▄▄
-`);
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07

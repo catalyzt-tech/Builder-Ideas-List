@@ -1,28 +1,11 @@
 'use client'
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Menu, Transition } from '@headlessui/react'
-import { Fragment } from 'react'
-=======
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
-=======
->>>>>>> ori/main
 import { newFilter } from '../../../(home)/Text'
 import { handleStatus } from '../../../(home)/component/GridCard'
 import { MarkDownData } from '../../../(home)/component/Home'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 import NavigateIcon from '@/public/icon/NavigateIcon'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import HomeIcon from "@/public/icon/Home"
-import { useRouter } from 'next/navigation'
-import RightIcon from '@/public/icon/RightIcon'
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
-=======
 import Link from 'next/link'
 import Home from '@/public/icon/HomeIcon'
->>>>>>> ori/main
 
 export default function OverViewSection({
   content,
@@ -31,37 +14,12 @@ export default function OverViewSection({
   content: MarkDownData
   overViewRef: React.MutableRefObject<HTMLElement | null>
 }) {
-<<<<<<< HEAD
-=======
-
-  const router = useRouter()
-
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
   return (
     <section
       ref={overViewRef}
       id="Overview"
       className="border-0 bg-white p-5 sm:p-6 md:p-10 lg:rounded-md lg:border items-center w-auto  lg:mb-6"
     >
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div
-        data-tooltip-id={content.contribution['execution-status']}
-        className="flex gap-1 items-center py-0.5 px-1 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-100 bg-gray-50 w-fit"
-=======
-      <button
-        onClick={() => router.back()}
-        className=" lg:hidden flex gap-3 items-center mb-10 hover:bg-gray-50 rounded-full ">
-        <RightIcon />
-        <h6 className="text-sm font-medium text-gray-500 ">Home</h6>
-
-      </button>
-
-      <div
-        data-tooltip-id={content.contribution['execution-status']}
-        className="flex gap-1 items-center py-0.5 px-1 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-100 bg-gray-50 w-fit my-4 -mx-1"
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
-=======
       {/* <Link href="/#project" className="flex gap-2 items-center ">
         <Home width="16" height="16" />
         <h6 className="text-sm font-medium text-gray-700 hover:underline">
@@ -72,7 +30,6 @@ export default function OverViewSection({
       <div
         data-tooltip-id={content.contributions['execution-status']}
         className="flex gap-1 items-center py-1 px-2 border rounded-full border-gray-200 cursor-pointer hover:bg-gray-100 bg-gray-50 w-fit"
->>>>>>> ori/main
       >
         {handleStatus(content.contributions['execution-status'])}
         <ReactTooltip
@@ -89,26 +46,14 @@ export default function OverViewSection({
           }
         />
       </div>
-<<<<<<< HEAD
 
       <h6 className="text-3xl font-bold my-4 ">{content.title}</h6>
       <hr className="hidden lg:block my-6  border-t border-gray-300" />
-=======
-      <h6 className="text-3xl font-bold my-4 ">{content.title}</h6>
-
-      <hr className="hidden lg:block my-6 border-t border-gray-300" />
-
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
       <p className=" text-gray-500 text-base font-normal">
         {content.description}
       </p>
 
-<<<<<<< HEAD
       <div className="flex flex-col  my-4 flex-wrap gap-2">
-=======
-
-      <div className="flex flex-col my-6 flex-wrap gap-2">
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
         <div className="flex gap-3 items-center flex-wrap">
           <p className="text-base font-normal text-gray-400">Category:</p>
           <h6 className="text-base font-medium text-gray-600">
@@ -169,20 +114,12 @@ export default function OverViewSection({
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className="flex gap-3 items-center flex-wrap">
-=======
-        {/* <div className="flex gap-3 items-center flex-wrap">
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
           <p className="text-base font-normal text-gray-400">Execution:</p>
           <h6 className="text-base font-medium text-gray-600">
             {content.contributions['execution-status'] || '-'}
           </h6>
-<<<<<<< HEAD
         </div>
-=======
-        </div> */}
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
 
         <div className="flex flex-wrap gap-3 items-center">
           <p className="text-base font-normal text-gray-400">Labels:</p>
@@ -195,84 +132,7 @@ export default function OverViewSection({
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* <Menu as="div" className="relative inline-block">
-                    <div className="flex w-fit mt-8 border bg-primaryRed text-white rounded-md hover:bg-primaryRed/90 shadow-md ">
-                        <Menu.Button
-                            className=" p-2 flex items-center justify-center"
-                        >
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M7 10L12 15L17 10"
-                                    stroke="#fff"
-                                    strokeWidth="1.5"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                            </svg>
-                        </Menu.Button>
-                        <hr className="border-r-[1px] border-white  h-auto my-1" />
-                        <a
-                            className="py-2 px-4"
-                            href={content.contribution["discussion-link"]}
-                        >
-                            <h6 className="text-gray-100 text-center text-md font-medium">Discussion Link</h6>
-                        </a>
-                    </div>
-
-                    <Transition
-                        as={Fragment}
-                        enter="transition ease-out duration-100"
-                        enterFrom="transform opacity-0 scale-95"
-                        enterTo="transform opacity-100 scale-100"
-                        leave="transition ease-in duration-75"
-                        leaveFrom="transform opacity-100 scale-100"
-                        leaveTo="transform opacity-0 scale-95"
-                    >
-
-                        <Menu.Items
-                            className="absolute z-20 w-auto origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
-                            <h6 className="text-sm font-bold text-center text-gray-900 bg-gray-50 p-2 border-b ">
-                                Refference Link
-                            </h6>
-                            {content.contribution.links.map((item, i) => (
-                                <Menu.Item
-                                    key={i}
-                                >
-                                    {({ active }) => (
-                                        <button
-                                            className={` p-2
-                                            group flex justify-between w-full items-center rounded-md px-2 py-2  hover:bg-gray-50/65`}
-                                        >
-                                            <h6
-                                            className="text-gray-900 text-sm font-normal"
-                                            >
-                                                {item}
-                                            </h6>
-                                        </button>
-                                    )}
-                                </Menu.Item>
-                            ))}
-
-                        </Menu.Items>
-                    </Transition>
-                </Menu> */}
-<<<<<<< HEAD
-
-=======
->>>>>>> ori/main
         <p className="text-base font-normal text-gray-400 mt-2">
-=======
-      </div>
-      <div className="flex flex-col flex-wrap gap-2">
-        <p className="text-base font-normal text-gray-400">
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
           Reference Links:
         </p>
         <div className="flex flex-col gap-y-1">
@@ -289,17 +149,8 @@ export default function OverViewSection({
           )}
         </div>
         <a
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className="w-fit mt-4 border px-8 py-3 bg-[#ff0420] text-white rounded-3xl hover:opacity-90 transition ease-linear duration-300 shadow-md"
-=======
-          className="w-fit mt-4 border px-6 py-2 bg-[#ff0420] text-white rounded-3xl hover:opacity-80 transition ease-linear duration-300 shadow-md"
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
-          href={content.contribution['discussion-link']}
-=======
           className="w-fit mt-4 border px-8 py-3 bg-[#ff0420] text-white rounded-3xl hover:bg-white hover:text-[#ff0420] hover:border-[#ff0420] transition ease-linear duration-300 shadow-md"
           href={content.contributions['discussion-link']}
->>>>>>> ori/main
         >
           <h6 className="text-center font-semibold">Join Discussion -&gt;</h6>
         </a>

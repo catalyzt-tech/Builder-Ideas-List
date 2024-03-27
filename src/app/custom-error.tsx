@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import Navbar from "@/src/app/component/navbar/Navbar";
-=======
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
 import Link from "next/link";
 
 export default function Custom500({

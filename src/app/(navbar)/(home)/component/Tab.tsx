@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-"use client"
-<<<<<<< HEAD
-import Link from "next/link"
-=======
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
-import { CheckBoxStateType, TabStateType } from "./Home"
-=======
 'use client'
 import Link from 'next/link'
 import { CheckBoxStateType, TabStateType } from './Home'
 import config from '@/public/static/homepage/config.json' assert { type: 'json' }
->>>>>>> ori/main
 export default function TabPage({
   state,
   setState,

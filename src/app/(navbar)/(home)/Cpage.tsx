@@ -8,15 +8,7 @@ import {
   TabStateType,
 } from './component/Home'
 import DialogFilter from './component/Dialog/DialogFilter'
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { categoryKeyAndValue, newFilter } from './Text'
-=======
 import { newFilter } from './Text'
->>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
-=======
-import { newFilter } from './Text'
->>>>>>> ori/main
 import DrawerFilter from './component/DrawerFilter'
 import ProjectTab from './component/ProjectTab'
 import OverViewTab from './component/OverViewTab'
