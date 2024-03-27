@@ -8,7 +8,7 @@ import { remark } from 'remark'
 import html from 'remark-html'
 import Custom500 from '../../custom-error'
 import Footer from '../../component/footer/Footer'
-
+import { Metadata } from 'next'
 async function getResources(): Promise<{
   jsonData: Omit<MarkDownData, 'contentHtml'>[]
   overViewData: string | LoadMarkDownType
@@ -40,6 +40,7 @@ async function getJsonData(): Promise<Omit<MarkDownData, 'contentHtml'>[]> {
 
 async function getOverViewData(id: string): Promise<LoadMarkDownType | string> {
   const encodedFileName = encodeURIComponent(id)
+<<<<<<< HEAD
   const fullPath =
 <<<<<<< HEAD
     path.join(process.cwd(), 'README.md')
@@ -48,6 +49,9 @@ async function getOverViewData(id: string): Promise<LoadMarkDownType | string> {
     '.md'
 
 >>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
+=======
+  const fullPath = path.join(process.cwd(), 'README.md')
+>>>>>>> ori/main
   try {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const matterResult = matter(fileContents)
@@ -66,6 +70,23 @@ async function getOverViewData(id: string): Promise<LoadMarkDownType | string> {
     console.error('Error processing markdown data:', error)
     return String(error)
   }
+}
+
+export const metadata: Metadata = {
+  title: 'Builder Ideas | Optimism',
+  description: 'Explore ideas for your next project.',
+  openGraph: {
+    type: 'website',
+    url: 'https://contribute.optimism.io',
+    title: 'Builder Ideas | Optimism',
+    description: 'Explore ideas for your next project.',
+    siteName: 'optimism.io',
+    images: [
+      {
+        url: 'https://contribute.optimism.io/cover.jpeg',
+      },
+    ],
+  },
 }
 
 export default async function Home() {

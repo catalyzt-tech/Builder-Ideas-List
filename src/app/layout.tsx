@@ -1,6 +1,7 @@
-import type { Metadata } from 'next'
 import './globals.css'
 import { Inter, Rubik } from 'next/font/google'
+import { RouteChangeListener } from './component/routeListener';
+import Head from 'next/head';
 
 const interFont = Inter({
   subsets: ["latin"],
@@ -15,6 +16,7 @@ const rubikFont = Rubik({
 });
 
 
+<<<<<<< HEAD
 export const metadata: Metadata = {
 <<<<<<< HEAD
   title: 'Buider Ideas',
@@ -23,6 +25,12 @@ export const metadata: Metadata = {
 >>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
   description: 'Explore ideas for your next project.',
 }
+=======
+// export const metadata: Metadata = {
+//   title: 'Buider Ideas',
+//   description: 'Explore ideas for your next project.',
+// }
+>>>>>>> ori/main
 
 export default function RootLayout({
   children,
@@ -31,7 +39,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
       <body className={`${interFont.variable} ${rubikFont.variable} `}>
+        <RouteChangeListener/>
         <div className="font-inter  ">
           {children}
         </div>

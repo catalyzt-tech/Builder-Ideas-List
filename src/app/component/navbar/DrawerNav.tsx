@@ -86,10 +86,14 @@ export default function DrawerNav({
                 <Dialog.Title
                   as="div"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="flex justify-between items-center px-6 h-16 mr-4"
 =======
                   className="flex justify-between items-center px-6 h-16 mr-4 h-[4.5em]"
 >>>>>>> 062f37a6d9587af47e7d8adc7fd7953799733a07
+=======
+                  className="flex justify-between items-center px-6 h-[4.5em] mr-4"
+>>>>>>> ori/main
                 >
                   <Link
                     className="text-custom-red font-rubik !font-semibold "
